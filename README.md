@@ -69,6 +69,7 @@ travel-itinerary-app/
 - **LocalStorage** - 데이터 저장
 - **Kakao Maps API** - 지도 데이터 연동
 - **react-big-calendar** - 캘린더 라이브러리
+- **Firebase** - 배포
 
 ## ✨ 주요 기능
 
