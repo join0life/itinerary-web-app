@@ -66,7 +66,7 @@ export function CalendarEndPicker({
                   if (!date) return;
                   setDate(date);
                   const combined = combinedDateAndTime(date, time);
-                  onChange(combined);
+                  onChange?.(combined);
                   setOpen(false);
                 }}
               />
@@ -88,7 +88,7 @@ export function CalendarEndPicker({
                 if (!date) return;
 
                 const combined = combinedDateAndTime(date, newTime);
-                onChange(combined);
+                onChange?.(combined);
               }}
             />
           </div>
