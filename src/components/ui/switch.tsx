@@ -3,17 +3,22 @@ import * as SwitchPrimitive from "@radix-ui/react-switch";
 
 import { cn } from "@/lib/utils";
 
+type SwitchProps = React.ComponentProps<typeof SwitchPrimitive.Root> & {
+  readOnly?: boolean;
+};
+
 function Switch({
   className,
   checked,
   onCheckedChange,
   readOnly,
   ...props
-}: React.ComponentProps<typeof SwitchPrimitive.Root>) {
+}: SwitchProps) {
   return (
     <SwitchPrimitive.Root
       checked={checked}
-      onCheckedChange={onCheckedChange}
+      onCheckedChange={readOnly ? undefined : onCheckedChange}
+      aria-readonly={readOnly}
       data-slot="switch"
       className={cn(
         "peer data-[state=checked]:bg-primary data-[state=unchecked]:bg-input focus-visible:border-ring focus-visible:ring-ring/50 dark:data-[state=unchecked]:bg-input/80 inline-flex h-[2rem] w-14 shrink-0 items-center rounded-full border border-transparent shadow-xs transition-all outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
