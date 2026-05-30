@@ -50,10 +50,10 @@ export default function CalendarHeader({
         <button
           type="button"
           onClick={() => moveWeek(-7)}
-          className="cursor-pointer rounded-[var(--component-button-radius)] p-[var(--spacing-1)] text-muted-foreground outline-none hover:bg-[var(--component-button-ghost-bg-hover)] hover:text-foreground focus-visible:shadow-[var(--component-button-focus-ring)]"
+          className="calendar-nav-button"
           aria-label="이전 주"
         >
-          <ChevronLeft className="size-[var(--size-icon-md)]" />
+          <ChevronLeft className="icon-md" />
         </button>
         <div className="text-[length:var(--font-size-xl)] font-[var(--font-weight-semibold)]">
           {dateHeader}
@@ -61,10 +61,10 @@ export default function CalendarHeader({
         <button
           type="button"
           onClick={() => moveWeek(7)}
-          className="cursor-pointer rounded-[var(--component-button-radius)] p-[var(--spacing-1)] text-muted-foreground outline-none hover:bg-[var(--component-button-ghost-bg-hover)] hover:text-foreground focus-visible:shadow-[var(--component-button-focus-ring)]"
+          className="calendar-nav-button"
           aria-label="다음 주"
         >
-          <ChevronRight className="size-[var(--size-icon-md)]" />
+          <ChevronRight className="icon-md" />
         </button>
       </div>
 
@@ -91,14 +91,12 @@ export default function CalendarHeader({
 
           return (
             <div key={`${date}-${idx}`} className="relative w-1/7">
-              {isSelected && (
-                <div className="absolute inset-0 m-auto flex aspect-square size-[var(--size-9)] items-center justify-center rounded-[var(--radius-full)] bg-[var(--component-calendar-selected-bg)]"></div>
-              )}
+              {isSelected && <div className="calendar-selected-dot"></div>}
               <button
                 type="button"
                 key={date.toISOString()}
                 className={cn(
-                  "relative flex h-full w-full items-center justify-center p-[var(--spacing-2)] text-center font-[var(--font-weight-semibold)] outline-none hover:cursor-pointer focus-visible:shadow-[var(--component-button-focus-ring)]",
+                  "calendar-date-button",
                   idx === 0 ? "text-muted-foreground" : "border-l",
                   idx === 6 && "text-muted-foreground",
                   isSelected && "text-[var(--color-semantic-text-primary)]",

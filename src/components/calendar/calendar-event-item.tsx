@@ -82,14 +82,12 @@ export default function CalendarEventItem({
           handleOpenModalClick();
         }
       }}
-      className="absolute right-0 left-1/7 w-full cursor-pointer rounded-[var(--ds-radius-sm)] border-l-[var(--spacing-1)] border-l-[var(--component-calendar-event-accent)] bg-[var(--component-calendar-event-confirmed-bg)] px-[var(--spacing-2)] py-[var(--spacing-3)] outline-none focus-visible:shadow-[var(--component-button-focus-ring)]"
+      className="calendar-event-card"
       style={style}
       draggable={true}
     >
-      <p className="line-clamp-1 text-[length:var(--font-size-sm)] font-[var(--font-weight-semibold)] text-[var(--component-calendar-event-text)]">
-        {event.title}
-      </p>
-      <span className="text-[length:var(--font-size-xs)] text-[var(--color-semantic-text-secondary)]">
+      <p className="calendar-event-title">{event.title}</p>
+      <span className="calendar-event-time">
         {event.startAt === event.endAt
           ? `${formatTime(event.startAt!)}`
           : `${formatTime(event.startAt!)} ~ ${formatTime(event.endAt!)}`}

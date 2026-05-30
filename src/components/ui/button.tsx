@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex shrink-0 items-center justify-center gap-[var(--component-button-gap)] whitespace-nowrap rounded-[var(--component-button-radius)] text-[length:var(--font-size-sm)] font-[var(--font-weight-medium)] transition-all outline-none disabled:pointer-events-none disabled:border-[var(--component-button-disabled-border)] disabled:bg-[var(--component-button-disabled-bg)] disabled:text-[var(--component-button-disabled-text)] disabled:opacity-[var(--component-button-loading-opacity)] focus-visible:shadow-[var(--component-button-focus-ring)] aria-invalid:border-[var(--color-semantic-danger-default)] [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-[var(--size-icon-sm)]",
+  "inline-flex shrink-0 items-center justify-center gap-[var(--component-button-gap)] whitespace-nowrap rounded-[var(--component-button-radius)] text-[length:var(--font-size-sm)] font-[var(--font-weight-medium)] transition-all outline-none disabled:pointer-events-none disabled:border-[var(--component-button-disabled-border)] disabled:bg-[var(--component-button-disabled-bg)] disabled:text-[var(--component-button-disabled-text)] disabled:opacity-[var(--component-button-loading-opacity)] focus-visible:shadow-[var(--component-button-focus-ring)] aria-invalid:border-[var(--color-semantic-danger-default)] [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-icon-sm",
   {
     variants: {
       variant: {

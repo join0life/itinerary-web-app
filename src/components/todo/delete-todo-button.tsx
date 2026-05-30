@@ -43,7 +43,7 @@ export default function DeleteTodoButton({
     <Button
       disabled={disabled || isDeleteTodoPending}
       onClick={handleDeleteClick}
-      className="h-[var(--component-todo-item-action-button-size)] cursor-pointer px-[var(--spacing-3)] text-[length:var(--font-size-xs)]"
+      className="todo-action-button"
       variant={"destructive"}
     >
       삭제

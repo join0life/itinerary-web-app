@@ -35,7 +35,7 @@ function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 const inputGroupAddonVariants = cva(
-  "flex h-auto cursor-text items-center justify-center gap-[var(--spacing-2)] py-[calc(var(--spacing-1)*1.5)] text-[length:var(--font-size-sm)] font-[var(--font-weight-medium)] text-muted-foreground select-none [&>svg:not([class*='size-'])]:size-[var(--size-icon-sm)] [&>kbd]:rounded-[var(--ds-radius-sm)] group-data-[disabled=true]/input-group:text-[var(--component-button-disabled-text)]",
+  "flex h-auto cursor-text items-center justify-center gap-[var(--spacing-2)] py-[calc(var(--spacing-1)*1.5)] text-[length:var(--font-size-sm)] font-[var(--font-weight-medium)] text-muted-foreground select-none [&>svg:not([class*='size-'])]:size-icon-sm [&>kbd]:rounded-[var(--ds-radius-sm)] group-data-[disabled=true]/input-group:text-[var(--component-button-disabled-text)]",
   {
     variants: {
       align: {
@@ -82,7 +82,7 @@ const inputGroupButtonVariants = cva(
   {
     variants: {
       size: {
-        xs: "h-[var(--size-6)] gap-[var(--spacing-1)] rounded-[var(--ds-radius-sm)] px-[var(--spacing-2)] [&>svg:not([class*='size-'])]:size-[var(--size-icon-sm)] has-[>svg]:px-[var(--spacing-2)]",
+        xs: "h-[var(--size-6)] gap-[var(--spacing-1)] rounded-[var(--ds-radius-sm)] px-[var(--spacing-2)] [&>svg:not([class*='size-'])]:size-icon-sm has-[>svg]:px-[var(--spacing-2)]",
         sm: "h-[var(--size-8)] gap-[calc(var(--spacing-1)*1.5)] rounded-[var(--component-button-radius)] px-[calc(var(--spacing-2)+var(--spacing-1)/2)] has-[>svg]:px-[calc(var(--spacing-2)+var(--spacing-1)/2)]",
         "icon-xs":
           "size-[var(--size-6)] rounded-[var(--ds-radius-sm)] p-[var(--spacing-0)] has-[>svg]:p-[var(--spacing-0)]",
@@ -118,7 +118,7 @@ function InputGroupText({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
       className={cn(
-        "flex items-center gap-[var(--spacing-2)] text-[length:var(--font-size-sm)] text-muted-foreground [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-[var(--size-icon-sm)]",
+        "flex items-center gap-[var(--spacing-2)] text-[length:var(--font-size-sm)] text-muted-foreground [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-icon-sm",
         className
       )}
       {...props}

@@ -28,7 +28,7 @@ export default function UpdateTodoButton(props: UpdateTodoButtonProps) {
     <Button
       disabled={props.disabled}
       onClick={handleButtonClick}
-      className="h-[var(--component-todo-item-action-button-size)] cursor-pointer px-[var(--spacing-3)] text-[length:var(--font-size-xs)]"
+      className="todo-action-button"
       variant={"outline"}
     >
       수정

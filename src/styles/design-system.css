@@ -54,6 +54,14 @@
   --spacing-page-y: var(--spacing-semantic-page-y);
   --spacing-section-gap: var(--spacing-semantic-section-gap);
   --spacing-item-gap: var(--spacing-semantic-item-gap);
+  --spacing-icon-sm: var(--size-icon-sm);
+  --spacing-icon-md: var(--size-icon-md);
+  --spacing-icon-lg: var(--size-icon-lg);
+  --spacing-control-sm: var(--size-6);
+  --spacing-control-md: var(--size-8);
+  --spacing-control-lg: var(--size-10);
+  --spacing-avatar-sm: var(--size-icon-lg);
+  --spacing-avatar-lg: calc(var(--size-15) * 2);
 
   --shadow-xs: var(--shadow-token-xs);
   --shadow-sm: var(--shadow-token-sm);
@@ -413,5 +421,402 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-family-sans);
+  }
+}
+
+@layer components {
+  .icon-sm {
+    width: var(--size-icon-sm);
+    height: var(--size-icon-sm);
+  }
+
+  .icon-md {
+    width: var(--size-icon-md);
+    height: var(--size-icon-md);
+  }
+
+  .icon-lg {
+    width: var(--size-icon-lg);
+    height: var(--size-icon-lg);
+  }
+
+  .avatar-sm {
+    width: var(--size-icon-lg);
+    height: var(--size-icon-lg);
+    border-radius: var(--radius-full);
+    object-fit: cover;
+  }
+
+  .avatar-lg {
+    width: calc(var(--size-15) * 2);
+    height: calc(var(--size-15) * 2);
+    border-radius: var(--radius-full);
+    object-fit: cover;
+  }
+
+  .avatar-trigger {
+    border-radius: var(--radius-full);
+    outline: none;
+  }
+
+  .avatar-trigger:focus-visible {
+    box-shadow: var(--component-button-focus-ring);
+  }
+
+  .ds-focus-ring {
+    outline: none;
+  }
+
+  .ds-focus-ring:focus-visible {
+    box-shadow: var(--component-button-focus-ring);
+  }
+
+  .header-icon-trigger {
+    cursor: pointer;
+    border-radius: var(--radius-full);
+    padding: var(--spacing-2);
+    outline: none;
+  }
+
+  .header-icon-trigger:hover {
+    background: var(--muted);
+  }
+
+  .header-icon-trigger:focus-visible {
+    box-shadow: var(--component-button-focus-ring);
+  }
+
+  .back-icon-button,
+  .calendar-nav-button {
+    cursor: pointer;
+    border-radius: var(--component-button-radius);
+    padding: var(--spacing-1);
+    color: var(--muted-foreground);
+    outline: none;
+  }
+
+  .back-icon-button:hover,
+  .calendar-nav-button:hover {
+    background: var(--component-button-ghost-bg-hover);
+    color: var(--foreground);
+  }
+
+  .back-icon-button:focus-visible,
+  .calendar-nav-button:focus-visible {
+    box-shadow: var(--component-button-focus-ring);
+  }
+
+  .popover-menu {
+    display: flex;
+    width: var(--size-40);
+    flex-direction: column;
+    padding: var(--spacing-0);
+  }
+
+  .popover-menu-item {
+    cursor: pointer;
+    padding: var(--spacing-3) var(--spacing-4);
+    font-size: var(--font-size-sm);
+  }
+
+  .popover-menu-item:hover {
+    background: var(--muted);
+  }
+
+  .theme-popover-menu {
+    width: calc(var(--size-15) * 2.333);
+    padding: var(--spacing-0);
+  }
+
+  .theme-popover-item {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-3);
+  }
+
+  .theme-popover-item:hover {
+    background: var(--muted);
+  }
+
+  .calendar-selected-dot {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    width: var(--size-9);
+    height: var(--size-9);
+    aspect-ratio: 1 / 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background: var(--component-calendar-selected-bg);
+  }
+
+  .calendar-date-button {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2);
+    text-align: center;
+    font-weight: var(--font-weight-semibold);
+    outline: none;
+  }
+
+  .calendar-date-button:hover {
+    cursor: pointer;
+  }
+
+  .calendar-date-button:focus-visible {
+    box-shadow: var(--component-button-focus-ring);
+  }
+
+  .todo-action-button {
+    height: var(--component-todo-item-action-button-size);
+    cursor: pointer;
+    padding-inline: var(--spacing-3);
+    font-size: var(--font-size-xs);
+  }
+
+  .auth-input-lg {
+    height: var(--size-12);
+    padding-inline: var(--spacing-4);
+  }
+
+  .auth-input-spaced {
+    margin-bottom: var(--spacing-2);
+  }
+
+  .floating-create-button {
+    position: fixed;
+    bottom: calc(var(--component-bottom-nav-height) + var(--spacing-5));
+    left: 50%;
+    z-index: 50;
+    width: calc(100% - (var(--spacing-4) * 2));
+    max-width: var(--size-floating-action-max-width);
+    height: var(--size-button-lg-height);
+    transform: translateX(-50%);
+    padding-inline: var(--component-button-padding-x-lg);
+    font-size: var(--font-size-md);
+  }
+
+  .create-todo-trigger {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--component-card-radius);
+    background: var(--muted);
+    padding: var(--spacing-4);
+    color: var(--muted-foreground);
+    outline: none;
+    transition: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-duration: 150ms;
+  }
+
+  .create-todo-trigger:hover {
+    background: var(--component-card-interactive-bg-hover);
+  }
+
+  .create-todo-trigger:focus-visible {
+    box-shadow: var(--component-button-focus-ring);
+  }
+
+  .project-item-card {
+    display: flex;
+    height: var(--component-project-item-height);
+    width: 100%;
+    cursor: pointer;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    border-radius: var(--component-project-item-radius);
+    background: var(--component-project-item-bg);
+    padding: var(--component-project-item-padding);
+    transition: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-duration: 150ms;
+  }
+
+  .project-item-card:hover {
+    background: var(--component-project-item-bg-hover);
+  }
+
+  .project-owner-badge {
+    width: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-radius: var(--component-project-item-owner-badge-radius);
+    border: 1px solid var(--component-project-item-owner-badge-border);
+    background: var(--component-project-item-owner-badge-bg);
+    padding: calc(var(--spacing-1) / 2) var(--spacing-1);
+    font-size: var(--font-size-xs);
+  }
+
+  .calendar-event-card {
+    position: absolute;
+    right: 0;
+    left: calc(100% / 7);
+    width: 100%;
+    cursor: pointer;
+    border-radius: var(--ds-radius-sm);
+    border-left: var(--spacing-1) solid var(--component-calendar-event-accent);
+    background: var(--component-calendar-event-confirmed-bg);
+    padding: var(--spacing-3) var(--spacing-2);
+    outline: none;
+  }
+
+  .calendar-event-card:focus-visible {
+    box-shadow: var(--component-button-focus-ring);
+  }
+
+  .calendar-event-title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--component-calendar-event-text);
+  }
+
+  .calendar-event-time {
+    font-size: var(--font-size-xs);
+    color: var(--color-semantic-text-secondary);
+  }
+
+  .calendar-allday-event {
+    margin-bottom: var(--spacing-1);
+    cursor: pointer;
+    border-radius: var(--ds-radius-sm);
+    background: var(--component-calendar-event-accent);
+    padding: var(--spacing-1) var(--spacing-2);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-semantic-text-inverse);
+    outline: none;
+  }
+
+  .calendar-allday-event:focus-visible {
+    box-shadow: var(--component-button-focus-ring);
+  }
+
+  .more-event-badge {
+    position: absolute;
+    right: var(--spacing-2);
+    z-index: 20;
+    border-radius: var(--ds-radius-sm);
+    background: var(--muted);
+    padding: var(--spacing-1) var(--spacing-2);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .stack-xs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  .stack-sm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+
+  .stack-md {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5);
+  }
+
+  .stack-lg {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+
+  .stack-xl {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-10);
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  .form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--spacing-2);
+  }
+
+  .page-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .section-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .card-title-text {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+  }
+
+  .caption-text {
+    font-size: var(--font-size-sm);
+    color: var(--muted-foreground);
+  }
+
+  .app-header {
+    display: flex;
+    height: var(--size-header-height);
+    border-bottom-width: 1px;
+  }
+
+  .app-header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+  }
+
+  .calendar-weekday {
+    width: calc(100% / 7);
+    padding: var(--spacing-2);
+    text-align: center;
+    font-size: var(--font-size-sm);
+  }
+
+  .calendar-row-spacing {
+    margin-bottom: var(--spacing-1);
+  }
+
+  .global-loader-mark {
+    margin-bottom: var(--size-15);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+  }
+
+  .brand-logo {
+    width: var(--size-10);
+    height: var(--size-10);
+  }
+
+  .brand-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
   }
 }

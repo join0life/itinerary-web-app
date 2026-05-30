@@ -32,10 +32,8 @@ export default function ForgetPasswordPage() {
   };
 
   return (
-    <div className="flex flex-col gap-[var(--spacing-5)]">
-      <div className="text-[length:var(--font-size-xl)] font-[var(--font-weight-bold)]">
-        비밀번호를 잊으셨나요?
-      </div>
+    <div className="stack-md">
+      <div className="page-title">비밀번호를 잊으셨나요?</div>
       <div className="text-muted-foreground">
         이메일로 비밀번호를 재설정할 수 있는 인증 링크를 보내드립니다.
       </div>
@@ -45,7 +43,7 @@ export default function ForgetPasswordPage() {
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           placeholder="example@abc.com"
-          className="mb-[var(--spacing-2)] h-[var(--size-12)] px-[var(--spacing-4)]"
+          className="auth-input-lg auth-input-spaced"
           disabled={isRequestPasswordResetEmailPending}
         ></Input>
       </div>

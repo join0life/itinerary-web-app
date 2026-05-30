@@ -88,7 +88,7 @@ export default function ProfileEditorModal() {
         {isFetchProfilePending && <Loader />}
         {!fetchProfileError && !isFetchProfilePending && (
           <>
-            <div className="flex flex-col gap-[var(--spacing-2)]">
+            <div className="form-field">
               <Label htmlFor="profile-image">프로필 이미지</Label>
               <Input
                 disabled={isUpdateProfilePending}
@@ -112,12 +112,12 @@ export default function ProfileEditorModal() {
                 }}
                 src={avatarImage?.previewUrl || profile.avatar_url || dog}
                 id="profile-image"
-                className="size-[calc(var(--size-15)*2)] cursor-pointer rounded-[var(--radius-full)] object-cover outline-none focus-visible:shadow-[var(--component-button-focus-ring)]"
+                className="avatar-lg ds-focus-ring cursor-pointer"
                 alt="프로필 이미지 미리보기"
               />
             </div>
 
-            <div className="flex flex-col gap-[var(--spacing-2)]">
+            <div className="form-field">
               <Label htmlFor="profile-nickname">닉네임</Label>
               <Input
                 disabled={isUpdateProfilePending}
@@ -127,7 +127,7 @@ export default function ProfileEditorModal() {
               ></Input>
             </div>
 
-            <div className="flex flex-col gap-[var(--spacing-2)]">
+            <div className="form-field">
               <Label htmlFor="profile-bio">소개</Label>
               <Input
                 disabled={isUpdateProfilePending}

@@ -27,11 +27,9 @@ export default function ProjectItem({
   const isJoined = isProjectOwner || isProjectMember;
 
   return (
-    <div className="flex h-[var(--component-project-item-height)] w-full cursor-pointer flex-col gap-[var(--spacing-3)] rounded-[var(--component-project-item-radius)] bg-[var(--component-project-item-bg)] p-[var(--component-project-item-padding)] transition-colors hover:bg-[var(--component-project-item-bg-hover)]">
+    <div className="project-item-card">
       <div className="flex items-center justify-between">
-        <div className="truncate text-[length:var(--font-size-lg)] font-[var(--font-weight-semibold)] leading-[var(--line-height-tight)]">
-          {project.name}
-        </div>
+        <div className="card-title-text truncate">{project.name}</div>
         <div className="flex shrink-0 items-center justify-between">
           {!showDelete && (
             <ProjectJoinButton projectId={projectId} isJoined={isJoined} />
@@ -41,13 +39,11 @@ export default function ProjectItem({
       </div>
 
       <div>
-        <div className="line-clamp-1 text-[length:var(--font-size-sm)] text-[var(--component-project-item-description-text)]">
+        <div className="line-clamp-1 text-[var(--component-project-item-description-text)]">
           {project.description}
         </div>
       </div>
-      <div className="w-fit truncate rounded-[var(--component-project-item-owner-badge-radius)] border border-[var(--component-project-item-owner-badge-border)] bg-[var(--component-project-item-owner-badge-bg)] px-[var(--spacing-1)] py-[calc(var(--spacing-1)/2)] text-[length:var(--font-size-xs)]">
-        {project.owner.nickname}
-      </div>
+      <div className="project-owner-badge">{project.owner.nickname}</div>
     </div>
   );
 }

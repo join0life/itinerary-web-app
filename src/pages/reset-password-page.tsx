@@ -32,17 +32,15 @@ export default function ResetPasswordPage() {
   };
 
   return (
-    <div className="flex flex-col gap-[var(--spacing-5)]">
-      <div className="text-[length:var(--font-size-xl)] font-[var(--font-weight-bold)]">
-        비밀번호 재설정하기
-      </div>
+    <div className="stack-md">
+      <div className="page-title">비밀번호 재설정하기</div>
       <div className="text-muted-foreground">새로운 비밀번호를 입력하세요</div>
       <div>
         <Input
           disabled={isUpdatePasswordPending}
           type="password"
           placeholder="Password"
-          className="mb-[var(--spacing-2)] h-[var(--size-12)] px-[var(--spacing-4)]"
+          className="auth-input-lg auth-input-spaced"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></Input>

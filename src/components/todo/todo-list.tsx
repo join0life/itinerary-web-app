@@ -39,7 +39,7 @@ export default function TodoList({ projectId }: { projectId: number }) {
         <div key={owner.id} className="flex flex-col gap-[var(--spacing-5)]">
           <div className="flex items-center gap-[var(--spacing-2)]">
             <img
-              className="size-[var(--size-icon-lg)] rounded-[var(--radius-full)] object-cover"
+              className="avatar-sm"
               src={dog}
               alt=""
             ></img>

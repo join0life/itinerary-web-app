@@ -35,14 +35,14 @@ function SelectTrigger({
       data-slot="select-trigger"
       data-size={size}
       className={cn(
-        "flex w-fit items-center justify-between gap-[var(--spacing-2)] rounded-[var(--component-input-radius)] border border-[var(--component-input-border)] bg-[var(--component-input-bg)] px-[var(--component-input-padding-x)] py-[var(--spacing-2)] text-[length:var(--font-size-sm)] whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none data-[placeholder]:text-[var(--component-input-placeholder)] focus-visible:border-[var(--component-input-border-focus)] focus-visible:shadow-[var(--component-input-focus-ring)] aria-invalid:border-[var(--component-input-border-invalid)] disabled:cursor-not-allowed disabled:bg-[var(--component-input-disabled-bg)] disabled:text-[var(--component-input-disabled-text)] data-[size=default]:h-[var(--component-input-height)] data-[size=sm]:h-[var(--component-button-height-sm)] *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-[var(--spacing-2)] [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-[var(--size-icon-sm)] [&_svg:not([class*='text-'])]:text-muted-foreground",
+        "flex w-fit items-center justify-between gap-[var(--spacing-2)] rounded-[var(--component-input-radius)] border border-[var(--component-input-border)] bg-[var(--component-input-bg)] px-[var(--component-input-padding-x)] py-[var(--spacing-2)] text-[length:var(--font-size-sm)] whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none data-[placeholder]:text-[var(--component-input-placeholder)] focus-visible:border-[var(--component-input-border-focus)] focus-visible:shadow-[var(--component-input-focus-ring)] aria-invalid:border-[var(--component-input-border-invalid)] disabled:cursor-not-allowed disabled:bg-[var(--component-input-disabled-bg)] disabled:text-[var(--component-input-disabled-text)] data-[size=default]:h-[var(--component-input-height)] data-[size=sm]:h-[var(--component-button-height-sm)] *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-[var(--spacing-2)] [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-icon-sm [&_svg:not([class*='text-'])]:text-muted-foreground",
         className
       )}
       {...props}
     >
       {children}
       <SelectPrimitive.Icon asChild>
-        <ChevronDownIcon className="size-[var(--size-icon-sm)] opacity-[var(--component-button-loading-opacity)]" />
+        <ChevronDownIcon className="icon-sm opacity-[var(--component-button-loading-opacity)]" />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   )
@@ -110,17 +110,17 @@ function SelectItem({
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
-        "relative flex w-full cursor-default items-center gap-[var(--spacing-2)] rounded-[var(--ds-radius-sm)] py-[calc(var(--spacing-1)*1.5)] pr-[var(--spacing-8)] pl-[var(--spacing-2)] text-[length:var(--font-size-sm)] outline-hidden select-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:text-[var(--component-button-disabled-text)] [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-[var(--size-icon-sm)] [&_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-[var(--spacing-2)]",
+        "relative flex w-full cursor-default items-center gap-[var(--spacing-2)] rounded-[var(--ds-radius-sm)] py-[calc(var(--spacing-1)*1.5)] pr-[var(--spacing-8)] pl-[var(--spacing-2)] text-[length:var(--font-size-sm)] outline-hidden select-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:text-[var(--component-button-disabled-text)] [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-icon-sm [&_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-[var(--spacing-2)]",
         className
       )}
       {...props}
     >
       <span
         data-slot="select-item-indicator"
-        className="absolute right-[var(--spacing-2)] flex size-[var(--size-icon-sm)] items-center justify-center"
+        className="absolute right-[var(--spacing-2)] flex icon-sm items-center justify-center"
       >
         <SelectPrimitive.ItemIndicator>
-          <CheckIcon className="size-[var(--size-icon-sm)]" />
+          <CheckIcon className="icon-sm" />
         </SelectPrimitive.ItemIndicator>
       </span>
       <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
@@ -157,7 +157,7 @@ function SelectScrollUpButton({
       )}
       {...props}
     >
-      <ChevronUpIcon className="size-[var(--size-icon-sm)]" />
+      <ChevronUpIcon className="icon-sm" />
     </SelectPrimitive.ScrollUpButton>
   )
 }
@@ -175,7 +175,7 @@ function SelectScrollDownButton({
       )}
       {...props}
     >
-      <ChevronDownIcon className="size-[var(--size-icon-sm)]" />
+      <ChevronDownIcon className="icon-sm" />
     </SelectPrimitive.ScrollDownButton>
   )
 }

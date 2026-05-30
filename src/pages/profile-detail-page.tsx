@@ -16,13 +16,11 @@ export default function ProfileDetailPage() {
   if (!userId) return <Navigate to={"/"} replace />;
 
   return (
-    <div className="flex flex-col gap-[var(--spacing-10)]">
+    <div className="stack-xl">
       <ProfileInfo userId={userId} />
       <div className="border-b"></div>
-      <div className="flex flex-col gap-[var(--spacing-3)]">
-        <div className="text-[length:var(--font-size-xl)] font-[var(--font-weight-semibold)]">
-          내 프로젝트
-        </div>
+      <div className="stack-sm">
+        <div className="section-title">내 프로젝트</div>
         <ProjectFeed ownerId={userId} />
       </div>
     </div>

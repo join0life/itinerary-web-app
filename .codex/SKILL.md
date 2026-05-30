@@ -162,7 +162,64 @@ Tailwind CSS v4에서는 CSS-first configuration을 우선 사용한다.
    className="bg-[var(--component-button-primary-bg)] text-[var(--component-button-primary-text)] rounded-[var(--component-button-radius)]"
    ```
 
-9. shadcn/ui의 기본 variant 구조에서는 가능한 한 semantic utility를 우선 사용한다.
+9. 반복적으로 등장하는 token arbitrary value는 컴포넌트 코드에 계속 남기지 않는다.
+
+   `size-[var(--size-icon-md)]`, `gap-[var(--spacing-2)]`, `rounded-[var(--radius-full)]`처럼 여러 파일에서 반복되는 값은 다음 순서로 숨긴다.
+
+   1. Tailwind utility로 쓰기 좋은 값은 `@theme`에 등록한다.
+
+      예:
+
+      ```css
+      @theme {
+        --spacing-icon-sm: var(--size-icon-sm);
+        --spacing-icon-md: var(--size-icon-md);
+        --spacing-icon-lg: var(--size-icon-lg);
+      }
+      ```
+
+      ```tsx
+      className="size-icon-md"
+      ```
+
+   2. component behavior나 조합 스타일은 `@layer components`에 token 기반 class로 만든다.
+
+      예:
+
+      ```css
+      @layer components {
+        .icon-md {
+          width: var(--size-icon-md);
+          height: var(--size-icon-md);
+        }
+
+        .header-icon-trigger {
+          border-radius: var(--radius-full);
+          padding: var(--spacing-2);
+          outline: none;
+        }
+
+        .header-icon-trigger:hover {
+          background: var(--muted);
+        }
+
+        .header-icon-trigger:focus-visible {
+          box-shadow: var(--component-button-focus-ring);
+        }
+      }
+      ```
+
+      ```tsx
+      className="header-icon-trigger"
+      ```
+
+   3. 같은 class 조합이 특정 React 역할로 반복되면 작은 wrapper component로 분리한다.
+
+      예: `HeaderIconButton`, `AvatarImage`, `CalendarCellButton`
+
+   단, 한두 번만 쓰이는 값이나 Radix/라이브러리 내부 상태 selector와 강하게 묶인 값은 과도하게 추상화하지 않는다.
+
+10. shadcn/ui의 기본 variant 구조에서는 가능한 한 semantic utility를 우선 사용한다.
 
    예:
 
@@ -170,7 +227,28 @@ Tailwind CSS v4에서는 CSS-first configuration을 우선 사용한다.
    className="bg-primary text-primary-foreground hover:bg-primary/90"
    ```
 
-10. 기존 UI를 수정할 때 hard-coded color, px, arbitrary value를 줄이고 design token 기반 변수로 교체한다.
+11. 기존 UI를 수정할 때 hard-coded color, px, arbitrary value를 줄이고 design token 기반 변수로 교체한다.
+
+12. token 도입 작업은 두 단계로 진행한다.
+
+    1. 1차 이행: hard-coded value를 semantic/component token으로 교체한다.
+    2. 2차 정리: 반복되는 `var()` 기반 arbitrary class를 `@theme` utility, `@layer components` class, wrapper component로 숨긴다.
+
+    2차 정리 후 컴포넌트 파일은 가능한 한 다음처럼 읽혀야 한다.
+
+    ```tsx
+    <PopoverTrigger className="header-icon-trigger">
+      <SunIcon className="icon-md" />
+    </PopoverTrigger>
+    ```
+
+    다음처럼 token 문법이 과하게 노출된 상태를 장기적으로 유지하지 않는다.
+
+    ```tsx
+    <PopoverTrigger className="rounded-[var(--radius-full)] p-[var(--spacing-2)] focus-visible:shadow-[var(--component-button-focus-ring)]">
+      <SunIcon className="size-[var(--size-icon-md)]" />
+    </PopoverTrigger>
+    ```
 
 ## Dark Mode Policy
 

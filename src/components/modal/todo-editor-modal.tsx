@@ -174,13 +174,13 @@ export default function TodoEditorModal() {
           </DialogHeader>
 
           <div className="flex flex-col gap-[var(--spacing-5)]">
-            <div className="flex flex-col gap-[var(--spacing-2)]">
-              <div className="flex flex-col gap-[var(--spacing-2)]">
+            <div className="form-field">
+              <div className="form-field">
                 <Label htmlFor="todo-event">제목</Label>
                 <p id="todo-event">{form.title}</p>
               </div>
 
-              <div className="flex flex-col gap-[var(--spacing-2)]">
+              <div className="form-field">
                 <Label htmlFor="todo-allday">하루종일</Label>
                 <Switch
                   readOnly
@@ -190,7 +190,7 @@ export default function TodoEditorModal() {
                 />
               </div>
 
-              <div className="flex flex-col gap-[var(--spacing-2)]">
+              <div className="form-field">
                 <Label htmlFor="todo-start">시작</Label>
                 {form.allday ? (
                   <p id="todo-start">{formatDate(form.startAt!)}</p>
@@ -199,7 +199,7 @@ export default function TodoEditorModal() {
                 )}
               </div>
 
-              <div className="flex flex-col gap-[var(--spacing-2)]">
+              <div className="form-field">
                 <Label htmlFor="todo-end">종료</Label>
                 {form.allday ? (
                   <p id="todo-end">{formatDate(form.endAt!)}</p>
@@ -208,7 +208,7 @@ export default function TodoEditorModal() {
                 )}
               </div>
 
-              <div className="flex flex-col gap-[var(--spacing-2)]">
+              <div className="form-field">
                 <Label htmlFor="todo-location">위치</Label>
                 <Input
                   readOnly
@@ -218,7 +218,7 @@ export default function TodoEditorModal() {
                 />
               </div>
 
-              <div className="flex flex-col gap-[var(--spacing-2)]">
+              <div className="form-field">
                 <Label htmlFor="todo-memo">메모</Label>
                 <Textarea
                   readOnly
@@ -229,7 +229,7 @@ export default function TodoEditorModal() {
               </div>
             </div>
 
-            <div className="flex items-center justify-around gap-[var(--spacing-2)]">
+            <div className="form-actions">
               <Button
                 disabled={isPending}
                 onClick={() => todoEditorModal.actions.close()}
@@ -252,8 +252,8 @@ export default function TodoEditorModal() {
         </DialogHeader>
 
         <div className="flex flex-col gap-[var(--spacing-5)]">
-          <div className="flex flex-col gap-[var(--spacing-2)]">
-            <div className="flex flex-col gap-[var(--spacing-2)]">
+          <div className="form-field">
+            <div className="form-field">
               <Label htmlFor="todo-event">제목</Label>
               <Input
                 value={form.title}
@@ -265,7 +265,7 @@ export default function TodoEditorModal() {
               ></Input>
             </div>
 
-            <div className="flex flex-col gap-[var(--spacing-2)]">
+            <div className="form-field">
               <Label htmlFor="todo-allday">하루종일</Label>
               <Switch
                 id="todo-allday"
@@ -277,7 +277,7 @@ export default function TodoEditorModal() {
               />
             </div>
 
-            <div className="flex flex-col gap-[var(--spacing-2)]">
+            <div className="form-field">
               <Label htmlFor="todo-start">시작</Label>
               <CalendarStartPicker
                 isAlldayTrue={form.allday}
@@ -294,7 +294,7 @@ export default function TodoEditorModal() {
               />
             </div>
 
-            <div className="flex flex-col gap-[var(--spacing-2)]">
+            <div className="form-field">
               <Label htmlFor="todo-end">종료</Label>
               <CalendarEndPicker
                 isAlldayTrue={form.allday}
@@ -318,7 +318,7 @@ export default function TodoEditorModal() {
               />
             </div>
 
-            <div className="flex flex-col gap-[var(--spacing-2)]">
+            <div className="form-field">
               <Label htmlFor="todo-location">위치</Label>
               <Input
                 value={form.location}
@@ -330,7 +330,7 @@ export default function TodoEditorModal() {
               />
             </div>
 
-            <div className="flex flex-col gap-[var(--spacing-2)]">
+            <div className="form-field">
               <Label htmlFor="todo-memo">메모</Label>
               <Textarea
                 value={form.memo}
@@ -343,7 +343,7 @@ export default function TodoEditorModal() {
             </div>
           </div>
 
-          <div className="flex items-center justify-around gap-[var(--spacing-2)]">
+          <div className="form-actions">
             <Button
               disabled={isPending}
               className="flex-1"

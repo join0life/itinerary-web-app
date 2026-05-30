@@ -82,7 +82,7 @@ export default function Allday({
               <div key={i} className="w-1/7 shrink-0" />
             ))}
             <div
-              className="mb-[var(--spacing-1)] cursor-pointer rounded-[var(--ds-radius-sm)] bg-[var(--component-calendar-event-accent)] px-[var(--spacing-2)] py-[var(--spacing-1)] text-[length:var(--font-size-xs)] font-[var(--font-weight-semibold)] text-[var(--color-semantic-text-inverse)] outline-none focus-visible:shadow-[var(--component-button-focus-ring)]"
+              className="calendar-allday-event"
               style={{ width: `${(spanDays / 7) * 100}%` }}
             >
               {event.title}

@@ -28,15 +28,13 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className="flex flex-col gap-[var(--spacing-10)]">
-      <div className="text-[length:var(--font-size-xl)] font-[var(--font-weight-bold)]">
-        회원가입
-      </div>
+    <div className="stack-xl">
+      <div className="page-title">회원가입</div>
       <div>
         <Input
           type="email"
           placeholder="Email"
-          className="mb-[var(--spacing-2)] h-[var(--size-12)] px-[var(--spacing-4)]"
+          className="auth-input-lg auth-input-spaced"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={isSignUpPending}
@@ -44,7 +42,7 @@ export default function SignUpPage() {
         <Input
           type="password"
           placeholder="Password"
-          className="h-[var(--size-12)] px-[var(--spacing-4)]"
+          className="auth-input-lg"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           disabled={isSignUpPending}

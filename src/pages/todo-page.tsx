@@ -47,7 +47,7 @@ export default function TodoPage() {
   }
 
   return (
-    <div className="flex w-full flex-col gap-[var(--spacing-5)]">
+    <div className="stack-md w-full">
       <CreateTodoButton />
       <TodoList projectId={Number(projectId)} />
     </div>

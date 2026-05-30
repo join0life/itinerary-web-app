@@ -82,7 +82,7 @@ function Calendar({
           "select-none font-[var(--font-weight-medium)]",
           captionLayout === "label"
             ? "text-[length:var(--font-size-sm)]"
-            : "flex h-[var(--size-8)] items-center gap-[var(--spacing-1)] rounded-[var(--component-button-radius)] pr-[var(--spacing-1)] pl-[var(--spacing-2)] text-[length:var(--font-size-sm)] [&>svg]:size-[var(--size-icon-sm)] [&>svg]:text-muted-foreground",
+            : "flex h-[var(--size-8)] items-center gap-[var(--spacing-1)] rounded-[var(--component-button-radius)] pr-[var(--spacing-1)] pl-[var(--spacing-2)] text-[length:var(--font-size-sm)] [&>svg]:size-icon-sm [&>svg]:text-muted-foreground",
           defaultClassNames.caption_label
         ),
         table: "w-full border-collapse",
@@ -149,7 +149,7 @@ function Calendar({
           if (orientation === "left") {
             return (
               <ChevronLeftIcon
-                className={cn("size-[var(--size-icon-sm)]", className)}
+                className={cn("icon-sm", className)}
                 {...props}
               />
             )
@@ -158,7 +158,7 @@ function Calendar({
           if (orientation === "right") {
             return (
               <ChevronRightIcon
-                className={cn("size-[var(--size-icon-sm)]", className)}
+                className={cn("icon-sm", className)}
                 {...props}
               />
             )
@@ -166,7 +166,7 @@ function Calendar({
 
           return (
             <ChevronDownIcon
-              className={cn("size-[var(--size-icon-sm)]", className)}
+              className={cn("icon-sm", className)}
               {...props}
             />
           )
