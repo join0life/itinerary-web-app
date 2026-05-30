@@ -5,28 +5,30 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "inline-flex shrink-0 items-center justify-center gap-[var(--component-button-gap)] whitespace-nowrap rounded-[var(--component-button-radius)] text-[length:var(--font-size-sm)] font-[var(--font-weight-medium)] transition-all outline-none disabled:pointer-events-none disabled:border-[var(--component-button-disabled-border)] disabled:bg-[var(--component-button-disabled-bg)] disabled:text-[var(--component-button-disabled-text)] disabled:opacity-[var(--component-button-loading-opacity)] focus-visible:shadow-[var(--component-button-focus-ring)] aria-invalid:border-[var(--color-semantic-danger-default)] [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-[var(--size-icon-sm)]",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default:
+          "bg-[var(--component-button-primary-bg)] text-[var(--component-button-primary-text)] hover:bg-[var(--component-button-primary-bg-hover)] active:bg-[var(--component-button-primary-bg-pressed)]",
         destructive:
-          "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+          "bg-[var(--component-button-destructive-bg)] text-[var(--component-button-destructive-text)] hover:bg-[var(--component-button-destructive-bg-hover)]",
         outline:
-          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "border border-[var(--component-button-outline-border)] bg-[var(--component-button-outline-bg)] text-[var(--component-button-outline-text)] shadow-xs hover:bg-[var(--component-button-outline-bg-hover)]",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-[var(--component-button-secondary-bg)] text-[var(--component-button-secondary-text)] hover:bg-[var(--color-semantic-action-ghost-hover)]",
         ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-[var(--component-button-ghost-bg)] text-[var(--component-button-ghost-text)] hover:bg-[var(--component-button-ghost-bg-hover)] hover:text-[var(--color-semantic-text-primary)]",
+        link: "text-[var(--component-button-link-text)] underline-offset-[var(--spacing-1)] hover:text-[var(--component-button-link-text-hover)] hover:underline",
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        icon: "size-9",
-        "icon-sm": "size-8",
-        "icon-lg": "size-10",
+        default:
+          "h-[var(--component-button-height-md)] px-[var(--component-button-padding-x-md)] has-[>svg]:px-[var(--component-button-padding-x-sm)]",
+        sm: "h-[var(--component-button-height-sm)] px-[var(--component-button-padding-x-sm)]",
+        lg: "h-[var(--component-button-height-lg)] px-[var(--component-button-padding-x-lg)]",
+        icon: "size-[var(--component-button-height-icon)]",
+        "icon-sm": "size-[var(--component-button-height-sm)]",
+        "icon-lg": "size-[var(--component-button-height-lg)]",
       },
     },
     defaultVariants: {

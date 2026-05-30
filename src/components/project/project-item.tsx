@@ -27,9 +27,11 @@ export default function ProjectItem({
   const isJoined = isProjectOwner || isProjectMember;
 
   return (
-    <div className="w-fll bg-muted flex h-40 cursor-pointer flex-col gap-3 rounded-xl p-6">
+    <div className="flex h-[var(--component-project-item-height)] w-full cursor-pointer flex-col gap-[var(--spacing-3)] rounded-[var(--component-project-item-radius)] bg-[var(--component-project-item-bg)] p-[var(--component-project-item-padding)] transition-colors hover:bg-[var(--component-project-item-bg-hover)]">
       <div className="flex items-center justify-between">
-        <div className="truncate text-lg font-semibold">{project.name}</div>
+        <div className="truncate text-[length:var(--font-size-lg)] font-[var(--font-weight-semibold)] leading-[var(--line-height-tight)]">
+          {project.name}
+        </div>
         <div className="flex shrink-0 items-center justify-between">
           {!showDelete && (
             <ProjectJoinButton projectId={projectId} isJoined={isJoined} />
@@ -39,9 +41,11 @@ export default function ProjectItem({
       </div>
 
       <div>
-        <div className="line-clamp-1 text-sm">{project.description}</div>
+        <div className="line-clamp-1 text-[length:var(--font-size-sm)] text-[var(--component-project-item-description-text)]">
+          {project.description}
+        </div>
       </div>
-      <div className="w-fit truncate rounded-sm border px-1 py-0.5 text-xs">
+      <div className="w-fit truncate rounded-[var(--component-project-item-owner-badge-radius)] border border-[var(--component-project-item-owner-badge-border)] bg-[var(--component-project-item-owner-badge-bg)] px-[var(--spacing-1)] py-[calc(var(--spacing-1)/2)] text-[length:var(--font-size-xs)]">
         {project.owner.nickname}
       </div>
     </div>

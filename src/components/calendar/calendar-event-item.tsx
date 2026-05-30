@@ -73,15 +73,23 @@ export default function CalendarEventItem({
 
   return (
     <div
+      role="button"
+      tabIndex={0}
       onClick={handleOpenModalClick}
-      className="absolute right-0 left-1/7 w-full cursor-pointer rounded-sm border-l-3 border-l-orange-500 bg-orange-50 px-2 py-3"
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          handleOpenModalClick();
+        }
+      }}
+      className="absolute right-0 left-1/7 w-full cursor-pointer rounded-[var(--ds-radius-sm)] border-l-[var(--spacing-1)] border-l-[var(--component-calendar-event-accent)] bg-[var(--component-calendar-event-confirmed-bg)] px-[var(--spacing-2)] py-[var(--spacing-3)] outline-none focus-visible:shadow-[var(--component-button-focus-ring)]"
       style={style}
       draggable={true}
     >
-      <p className="line-clamp-1 text-sm font-semibold text-orange-500">
+      <p className="line-clamp-1 text-[length:var(--font-size-sm)] font-[var(--font-weight-semibold)] text-[var(--component-calendar-event-text)]">
         {event.title}
       </p>
-      <span className="text-xs text-orange-500">
+      <span className="text-[length:var(--font-size-xs)] text-[var(--color-semantic-text-secondary)]">
         {event.startAt === event.endAt
           ? `${formatTime(event.startAt!)}`
           : `${formatTime(event.startAt!)} ~ ${formatTime(event.endAt!)}`}

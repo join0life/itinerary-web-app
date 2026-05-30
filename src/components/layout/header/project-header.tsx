@@ -1,4 +1,4 @@
-import {useNavigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import ThemeButton from "./theme-button";
 import { ChevronLeftIcon } from "lucide-react";
 import { useProjectByIdData } from "@/hooks/queries/use-project-by-id-data";
@@ -15,17 +15,22 @@ export default function ProjectHeader() {
   });
 
   return (
-    <header className="flex h-15 border-b">
-      <div className="m-auto flex h-full w-full items-center justify-between px-4">
-        <div className="flex w-full items-center gap-1">
-          <div onClick={() => navigate(-1)}>
-            <ChevronLeftIcon className="text-muted-foreground cursor-pointer hover:font-black" />
-          </div>
-          <div className="text-md line-clamp-1 font-bold text-orange-500">
+    <header className="flex h-[var(--size-header-height)] border-b">
+      <div className="m-auto flex h-full w-full items-center justify-between px-page-x">
+        <div className="flex w-full items-center gap-[var(--spacing-1)]">
+          <button
+            type="button"
+            onClick={() => navigate(-1)}
+            className="cursor-pointer rounded-[var(--component-button-radius)] p-[var(--spacing-1)] text-muted-foreground outline-none hover:bg-[var(--component-button-ghost-bg-hover)] focus-visible:shadow-[var(--component-button-focus-ring)]"
+            aria-label="이전 페이지로 이동"
+          >
+            <ChevronLeftIcon className="size-[var(--size-icon-md)]" />
+          </button>
+          <div className="line-clamp-1 text-[length:var(--font-size-md)] font-[var(--font-weight-bold)] text-primary">
             {project?.name}
           </div>
         </div>
-        <div className="flex shrink-0 items-center gap-3">
+        <div className="flex shrink-0 items-center gap-[var(--spacing-3)]">
           <ThemeButton />
           <ProfileEnterButton />
         </div>

@@ -88,7 +88,7 @@ export default function ProfileEditorModal() {
         {isFetchProfilePending && <Loader />}
         {!fetchProfileError && !isFetchProfilePending && (
           <>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-[var(--spacing-2)]">
               <Label htmlFor="profile-image">프로필 이미지</Label>
               <Input
                 disabled={isUpdateProfilePending}
@@ -99,16 +99,25 @@ export default function ProfileEditorModal() {
                 className="hidden"
               />
               <img
+                role="button"
+                tabIndex={0}
                 onClick={() => {
                   if (fileInputRef.current) fileInputRef.current.click();
                 }}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    fileInputRef.current?.click();
+                  }
+                }}
                 src={avatarImage?.previewUrl || profile.avatar_url || dog}
                 id="profile-image"
-                className="h-30 w-30 rounded-full object-cover"
+                className="size-[calc(var(--size-15)*2)] cursor-pointer rounded-[var(--radius-full)] object-cover outline-none focus-visible:shadow-[var(--component-button-focus-ring)]"
+                alt="프로필 이미지 미리보기"
               />
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-[var(--spacing-2)]">
               <Label htmlFor="profile-nickname">닉네임</Label>
               <Input
                 disabled={isUpdateProfilePending}
@@ -118,7 +127,7 @@ export default function ProfileEditorModal() {
               ></Input>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-[var(--spacing-2)]">
               <Label htmlFor="profile-bio">소개</Label>
               <Input
                 disabled={isUpdateProfilePending}

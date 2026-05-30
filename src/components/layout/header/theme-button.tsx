@@ -16,20 +16,20 @@ export default function ThemeButton() {
 
   return (
     <Popover>
-      <PopoverTrigger>
-        <div className="hover:bg-muted cursor-pointer rounded-full p-2">
-          <SunIcon />
-        </div>
+      <PopoverTrigger className="cursor-pointer rounded-[var(--radius-full)] p-[var(--spacing-2)] outline-none hover:bg-muted focus-visible:shadow-[var(--component-button-focus-ring)]">
+        <SunIcon className="size-[var(--size-icon-md)]" />
       </PopoverTrigger>
-      <PopoverContent className="w-35 p-0">
+      <PopoverContent className="w-[calc(var(--size-15)*2.333)] p-[var(--spacing-0)]">
         {THEMES.map((theme) => (
           <PopoverClose key={`theme-button-${theme}`} asChild>
             <div
               onClick={() => setTheme(theme)}
-              className="hover:bg-muted flex cursor-pointer items-center justify-between p-3"
+              className="flex cursor-pointer items-center justify-between p-[var(--spacing-3)] hover:bg-muted"
             >
               {theme}
-              {currentTheme === theme && <CheckIcon className="h-4 w-4" />}
+              {currentTheme === theme && (
+                <CheckIcon className="size-[var(--size-icon-sm)]" />
+              )}
             </div>
           </PopoverClose>
         ))}

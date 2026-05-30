@@ -25,17 +25,17 @@ export default function ProfileEnterButton() {
   if (!session) return null;
   return (
     <Popover>
-      <PopoverTrigger>
+      <PopoverTrigger className="rounded-[var(--radius-full)] outline-none focus-visible:shadow-[var(--component-button-focus-ring)]">
         <img
           src={profile?.avatar_url || dog}
-          className="h-6 w-6 cursor-pointer rounded-full object-cover"
+          className="size-[var(--size-icon-lg)] cursor-pointer rounded-[var(--radius-full)] object-cover"
           alt="프로필 이미지"
         />
       </PopoverTrigger>
-      <PopoverContent className="flex w-40 flex-col p-0">
+      <PopoverContent className="flex w-[var(--size-40)] flex-col p-[var(--spacing-0)]">
         <PopoverClose asChild>
           <Link to={`/profile/${session.user.id}`}>
-            <div className="hover:bg-muted cursor-pointer px-4 py-3 text-sm">
+            <div className="cursor-pointer px-[var(--spacing-4)] py-[var(--spacing-3)] text-[length:var(--font-size-sm)] hover:bg-muted">
               프로필
             </div>
           </Link>
@@ -43,7 +43,7 @@ export default function ProfileEnterButton() {
         <PopoverClose asChild>
           <div
             onClick={handleLogoutClick}
-            className="hover:bg-muted cursor-pointer px-4 py-3 text-sm"
+            className="cursor-pointer px-[var(--spacing-4)] py-[var(--spacing-3)] text-[length:var(--font-size-sm)] hover:bg-muted"
           >
             로그아웃
           </div>

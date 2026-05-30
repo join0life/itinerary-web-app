@@ -7,7 +7,7 @@ function Textarea({ className, ...props }: React.ComponentProps<"textarea">) {
     <textarea
       data-slot="textarea"
       className={cn(
-        "border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content min-h-16 w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "flex field-sizing-content min-h-[var(--spacing-16)] w-full rounded-[var(--component-input-radius)] border border-[var(--component-input-border)] bg-[var(--component-input-bg)] px-[var(--component-input-padding-x)] py-[var(--spacing-2)] text-[length:var(--font-size-md)] text-[var(--component-input-text)] shadow-xs transition-[color,box-shadow] outline-none placeholder:text-[var(--component-input-placeholder)] focus-visible:border-[var(--component-input-border-focus)] focus-visible:shadow-[var(--component-input-focus-ring)] aria-invalid:border-[var(--component-input-border-invalid)] disabled:cursor-not-allowed disabled:bg-[var(--component-input-disabled-bg)] disabled:text-[var(--component-input-disabled-text)] md:text-[length:var(--font-size-sm)]",
         className
       )}
       {...props}

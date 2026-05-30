@@ -2,10 +2,16 @@ import { useOpenEditTodoModal } from "@/store/todo-editor-modal";
 import { Button } from "../ui/button";
 import type { EventEntity } from "@/types";
 
-export default function UpdateTodoButton(props: EventEntity) {
+type UpdateTodoButtonProps = EventEntity & {
+  disabled?: boolean;
+};
+
+export default function UpdateTodoButton(props: UpdateTodoButtonProps) {
   const openTodoEditorModal = useOpenEditTodoModal();
 
   const handleButtonClick = () => {
+    if (props.disabled) return;
+
     openTodoEditorModal({
       projectId: props.project_id,
       id: props.id,
@@ -20,8 +26,9 @@ export default function UpdateTodoButton(props: EventEntity) {
   };
   return (
     <Button
+      disabled={props.disabled}
       onClick={handleButtonClick}
-      className="cursor-pointer px-3 py-1 text-xs"
+      className="h-[var(--component-todo-item-action-button-size)] cursor-pointer px-[var(--spacing-3)] text-[length:var(--font-size-xs)]"
       variant={"outline"}
     >
       수정

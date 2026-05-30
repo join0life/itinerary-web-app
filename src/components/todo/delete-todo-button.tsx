@@ -3,7 +3,13 @@ import { Button } from "../ui/button";
 import { toast } from "sonner";
 import { useOpenAlertModal } from "@/store/use-alert-modal";
 
-export default function DeleteTodoButton({ id }: { id: number }) {
+export default function DeleteTodoButton({
+  id,
+  disabled = false,
+}: {
+  id: number;
+  disabled?: boolean;
+}) {
   const openAlertModal = useOpenAlertModal();
 
   const { mutate: deleteTodo, isPending: isDeleteTodoPending } = useDeleteEvent(
@@ -22,6 +28,8 @@ export default function DeleteTodoButton({ id }: { id: number }) {
   );
 
   const handleDeleteClick = () => {
+    if (disabled) return;
+
     openAlertModal({
       title: "일정 삭제",
       description: "일정을 삭제하시겠습니까?",
@@ -33,9 +41,9 @@ export default function DeleteTodoButton({ id }: { id: number }) {
 
   return (
     <Button
-      disabled={isDeleteTodoPending}
+      disabled={disabled || isDeleteTodoPending}
       onClick={handleDeleteClick}
-      className="cursor-pointer px-3 py-1 text-xs"
+      className="h-[var(--component-todo-item-action-button-size)] cursor-pointer px-[var(--spacing-3)] text-[length:var(--font-size-xs)]"
       variant={"destructive"}
     >
       삭제

@@ -1,8 +1,7 @@
-import { Outlet, useLocation, useMatch, useParams } from "react-router";
+import { Outlet, useLocation, useMatch } from "react-router";
 import BottomNavigationBar from "./bottom-navigation-bar";
 import GlobalHeader from "./header/global-header";
 import ProjectHeader from "./header/project-header";
-import { DialogOverlay } from "@radix-ui/react-dialog";
 
 export default function GlobalLayout() {
   const location = useLocation();
@@ -14,10 +13,10 @@ export default function GlobalLayout() {
 
   return (
     <div>
-      <div className="m-auto flex min-h-dvh max-w-150 flex-col shadow-xl">
+      <div className="m-auto flex min-h-dvh max-w-[var(--size-app-shell-width)] flex-col shadow-app-shell">
         {!isProjectHeaderPage ? <GlobalHeader /> : <ProjectHeader />}
         {!isIndexPage ? (
-          <div className="m-auto h-full w-full flex-1 px-4 py-6">
+          <div className="m-auto h-full w-full flex-1 px-page-x py-page-y">
             <Outlet />
           </div>
         ) : (
@@ -27,7 +26,7 @@ export default function GlobalLayout() {
         )}
 
         {isIndexPage && (
-          <footer className="text-muted-foreground border-t py-10 text-center">
+          <footer className="border-t py-[var(--spacing-10)] text-center text-muted-foreground">
             @join0life
           </footer>
         )}

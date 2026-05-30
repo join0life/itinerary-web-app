@@ -84,11 +84,11 @@ export default function CalendarPage() {
         selectedDate={selectedDate}
       />
 
-      <div className="bg-muted h-15 overflow-x-hidden overflow-y-scroll border-b border-dashed [&::-webkit-scrollbar]:hidden">
+      <div className="h-[var(--size-15)] overflow-x-hidden overflow-y-scroll border-b border-dashed bg-[var(--component-calendar-allday-bg)] [&::-webkit-scrollbar]:hidden">
         <Allday baseDate={baseDate} events={calendarEvents} />
       </div>
 
-      <div className="flex flex-col sm:h-130 md:h-150 lg:h-170">
+      <div className="flex flex-col sm:h-[calc(var(--size-40)*3.25)] md:h-[calc(var(--size-40)*3.75)] lg:h-[calc(var(--size-40)*4.25)]">
         <WeeklyCalendar
           events={filteredCalendarEvents}
           baseDate={baseDate}

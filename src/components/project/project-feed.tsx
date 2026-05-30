@@ -24,7 +24,7 @@ export default function ProjectFeed({ ownerId }: { ownerId?: string }) {
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-[var(--spacing-semantic-item-gap)]">
       {data?.pages.map((page) =>
         page.map((projectId) => (
           <ProjectItem
@@ -35,7 +35,7 @@ export default function ProjectFeed({ ownerId }: { ownerId?: string }) {
         )),
       )}
       {isFetchingNextPage && <Loader />}
-      <div ref={ref} className="m-5"></div>
+      <div ref={ref} className="m-[var(--spacing-5)]"></div>
     </div>
   );
 }

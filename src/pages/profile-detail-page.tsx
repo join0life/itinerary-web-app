@@ -1,6 +1,5 @@
 import ProfileInfo from "@/components/profile/profile-info";
 import ProjectFeed from "@/components/project/project-feed";
-import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import { Navigate, useParams } from "react-router";
 
@@ -17,11 +16,13 @@ export default function ProfileDetailPage() {
   if (!userId) return <Navigate to={"/"} replace />;
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-[var(--spacing-10)]">
       <ProfileInfo userId={userId} />
       <div className="border-b"></div>
-      <div className="flex flex-col gap-3">
-        <div className="text-xl font-semibold">내 프로젝트</div>
+      <div className="flex flex-col gap-[var(--spacing-3)]">
+        <div className="text-[length:var(--font-size-xl)] font-[var(--font-weight-semibold)]">
+          내 프로젝트
+        </div>
         <ProjectFeed ownerId={userId} />
       </div>
     </div>

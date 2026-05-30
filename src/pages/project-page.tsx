@@ -11,7 +11,7 @@ export default function ProjectPage() {
   }, []);
 
   return (
-    <div className="relative flex w-full flex-col gap-3">
+    <div className="relative flex w-full flex-col gap-[var(--spacing-semantic-item-gap)]">
       <SearchProject />
       <ProjectFeed />
       <CreateProjectButton />
