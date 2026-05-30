@@ -14,14 +14,8 @@ export default function ProjectJoinModal() {
   const projectId = useProjectId();
   const navigate = useNavigate();
 
-  if (!projectId) return null;
-
   const { mutate: joinProject, isPending: isJoinProjectPending } =
     useJoinProject({
-      onSuccess: () => {
-        close();
-        navigate(`/project/${projectId}/todo`);
-      },
       onError: (error) => {
         toast.error("입장에 실패했습니다. 비밀번호를 다시 입력해주세요.", {
           position: "top-center",
@@ -30,16 +24,31 @@ export default function ProjectJoinModal() {
     });
 
   const handleValidatePasswordClick = () => {
+    if (!projectId) return;
     if (password.trim() === "") return;
 
     joinProject({
       projectId,
       projectPassword: password,
+    }, {
+      onSuccess: (_, variables) => {
+        close();
+        setPassword("");
+        navigate(`/project/${variables.projectId}/todo`);
+      },
     });
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={close}>
+    <Dialog
+      open={isOpen && !!projectId}
+      onOpenChange={(open) => {
+        if (!open) {
+          close();
+          setPassword("");
+        }
+      }}
+    >
       <DialogContent>
         <DialogTitle>비밀번호 입력</DialogTitle>
         <DialogDescription>

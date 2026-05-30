@@ -65,7 +65,7 @@ export async function joinProject({
   projectPassword: string;
 }) {
   const { error } = await supabase.rpc("join_project", {
-    p_project_id: String(projectId),
+    p_project_id: projectId,
     p_password: projectPassword,
   });
 
