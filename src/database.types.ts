@@ -186,7 +186,7 @@ export type Database = {
         }
       }
       join_project: {
-        Args: { p_password: string; p_project_id: string }
+        Args: { p_password: string; p_project_id: number }
         Returns: undefined
       }
     }
