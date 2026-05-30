@@ -69,7 +69,7 @@ export default function ProjectEditorModal() {
           <DialogTitle>새 프로젝트 만들기</DialogTitle>
         </DialogHeader>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-[var(--spacing-2)]">
           <Label htmlFor="project-name">프로젝트 이름</Label>
           <Input
             id="project-name"
@@ -79,7 +79,7 @@ export default function ProjectEditorModal() {
           ></Input>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-[var(--spacing-2)]">
           <Label htmlFor="project-description">자세한 설명</Label>
           <Input
             id="project-description"
@@ -89,7 +89,7 @@ export default function ProjectEditorModal() {
           ></Input>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-[var(--spacing-2)]">
           <Label htmlFor="project-password">비밀번호</Label>
           <Input
             id="project-description"
@@ -100,7 +100,7 @@ export default function ProjectEditorModal() {
           ></Input>
         </div>
 
-        <div className="flex items-center justify-around gap-2">
+        <div className="flex items-center justify-around gap-[var(--spacing-2)]">
           <Button
             className="flex-1"
             variant={"outline"}

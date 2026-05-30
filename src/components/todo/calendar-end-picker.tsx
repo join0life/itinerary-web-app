@@ -35,14 +35,14 @@ export function CalendarEndPicker({
 
   return (
     <div className="relative">
-      <div className="flex gap-2">
-        <div className="flex flex-col gap-3">
+      <div className="flex gap-[var(--spacing-2)]">
+        <div className="flex flex-col gap-[var(--spacing-3)]">
           <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
               <Button
                 variant="outline"
                 id="date-picker"
-                className="w-32 justify-between font-normal"
+                className="w-[calc(var(--size-40)-var(--spacing-8))] justify-between font-[var(--font-weight-regular)]"
               >
                 {value
                   ? value.toLocaleDateString()
@@ -51,7 +51,7 @@ export function CalendarEndPicker({
               </Button>
             </PopoverTrigger>
             <PopoverContent
-              className="w-auto overflow-hidden p-0"
+              className="w-auto overflow-hidden p-[var(--spacing-0)]"
               align="start"
             >
               <Calendar
@@ -75,9 +75,9 @@ export function CalendarEndPicker({
         </div>
 
         {!isAlldayTrue && (
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-[var(--spacing-3)]">
             <Input
-              className="text-sm"
+              className="text-[length:var(--font-size-sm)]"
               type="time"
               step="300"
               value={time}

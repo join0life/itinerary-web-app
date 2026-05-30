@@ -8,25 +8,25 @@ export default function BottomNavigationBar() {
 
   return (
     <nav
-      className={`text-muted-foreground sticky bottom-0 flex h-15 w-full items-center justify-center border-t bg-white px-1 py-2 text-xs dark:bg-[oklch(0.145_0_0)] ${isCalendarPage ? "z-30" : ""}`}
+      className={`sticky bottom-0 flex h-[var(--component-bottom-nav-height)] w-full items-center justify-center border-t border-[var(--component-bottom-nav-border)] bg-[var(--component-bottom-nav-bg)] px-[var(--spacing-1)] py-[var(--spacing-2)] text-[length:var(--font-size-xs)] text-[var(--component-bottom-nav-text)] ${isCalendarPage ? "z-30" : ""}`}
     >
       <NavItem to={"/"}>
-        <Home className="m-auto w-5" />
+        <Home className="m-auto size-[var(--component-bottom-nav-icon-size)]" />
         <div>소개</div>
       </NavItem>
 
       <NavItem to={"/project"} end>
-        <Folder className="m-auto w-5" />
+        <Folder className="m-auto size-[var(--component-bottom-nav-icon-size)]" />
         <div>프로젝트</div>
       </NavItem>
 
       <NavItem to={`/project/${recentProjectId}/todo`}>
-        <ListTodo className="m-auto w-5" />
+        <ListTodo className="m-auto size-[var(--component-bottom-nav-icon-size)]" />
         <div>일정</div>
       </NavItem>
 
       <NavItem to={`/project/${recentProjectId}/calendar`}>
-        <Calendar className="m-auto w-5" />
+        <Calendar className="m-auto size-[var(--component-bottom-nav-icon-size)]" />
         <div>캘린더</div>
       </NavItem>
     </nav>
@@ -43,11 +43,13 @@ function NavItem({
   end?: boolean;
 }) {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-0.5">
+    <div className="flex w-full flex-col items-center justify-center gap-[var(--spacing-1)]">
       <NavLink
         to={to}
         className={({ isActive }) =>
-          isActive ? "text-black dark:text-white" : ""
+          `rounded-[var(--ds-radius-sm)] focus-visible:shadow-[var(--component-button-focus-ring)] focus-visible:outline-none ${
+            isActive ? "text-[var(--component-bottom-nav-text-active)]" : ""
+          }`
         }
         end={end}
       >

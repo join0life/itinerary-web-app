@@ -1,0 +1,417 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-ds-bg-default: var(--color-semantic-bg-default);
+  --color-ds-bg-muted: var(--color-semantic-bg-muted);
+  --color-ds-bg-elevated: var(--color-semantic-bg-elevated);
+  --color-ds-text-primary: var(--color-semantic-text-primary);
+  --color-ds-text-secondary: var(--color-semantic-text-secondary);
+  --color-ds-text-muted: var(--color-semantic-text-muted);
+  --color-ds-action-primary: var(--color-semantic-action-primary);
+  --color-ds-calendar-confirmed: var(--color-semantic-calendar-confirmed);
+  --color-ds-calendar-pending: var(--color-semantic-calendar-pending);
+
+  --radius-sm: var(--ds-radius-sm);
+  --radius-md: var(--ds-radius-md);
+  --radius-lg: var(--ds-radius-lg);
+  --radius-xl: var(--ds-radius-xl);
+
+  --spacing-page-x: var(--spacing-semantic-page-x);
+  --spacing-page-y: var(--spacing-semantic-page-y);
+  --spacing-section-gap: var(--spacing-semantic-section-gap);
+  --spacing-item-gap: var(--spacing-semantic-item-gap);
+
+  --shadow-xs: var(--shadow-token-xs);
+  --shadow-sm: var(--shadow-token-sm);
+  --shadow-md: var(--shadow-token-md);
+  --shadow-app-shell: var(--shadow-app-shell);
+}
+
+:root {
+  --color-primitive-white: #ffffff;
+  --color-primitive-black: #0f1115;
+
+  --color-primitive-neutral-0: #ffffff;
+  --color-primitive-neutral-50: #fafafa;
+  --color-primitive-neutral-100: #f5f5f4;
+  --color-primitive-neutral-200: #e7e5e4;
+  --color-primitive-neutral-300: #d6d3d1;
+  --color-primitive-neutral-400: #a8a29e;
+  --color-primitive-neutral-500: #78716c;
+  --color-primitive-neutral-600: #57534e;
+  --color-primitive-neutral-700: #44403c;
+  --color-primitive-neutral-800: #292524;
+  --color-primitive-neutral-900: #1c1917;
+  --color-primitive-neutral-1000: #0c0a09;
+
+  --color-primitive-teal-50: #f0fdfa;
+  --color-primitive-teal-100: #ccfbf1;
+  --color-primitive-teal-300: #5eead4;
+  --color-primitive-teal-500: #14b8a6;
+  --color-primitive-teal-600: #0d9488;
+  --color-primitive-teal-700: #0f766e;
+  --color-primitive-teal-900: #134e4a;
+
+  --color-primitive-sky-50: #f0f9ff;
+  --color-primitive-sky-100: #e0f2fe;
+  --color-primitive-sky-300: #7dd3fc;
+  --color-primitive-sky-500: #0ea5e9;
+  --color-primitive-sky-600: #0284c7;
+  --color-primitive-sky-900: #0c4a6e;
+
+  --color-primitive-red-50: #fef2f2;
+  --color-primitive-red-500: #ef4444;
+  --color-primitive-red-600: #dc2626;
+  --color-primitive-red-700: #b91c1c;
+
+  --color-primitive-yellow-50: #fefce8;
+  --color-primitive-yellow-300: #fde047;
+  --color-primitive-yellow-500: #eab308;
+  --color-primitive-yellow-700: #a16207;
+
+  --color-semantic-bg-default: var(--color-primitive-neutral-0);
+  --color-semantic-bg-muted: var(--color-primitive-neutral-100);
+  --color-semantic-bg-elevated: var(--color-primitive-white);
+  --color-semantic-bg-inverse: var(--color-primitive-neutral-900);
+  --color-semantic-text-primary: var(--color-primitive-neutral-900);
+  --color-semantic-text-secondary: var(--color-primitive-neutral-600);
+  --color-semantic-text-muted: var(--color-primitive-neutral-500);
+  --color-semantic-text-inverse: var(--color-primitive-white);
+  --color-semantic-border-default: var(--color-primitive-neutral-200);
+  --color-semantic-border-subtle: var(--color-primitive-neutral-100);
+  --color-semantic-action-primary: var(--color-primitive-teal-600);
+  --color-semantic-action-primary-hover: var(--color-primitive-teal-700);
+  --color-semantic-action-secondary: var(--color-primitive-neutral-100);
+  --color-semantic-action-ghost-hover: var(--color-primitive-neutral-100);
+  --color-semantic-danger-default: var(--color-primitive-red-500);
+  --color-semantic-danger-hover: var(--color-primitive-red-600);
+  --color-semantic-success-default: var(--color-primitive-teal-600);
+  --color-semantic-calendar-confirmed: var(--color-primitive-teal-100);
+  --color-semantic-calendar-pending: var(--color-primitive-yellow-50);
+
+  --spacing-0: 0rem;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-semantic-page-x: var(--spacing-4);
+  --spacing-semantic-page-y: var(--spacing-6);
+  --spacing-semantic-section-gap: var(--spacing-8);
+  --spacing-semantic-item-gap: var(--spacing-3);
+
+  --radius-none: 0rem;
+  --ds-radius-sm: 0.25rem;
+  --ds-radius-md: 0.5rem;
+  --ds-radius-lg: 0.625rem;
+  --ds-radius-xl: 0.75rem;
+  --radius-full: 9999px;
+  --radius-component-button: var(--ds-radius-md);
+  --radius-component-input: var(--ds-radius-md);
+  --radius-component-card: var(--ds-radius-md);
+  --radius-component-dialog: var(--ds-radius-lg);
+
+  --font-family-sans: "Noto Sans KR", system-ui, sans-serif;
+  --font-family-brand: "JejuStoneWall", "Noto Sans KR", sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-8: 2rem;
+  --size-9: 2.25rem;
+  --size-10: 2.5rem;
+  --size-12: 3rem;
+  --size-15: 3.75rem;
+  --size-40: 10rem;
+  --size-header-height: var(--size-15);
+  --size-bottom-nav-height: var(--size-15);
+  --size-app-shell-width: 37.5rem;
+  --size-floating-action-max-width: 35.5rem;
+  --size-button-sm-height: var(--size-8);
+  --size-button-md-height: var(--size-9);
+  --size-button-lg-height: var(--size-10);
+  --size-icon-sm: var(--size-4);
+  --size-icon-md: var(--size-5);
+  --size-icon-lg: var(--size-6);
+
+  --shadow-none: none;
+  --shadow-token-xs: 0 1px 2px rgb(15 17 21 / 0.05);
+  --shadow-token-sm: 0 1px 3px rgb(15 17 21 / 0.08), 0 1px 2px rgb(15 17 21 / 0.04);
+  --shadow-token-md: 0 8px 24px rgb(15 17 21 / 0.1);
+  --shadow-app-shell: 0 18px 48px rgb(15 17 21 / 0.16);
+
+  --component-button-primary-bg: var(--color-semantic-action-primary);
+  --component-button-primary-bg-hover: var(--color-semantic-action-primary-hover);
+  --component-button-primary-bg-pressed: var(--color-primitive-teal-700);
+  --component-button-primary-text: var(--color-semantic-text-inverse);
+  --component-button-secondary-bg: var(--color-semantic-action-secondary);
+  --component-button-secondary-text: var(--color-semantic-text-primary);
+  --component-button-outline-bg: transparent;
+  --component-button-outline-border: var(--color-semantic-border-default);
+  --component-button-outline-bg-hover: var(--color-semantic-action-ghost-hover);
+  --component-button-outline-text: var(--color-semantic-text-primary);
+  --component-button-ghost-bg: transparent;
+  --component-button-ghost-bg-hover: var(--color-semantic-action-ghost-hover);
+  --component-button-ghost-text: var(--color-semantic-text-secondary);
+  --component-button-destructive-bg: var(--color-semantic-danger-default);
+  --component-button-destructive-bg-hover: var(--color-semantic-danger-hover);
+  --component-button-destructive-text: var(--color-semantic-text-inverse);
+  --component-button-link-text: var(--color-semantic-action-primary);
+  --component-button-link-text-hover: var(--color-semantic-action-primary-hover);
+  --component-button-disabled-bg: var(--color-primitive-neutral-100);
+  --component-button-disabled-text: var(--color-primitive-neutral-400);
+  --component-button-disabled-border: var(--color-primitive-neutral-200);
+  --component-button-loading-opacity: 0.72;
+  --component-button-focus-ring: 0 0 0 3px rgb(20 184 166 / 0.28);
+  --component-button-radius: var(--radius-component-button);
+  --component-button-height-sm: var(--size-button-sm-height);
+  --component-button-height-md: var(--size-button-md-height);
+  --component-button-height-lg: var(--size-button-lg-height);
+  --component-button-height-icon: var(--size-9);
+  --component-button-padding-x-sm: var(--spacing-3);
+  --component-button-padding-x-md: var(--spacing-4);
+  --component-button-padding-x-lg: var(--spacing-6);
+  --component-button-gap: var(--spacing-2);
+
+  --component-input-bg: transparent;
+  --component-input-text: var(--color-semantic-text-primary);
+  --component-input-placeholder: var(--color-semantic-text-muted);
+  --component-input-border: var(--color-semantic-border-default);
+  --component-input-border-focus: var(--color-semantic-action-primary);
+  --component-input-border-invalid: var(--color-semantic-danger-default);
+  --component-input-disabled-bg: var(--color-primitive-neutral-100);
+  --component-input-disabled-text: var(--color-primitive-neutral-400);
+  --component-input-radius: var(--radius-component-input);
+  --component-input-height: var(--size-9);
+  --component-input-padding-x: var(--spacing-3);
+  --component-input-focus-ring: 0 0 0 3px rgb(20 184 166 / 0.22);
+
+  --component-card-default-bg: var(--color-semantic-bg-elevated);
+  --component-card-default-text: var(--color-semantic-text-primary);
+  --component-card-default-border: var(--color-semantic-border-default);
+  --component-card-muted-bg: var(--color-semantic-bg-muted);
+  --component-card-muted-text: var(--color-semantic-text-primary);
+  --component-card-interactive-bg-hover: var(--color-primitive-teal-50);
+  --component-card-interactive-selected: var(--color-primitive-teal-100);
+  --component-card-radius: var(--radius-component-card);
+  --component-card-padding: var(--spacing-6);
+  --component-card-gap: var(--spacing-3);
+  --component-card-shadow: var(--shadow-none);
+
+  --component-dialog-bg: var(--color-semantic-bg-elevated);
+  --component-dialog-text: var(--color-semantic-text-primary);
+  --component-dialog-overlay: rgb(15 17 21 / 0.48);
+  --component-dialog-radius: var(--radius-component-dialog);
+  --component-dialog-padding: var(--spacing-6);
+  --component-dialog-width-mobile: calc(100vw - 2rem);
+  --component-dialog-width-desktop: 32rem;
+  --component-dialog-shadow: var(--shadow-token-md);
+
+  --component-checkbox-size: var(--size-4);
+  --component-checkbox-radius: var(--ds-radius-sm);
+  --component-checkbox-border: var(--color-semantic-border-default);
+  --component-checkbox-bg-checked: var(--color-semantic-action-primary);
+  --component-checkbox-icon-checked: var(--color-semantic-text-inverse);
+  --component-checkbox-disabled-bg: var(--color-primitive-neutral-100);
+  --component-checkbox-disabled-border: var(--color-primitive-neutral-200);
+  --component-checkbox-focus-ring: 0 0 0 3px rgb(20 184 166 / 0.22);
+
+  --component-bottom-nav-bg: var(--color-semantic-bg-elevated);
+  --component-bottom-nav-border: var(--color-semantic-border-default);
+  --component-bottom-nav-height: var(--size-bottom-nav-height);
+  --component-bottom-nav-text: var(--color-semantic-text-muted);
+  --component-bottom-nav-text-active: var(--color-semantic-text-primary);
+  --component-bottom-nav-icon-size: var(--size-icon-md);
+
+  --component-project-item-bg: var(--color-semantic-bg-muted);
+  --component-project-item-bg-hover: var(--color-primitive-teal-50);
+  --component-project-item-radius: var(--ds-radius-xl);
+  --component-project-item-padding: var(--spacing-6);
+  --component-project-item-height: var(--size-40);
+  --component-project-item-description-text: var(--color-semantic-text-secondary);
+  --component-project-item-owner-badge-bg: var(--color-semantic-bg-elevated);
+  --component-project-item-owner-badge-border: var(--color-semantic-border-default);
+  --component-project-item-owner-badge-radius: var(--ds-radius-sm);
+
+  --component-todo-item-gap: var(--spacing-2);
+  --component-todo-item-text: var(--color-semantic-text-primary);
+  --component-todo-item-owner-actions-visibility-rule: ownerOnly;
+  --component-todo-item-action-button-size: var(--size-8);
+  --component-todo-item-confirmed-text: var(--color-semantic-text-muted);
+  --component-todo-item-pending-text: var(--color-semantic-text-primary);
+
+  --component-calendar-bg: var(--color-semantic-bg-default);
+  --component-calendar-border: var(--color-semantic-border-default);
+  --component-calendar-today-bg: var(--color-primitive-sky-50);
+  --component-calendar-selected-bg: var(--color-primitive-teal-100);
+  --component-calendar-event-confirmed-bg: var(--color-semantic-calendar-confirmed);
+  --component-calendar-event-pending-bg: var(--color-semantic-calendar-pending);
+  --component-calendar-event-text: var(--color-semantic-text-primary);
+  --component-calendar-allday-bg: var(--color-semantic-bg-muted);
+  --component-calendar-event-accent: var(--color-semantic-action-primary);
+
+  --radius: var(--ds-radius-lg);
+  --background: var(--color-semantic-bg-default);
+  --foreground: var(--color-semantic-text-primary);
+  --card: var(--color-semantic-bg-elevated);
+  --card-foreground: var(--color-semantic-text-primary);
+  --popover: var(--color-semantic-bg-elevated);
+  --popover-foreground: var(--color-semantic-text-primary);
+  --primary: var(--color-semantic-action-primary);
+  --primary-foreground: var(--color-semantic-text-inverse);
+  --secondary: var(--color-semantic-action-secondary);
+  --secondary-foreground: var(--color-semantic-text-primary);
+  --muted: var(--color-semantic-bg-muted);
+  --muted-foreground: var(--color-semantic-text-muted);
+  --accent: var(--color-primitive-teal-50);
+  --accent-foreground: var(--color-semantic-text-primary);
+  --destructive: var(--color-semantic-danger-default);
+  --destructive-foreground: var(--color-semantic-text-inverse);
+  --border: var(--color-semantic-border-default);
+  --input: var(--color-semantic-border-default);
+  --ring: var(--color-semantic-action-primary);
+
+  --chart-1: var(--color-primitive-teal-600);
+  --chart-2: var(--color-primitive-sky-500);
+  --chart-3: var(--color-primitive-yellow-500);
+  --chart-4: var(--color-primitive-red-500);
+  --chart-5: var(--color-primitive-neutral-600);
+  --sidebar: var(--color-semantic-bg-elevated);
+  --sidebar-foreground: var(--color-semantic-text-primary);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.dark {
+  --color-semantic-bg-default: var(--color-primitive-neutral-1000);
+  --color-semantic-bg-muted: var(--color-primitive-neutral-900);
+  --color-semantic-bg-elevated: var(--color-primitive-neutral-800);
+  --color-semantic-bg-inverse: var(--color-primitive-neutral-0);
+  --color-semantic-text-primary: var(--color-primitive-neutral-50);
+  --color-semantic-text-secondary: var(--color-primitive-neutral-300);
+  --color-semantic-text-muted: var(--color-primitive-neutral-400);
+  --color-semantic-text-inverse: var(--color-primitive-neutral-1000);
+  --color-semantic-border-default: rgb(255 255 255 / 0.12);
+  --color-semantic-border-subtle: rgb(255 255 255 / 0.08);
+  --color-semantic-action-primary: var(--color-primitive-teal-300);
+  --color-semantic-action-primary-hover: var(--color-primitive-teal-100);
+  --color-semantic-action-secondary: var(--color-primitive-neutral-900);
+  --color-semantic-action-ghost-hover: rgb(255 255 255 / 0.08);
+  --color-semantic-danger-default: var(--color-primitive-red-500);
+  --color-semantic-danger-hover: var(--color-primitive-red-600);
+  --color-semantic-calendar-confirmed: rgb(20 184 166 / 0.22);
+  --color-semantic-calendar-pending: rgb(234 179 8 / 0.2);
+
+  --component-button-primary-bg-pressed: var(--color-primitive-teal-500);
+  --component-button-disabled-bg: var(--color-primitive-neutral-900);
+  --component-button-disabled-text: var(--color-primitive-neutral-500);
+  --component-button-disabled-border: rgb(255 255 255 / 0.08);
+  --component-card-interactive-bg-hover: rgb(20 184 166 / 0.14);
+  --component-card-interactive-selected: rgb(20 184 166 / 0.2);
+  --component-dialog-overlay: rgb(0 0 0 / 0.6);
+  --component-checkbox-disabled-bg: var(--color-primitive-neutral-900);
+  --component-checkbox-disabled-border: rgb(255 255 255 / 0.08);
+  --component-calendar-today-bg: rgb(14 165 233 / 0.16);
+  --component-calendar-selected-bg: rgb(20 184 166 / 0.2);
+
+  --background: var(--color-semantic-bg-default);
+  --foreground: var(--color-semantic-text-primary);
+  --card: var(--color-semantic-bg-elevated);
+  --card-foreground: var(--color-semantic-text-primary);
+  --popover: var(--color-semantic-bg-elevated);
+  --popover-foreground: var(--color-semantic-text-primary);
+  --primary: var(--color-semantic-action-primary);
+  --primary-foreground: var(--color-semantic-text-inverse);
+  --secondary: var(--color-semantic-action-secondary);
+  --secondary-foreground: var(--color-semantic-text-primary);
+  --muted: var(--color-semantic-bg-muted);
+  --muted-foreground: var(--color-semantic-text-muted);
+  --accent: rgb(20 184 166 / 0.14);
+  --accent-foreground: var(--color-semantic-text-primary);
+  --destructive: var(--color-semantic-danger-default);
+  --destructive-foreground: var(--color-semantic-text-inverse);
+  --border: var(--color-semantic-border-default);
+  --input: var(--color-semantic-border-default);
+  --ring: var(--color-semantic-action-primary);
+
+  --chart-1: var(--color-primitive-teal-300);
+  --chart-2: var(--color-primitive-sky-300);
+  --chart-3: var(--color-primitive-yellow-300);
+  --chart-4: var(--color-primitive-red-500);
+  --chart-5: var(--color-primitive-neutral-300);
+  --sidebar: var(--color-semantic-bg-elevated);
+  --sidebar-foreground: var(--color-semantic-text-primary);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-family-sans);
+  }
+}

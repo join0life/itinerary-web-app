@@ -1,0 +1,1603 @@
+{
+  "color": {
+    "primitive": {
+      "white": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Pure white for light surfaces."
+      },
+      "black": {
+        "value": "#0f1115",
+        "type": "color",
+        "description": "Soft black for high-emphasis text."
+      },
+      "neutral": {
+        "0": {
+          "value": "#ffffff",
+          "type": "color",
+          "description": "White."
+        },
+        "50": {
+          "value": "#fafafa",
+          "type": "color",
+          "description": "App background tint."
+        },
+        "100": {
+          "value": "#f5f5f4",
+          "type": "color",
+          "description": "Muted surface."
+        },
+        "200": {
+          "value": "#e7e5e4",
+          "type": "color",
+          "description": "Subtle border."
+        },
+        "300": {
+          "value": "#d6d3d1",
+          "type": "color",
+          "description": "Default border."
+        },
+        "400": {
+          "value": "#a8a29e",
+          "type": "color",
+          "description": "Disabled text."
+        },
+        "500": {
+          "value": "#78716c",
+          "type": "color",
+          "description": "Muted text."
+        },
+        "600": {
+          "value": "#57534e",
+          "type": "color",
+          "description": "Secondary text."
+        },
+        "700": {
+          "value": "#44403c",
+          "type": "color",
+          "description": "Strong text."
+        },
+        "800": {
+          "value": "#292524",
+          "type": "color",
+          "description": "Dark elevated surface."
+        },
+        "900": {
+          "value": "#1c1917",
+          "type": "color",
+          "description": "Dark muted surface."
+        },
+        "1000": {
+          "value": "#0c0a09",
+          "type": "color",
+          "description": "Dark app background."
+        }
+      },
+      "teal": {
+        "50": {
+          "value": "#f0fdfa",
+          "type": "color",
+          "description": "Light teal surface."
+        },
+        "100": {
+          "value": "#ccfbf1",
+          "type": "color",
+          "description": "Soft teal surface."
+        },
+        "300": {
+          "value": "#5eead4",
+          "type": "color",
+          "description": "Soft teal accent."
+        },
+        "500": {
+          "value": "#14b8a6",
+          "type": "color",
+          "description": "Primary travel/action accent."
+        },
+        "600": {
+          "value": "#0d9488",
+          "type": "color",
+          "description": "Primary action hover."
+        },
+        "700": {
+          "value": "#0f766e",
+          "type": "color",
+          "description": "Pressed teal."
+        },
+        "900": {
+          "value": "#134e4a",
+          "type": "color",
+          "description": "Dark teal surface."
+        }
+      },
+      "sky": {
+        "50": {
+          "value": "#f0f9ff",
+          "type": "color",
+          "description": "Light calendar surface."
+        },
+        "100": {
+          "value": "#e0f2fe",
+          "type": "color",
+          "description": "Soft calendar surface."
+        },
+        "300": {
+          "value": "#7dd3fc",
+          "type": "color",
+          "description": "Soft information accent."
+        },
+        "500": {
+          "value": "#0ea5e9",
+          "type": "color",
+          "description": "Calendar/information accent."
+        },
+        "600": {
+          "value": "#0284c7",
+          "type": "color",
+          "description": "Calendar hover."
+        },
+        "900": {
+          "value": "#0c4a6e",
+          "type": "color",
+          "description": "Dark sky surface."
+        }
+      },
+      "red": {
+        "50": {
+          "value": "#fef2f2",
+          "type": "color",
+          "description": "Light danger surface."
+        },
+        "500": {
+          "value": "#ef4444",
+          "type": "color",
+          "description": "Destructive action."
+        },
+        "600": {
+          "value": "#dc2626",
+          "type": "color",
+          "description": "Destructive hover."
+        },
+        "700": {
+          "value": "#b91c1c",
+          "type": "color",
+          "description": "Pressed destructive."
+        }
+      },
+      "yellow": {
+        "50": {
+          "value": "#fefce8",
+          "type": "color",
+          "description": "Light warning surface."
+        },
+        "300": {
+          "value": "#fde047",
+          "type": "color",
+          "description": "Warning highlight."
+        },
+        "500": {
+          "value": "#eab308",
+          "type": "color",
+          "description": "Warning."
+        },
+        "700": {
+          "value": "#a16207",
+          "type": "color",
+          "description": "Warning text."
+        }
+      }
+    },
+    "semantic": {
+      "bg": {
+        "default": {
+          "value": "{color.primitive.neutral.0}",
+          "type": "color",
+          "description": "Default app background."
+        },
+        "muted": {
+          "value": "{color.primitive.neutral.100}",
+          "type": "color",
+          "description": "Subtle section or item background."
+        },
+        "elevated": {
+          "value": "{color.primitive.white}",
+          "type": "color",
+          "description": "Elevated component surface."
+        },
+        "inverse": {
+          "value": "{color.primitive.neutral.900}",
+          "type": "color",
+          "description": "Inverse background."
+        }
+      },
+      "text": {
+        "primary": {
+          "value": "{color.primitive.neutral.900}",
+          "type": "color",
+          "description": "Primary text."
+        },
+        "secondary": {
+          "value": "{color.primitive.neutral.600}",
+          "type": "color",
+          "description": "Secondary text."
+        },
+        "muted": {
+          "value": "{color.primitive.neutral.500}",
+          "type": "color",
+          "description": "Low-emphasis text."
+        },
+        "inverse": {
+          "value": "{color.primitive.white}",
+          "type": "color",
+          "description": "Text on dark or primary surfaces."
+        }
+      },
+      "border": {
+        "default": {
+          "value": "{color.primitive.neutral.200}",
+          "type": "color",
+          "description": "Default border."
+        },
+        "subtle": {
+          "value": "{color.primitive.neutral.100}",
+          "type": "color",
+          "description": "Low-emphasis divider."
+        }
+      },
+      "action": {
+        "primary": {
+          "value": "{color.primitive.teal.600}",
+          "type": "color",
+          "description": "Primary action color."
+        },
+        "primaryHover": {
+          "value": "{color.primitive.teal.700}",
+          "type": "color",
+          "description": "Primary action hover."
+        },
+        "secondary": {
+          "value": "{color.primitive.neutral.100}",
+          "type": "color",
+          "description": "Secondary action background."
+        },
+        "ghostHover": {
+          "value": "{color.primitive.neutral.100}",
+          "type": "color",
+          "description": "Ghost action hover background."
+        }
+      },
+      "danger": {
+        "default": {
+          "value": "{color.primitive.red.500}",
+          "type": "color",
+          "description": "Danger/destructive color."
+        },
+        "hover": {
+          "value": "{color.primitive.red.600}",
+          "type": "color",
+          "description": "Danger hover color."
+        }
+      },
+      "success": {
+        "default": {
+          "value": "{color.primitive.teal.600}",
+          "type": "color",
+          "description": "Success/confirmed state."
+        }
+      },
+      "calendar": {
+        "confirmed": {
+          "value": "{color.primitive.teal.100}",
+          "type": "color",
+          "description": "Confirmed calendar event background."
+        },
+        "pending": {
+          "value": "{color.primitive.yellow.50}",
+          "type": "color",
+          "description": "Pending calendar event background."
+        }
+      }
+    }
+  },
+  "spacing": {
+    "0": {
+      "value": "0rem",
+      "type": "spacing",
+      "description": "No spacing."
+    },
+    "1": {
+      "value": "0.25rem",
+      "type": "spacing",
+      "description": "Tailwind spacing 1."
+    },
+    "2": {
+      "value": "0.5rem",
+      "type": "spacing",
+      "description": "Tailwind spacing 2."
+    },
+    "3": {
+      "value": "0.75rem",
+      "type": "spacing",
+      "description": "Tailwind spacing 3."
+    },
+    "4": {
+      "value": "1rem",
+      "type": "spacing",
+      "description": "Default page horizontal padding."
+    },
+    "5": {
+      "value": "1.25rem",
+      "type": "spacing",
+      "description": "Medium component gap."
+    },
+    "6": {
+      "value": "1.5rem",
+      "type": "spacing",
+      "description": "Card padding."
+    },
+    "8": {
+      "value": "2rem",
+      "type": "spacing",
+      "description": "Large section gap."
+    },
+    "10": {
+      "value": "2.5rem",
+      "type": "spacing",
+      "description": "Large vertical rhythm."
+    },
+    "12": {
+      "value": "3rem",
+      "type": "spacing",
+      "description": "Extra-large spacing."
+    },
+    "16": {
+      "value": "4rem",
+      "type": "spacing",
+      "description": "Hero or empty-state spacing."
+    },
+    "semantic": {
+      "page": {
+        "x": {
+          "value": "{spacing.4}",
+          "type": "spacing",
+          "description": "Mobile page horizontal padding."
+        },
+        "y": {
+          "value": "{spacing.6}",
+          "type": "spacing",
+          "description": "Mobile page vertical padding."
+        }
+      },
+      "section": {
+        "gap": {
+          "value": "{spacing.8}",
+          "type": "spacing",
+          "description": "Gap between major content sections."
+        }
+      },
+      "item": {
+        "gap": {
+          "value": "{spacing.3}",
+          "type": "spacing",
+          "description": "Gap inside repeated items."
+        }
+      }
+    }
+  },
+  "radius": {
+    "none": {
+      "value": "0rem",
+      "type": "radius",
+      "description": "No radius."
+    },
+    "sm": {
+      "value": "0.25rem",
+      "type": "radius",
+      "description": "Small radius for badges."
+    },
+    "md": {
+      "value": "0.5rem",
+      "type": "radius",
+      "description": "Default component radius."
+    },
+    "lg": {
+      "value": "0.625rem",
+      "type": "radius",
+      "description": "Current shadcn base radius."
+    },
+    "xl": {
+      "value": "0.75rem",
+      "type": "radius",
+      "description": "Large radius for prominent items."
+    },
+    "full": {
+      "value": "9999px",
+      "type": "radius",
+      "description": "Circular or pill radius."
+    },
+    "component": {
+      "button": {
+        "value": "{radius.md}",
+        "type": "radius",
+        "description": "Button radius."
+      },
+      "input": {
+        "value": "{radius.md}",
+        "type": "radius",
+        "description": "Input radius."
+      },
+      "card": {
+        "value": "{radius.md}",
+        "type": "radius",
+        "description": "Card radius kept restrained."
+      },
+      "dialog": {
+        "value": "{radius.lg}",
+        "type": "radius",
+        "description": "Dialog radius."
+      }
+    }
+  },
+  "typography": {
+    "font": {
+      "family": {
+        "sans": {
+          "value": "\"Noto Sans KR\", system-ui, sans-serif",
+          "type": "fontFamily",
+          "description": "Default Korean-friendly sans font."
+        },
+        "brand": {
+          "value": "\"JejuStoneWall\", \"Noto Sans KR\", sans-serif",
+          "type": "fontFamily",
+          "description": "Optional brand display font."
+        }
+      },
+      "size": {
+        "xs": {
+          "value": "0.75rem",
+          "type": "fontSize",
+          "description": "Extra-small text."
+        },
+        "sm": {
+          "value": "0.875rem",
+          "type": "fontSize",
+          "description": "Small body or labels."
+        },
+        "md": {
+          "value": "1rem",
+          "type": "fontSize",
+          "description": "Default body text."
+        },
+        "lg": {
+          "value": "1.125rem",
+          "type": "fontSize",
+          "description": "Card title."
+        },
+        "xl": {
+          "value": "1.25rem",
+          "type": "fontSize",
+          "description": "Page title."
+        },
+        "2xl": {
+          "value": "1.5rem",
+          "type": "fontSize",
+          "description": "Large title."
+        }
+      },
+      "weight": {
+        "regular": {
+          "value": "400",
+          "type": "fontWeight",
+          "description": "Regular."
+        },
+        "medium": {
+          "value": "500",
+          "type": "fontWeight",
+          "description": "Medium emphasis."
+        },
+        "semibold": {
+          "value": "600",
+          "type": "fontWeight",
+          "description": "Section/card title."
+        },
+        "bold": {
+          "value": "700",
+          "type": "fontWeight",
+          "description": "Strong title."
+        }
+      }
+    },
+    "lineHeight": {
+      "tight": {
+        "value": "1.25",
+        "type": "lineHeight",
+        "description": "Compact headings."
+      },
+      "normal": {
+        "value": "1.5",
+        "type": "lineHeight",
+        "description": "Default readable text."
+      },
+      "relaxed": {
+        "value": "1.7",
+        "type": "lineHeight",
+        "description": "Long-form or helper text."
+      }
+    },
+    "pageTitle": {
+      "value": {
+        "fontFamily": "{typography.font.family.sans}",
+        "fontSize": "{typography.font.size.xl}",
+        "fontWeight": "{typography.font.weight.bold}",
+        "lineHeight": "{typography.lineHeight.tight}"
+      },
+      "type": "typography",
+      "description": "Main page title."
+    },
+    "sectionTitle": {
+      "value": {
+        "fontFamily": "{typography.font.family.sans}",
+        "fontSize": "{typography.font.size.lg}",
+        "fontWeight": "{typography.font.weight.semibold}",
+        "lineHeight": "{typography.lineHeight.tight}"
+      },
+      "type": "typography",
+      "description": "Section heading."
+    },
+    "cardTitle": {
+      "value": {
+        "fontFamily": "{typography.font.family.sans}",
+        "fontSize": "{typography.font.size.lg}",
+        "fontWeight": "{typography.font.weight.semibold}",
+        "lineHeight": "{typography.lineHeight.tight}"
+      },
+      "type": "typography",
+      "description": "Project or item card title."
+    },
+    "body": {
+      "value": {
+        "fontFamily": "{typography.font.family.sans}",
+        "fontSize": "{typography.font.size.md}",
+        "fontWeight": "{typography.font.weight.regular}",
+        "lineHeight": "{typography.lineHeight.normal}"
+      },
+      "type": "typography",
+      "description": "Default body text."
+    },
+    "caption": {
+      "value": {
+        "fontFamily": "{typography.font.family.sans}",
+        "fontSize": "{typography.font.size.xs}",
+        "fontWeight": "{typography.font.weight.regular}",
+        "lineHeight": "{typography.lineHeight.normal}"
+      },
+      "type": "typography",
+      "description": "Caption or metadata."
+    },
+    "navLabel": {
+      "value": {
+        "fontFamily": "{typography.font.family.sans}",
+        "fontSize": "{typography.font.size.xs}",
+        "fontWeight": "{typography.font.weight.medium}",
+        "lineHeight": "{typography.lineHeight.tight}"
+      },
+      "type": "typography",
+      "description": "Bottom navigation label."
+    },
+    "button": {
+      "value": {
+        "fontFamily": "{typography.font.family.sans}",
+        "fontSize": "{typography.font.size.sm}",
+        "fontWeight": "{typography.font.weight.medium}",
+        "lineHeight": "{typography.lineHeight.tight}"
+      },
+      "type": "typography",
+      "description": "Button text."
+    }
+  },
+  "size": {
+    "4": {
+      "value": "1rem",
+      "type": "sizing",
+      "description": "Small control or icon."
+    },
+    "5": {
+      "value": "1.25rem",
+      "type": "sizing",
+      "description": "Navigation icon."
+    },
+    "6": {
+      "value": "1.5rem",
+      "type": "sizing",
+      "description": "Avatar small."
+    },
+    "8": {
+      "value": "2rem",
+      "type": "sizing",
+      "description": "Small icon button."
+    },
+    "9": {
+      "value": "2.25rem",
+      "type": "sizing",
+      "description": "Default button height."
+    },
+    "10": {
+      "value": "2.5rem",
+      "type": "sizing",
+      "description": "Large control height."
+    },
+    "12": {
+      "value": "3rem",
+      "type": "sizing",
+      "description": "Large avatar."
+    },
+    "15": {
+      "value": "3.75rem",
+      "type": "sizing",
+      "description": "Header and bottom navigation height."
+    },
+    "40": {
+      "value": "10rem",
+      "type": "sizing",
+      "description": "Project item height."
+    },
+    "header": {
+      "height": {
+        "value": "{size.15}",
+        "type": "sizing",
+        "description": "Global header height."
+      }
+    },
+    "bottomNav": {
+      "height": {
+        "value": "{size.15}",
+        "type": "sizing",
+        "description": "Bottom navigation height."
+      }
+    },
+    "button": {
+      "sm": {
+        "height": {
+          "value": "{size.8}",
+          "type": "sizing",
+          "description": "Small button height."
+        }
+      },
+      "md": {
+        "height": {
+          "value": "{size.9}",
+          "type": "sizing",
+          "description": "Default button height."
+        }
+      },
+      "lg": {
+        "height": {
+          "value": "{size.10}",
+          "type": "sizing",
+          "description": "Large button height."
+        }
+      }
+    },
+    "icon": {
+      "sm": {
+        "value": "{size.4}",
+        "type": "sizing",
+        "description": "Small icon."
+      },
+      "md": {
+        "value": "{size.5}",
+        "type": "sizing",
+        "description": "Default icon."
+      },
+      "lg": {
+        "value": "{size.6}",
+        "type": "sizing",
+        "description": "Large icon."
+      }
+    }
+  },
+  "shadow": {
+    "none": {
+      "value": "none",
+      "type": "shadow",
+      "description": "No shadow."
+    },
+    "xs": {
+      "value": "0 1px 2px rgb(15 17 21 / 0.05)",
+      "type": "shadow",
+      "description": "Subtle component shadow."
+    },
+    "sm": {
+      "value": "0 1px 3px rgb(15 17 21 / 0.08), 0 1px 2px rgb(15 17 21 / 0.04)",
+      "type": "shadow",
+      "description": "Small elevated shadow."
+    },
+    "md": {
+      "value": "0 8px 24px rgb(15 17 21 / 0.10)",
+      "type": "shadow",
+      "description": "Dialog or popover shadow."
+    },
+    "appShell": {
+      "value": "0 18px 48px rgb(15 17 21 / 0.16)",
+      "type": "shadow",
+      "description": "Mobile app shell shadow."
+    }
+  },
+  "component": {
+    "button": {
+      "primary": {
+        "bg": {
+          "value": "{color.semantic.action.primary}",
+          "type": "color",
+          "description": "Primary button background."
+        },
+        "bgHover": {
+          "value": "{color.semantic.action.primaryHover}",
+          "type": "color",
+          "description": "Primary button hover background."
+        },
+        "bgPressed": {
+          "value": "{color.primitive.teal.700}",
+          "type": "color",
+          "description": "Primary button pressed background."
+        },
+        "text": {
+          "value": "{color.semantic.text.inverse}",
+          "type": "color",
+          "description": "Primary button text."
+        }
+      },
+      "secondary": {
+        "bg": {
+          "value": "{color.semantic.action.secondary}",
+          "type": "color",
+          "description": "Secondary button background."
+        },
+        "text": {
+          "value": "{color.semantic.text.primary}",
+          "type": "color",
+          "description": "Secondary button text."
+        }
+      },
+      "outline": {
+        "bg": {
+          "value": "transparent",
+          "type": "color",
+          "description": "Outline button background."
+        },
+        "border": {
+          "value": "{color.semantic.border.default}",
+          "type": "color",
+          "description": "Outline button border."
+        },
+        "bgHover": {
+          "value": "{color.semantic.action.ghostHover}",
+          "type": "color",
+          "description": "Outline button hover background."
+        },
+        "text": {
+          "value": "{color.semantic.text.primary}",
+          "type": "color",
+          "description": "Outline button text."
+        }
+      },
+      "ghost": {
+        "bg": {
+          "value": "transparent",
+          "type": "color",
+          "description": "Ghost button background."
+        },
+        "bgHover": {
+          "value": "{color.semantic.action.ghostHover}",
+          "type": "color",
+          "description": "Ghost button hover background."
+        },
+        "text": {
+          "value": "{color.semantic.text.secondary}",
+          "type": "color",
+          "description": "Ghost button text."
+        }
+      },
+      "destructive": {
+        "bg": {
+          "value": "{color.semantic.danger.default}",
+          "type": "color",
+          "description": "Destructive button background."
+        },
+        "bgHover": {
+          "value": "{color.semantic.danger.hover}",
+          "type": "color",
+          "description": "Destructive button hover background."
+        },
+        "text": {
+          "value": "{color.semantic.text.inverse}",
+          "type": "color",
+          "description": "Destructive button text."
+        }
+      },
+      "link": {
+        "text": {
+          "value": "{color.semantic.action.primary}",
+          "type": "color",
+          "description": "Link button text."
+        },
+        "textHover": {
+          "value": "{color.semantic.action.primaryHover}",
+          "type": "color",
+          "description": "Link button hover text."
+        }
+      },
+      "disabled": {
+        "bg": {
+          "value": "{color.primitive.neutral.100}",
+          "type": "color",
+          "description": "Disabled button background."
+        },
+        "text": {
+          "value": "{color.primitive.neutral.400}",
+          "type": "color",
+          "description": "Disabled button text."
+        },
+        "border": {
+          "value": "{color.primitive.neutral.200}",
+          "type": "color",
+          "description": "Disabled button border."
+        }
+      },
+      "loading": {
+        "opacity": {
+          "value": "0.72",
+          "type": "opacity",
+          "description": "Loading state opacity."
+        }
+      },
+      "focusRing": {
+        "value": "0 0 0 3px rgb(20 184 166 / 0.28)",
+        "type": "shadow",
+        "description": "Accessible button focus ring."
+      },
+      "radius": {
+        "value": "{radius.component.button}",
+        "type": "radius",
+        "description": "Button radius."
+      },
+      "height": {
+        "sm": {
+          "value": "{size.button.sm.height}",
+          "type": "sizing",
+          "description": "Small button height."
+        },
+        "md": {
+          "value": "{size.button.md.height}",
+          "type": "sizing",
+          "description": "Medium button height."
+        },
+        "lg": {
+          "value": "{size.button.lg.height}",
+          "type": "sizing",
+          "description": "Large button height."
+        },
+        "icon": {
+          "value": "{size.9}",
+          "type": "sizing",
+          "description": "Icon button square size."
+        }
+      },
+      "padding": {
+        "x": {
+          "sm": {
+            "value": "{spacing.3}",
+            "type": "spacing",
+            "description": "Small horizontal button padding."
+          },
+          "md": {
+            "value": "{spacing.4}",
+            "type": "spacing",
+            "description": "Default horizontal button padding."
+          },
+          "lg": {
+            "value": "{spacing.6}",
+            "type": "spacing",
+            "description": "Large horizontal button padding."
+          }
+        }
+      },
+      "gap": {
+        "value": "{spacing.2}",
+        "type": "spacing",
+        "description": "Button icon/text gap."
+      },
+      "typography": {
+        "value": "{typography.button}",
+        "type": "typography",
+        "description": "Button typography."
+      }
+    },
+    "input": {
+      "bg": {
+        "value": "transparent",
+        "type": "color",
+        "description": "Input background."
+      },
+      "text": {
+        "value": "{color.semantic.text.primary}",
+        "type": "color",
+        "description": "Input text."
+      },
+      "placeholder": {
+        "value": "{color.semantic.text.muted}",
+        "type": "color",
+        "description": "Input placeholder."
+      },
+      "border": {
+        "value": "{color.semantic.border.default}",
+        "type": "color",
+        "description": "Input border."
+      },
+      "borderFocus": {
+        "value": "{color.semantic.action.primary}",
+        "type": "color",
+        "description": "Input focus border."
+      },
+      "borderInvalid": {
+        "value": "{color.semantic.danger.default}",
+        "type": "color",
+        "description": "Input invalid border."
+      },
+      "disabled": {
+        "bg": {
+          "value": "{color.primitive.neutral.100}",
+          "type": "color",
+          "description": "Disabled input background."
+        },
+        "text": {
+          "value": "{color.primitive.neutral.400}",
+          "type": "color",
+          "description": "Disabled input text."
+        }
+      },
+      "radius": {
+        "value": "{radius.component.input}",
+        "type": "radius",
+        "description": "Input radius."
+      },
+      "height": {
+        "value": "{size.9}",
+        "type": "sizing",
+        "description": "Default input height."
+      },
+      "padding": {
+        "x": {
+          "value": "{spacing.3}",
+          "type": "spacing",
+          "description": "Input horizontal padding."
+        }
+      },
+      "focusRing": {
+        "value": "0 0 0 3px rgb(20 184 166 / 0.22)",
+        "type": "shadow",
+        "description": "Input focus ring."
+      }
+    },
+    "card": {
+      "default": {
+        "bg": {
+          "value": "{color.semantic.bg.elevated}",
+          "type": "color",
+          "description": "Default card background."
+        },
+        "text": {
+          "value": "{color.semantic.text.primary}",
+          "type": "color",
+          "description": "Default card text."
+        },
+        "border": {
+          "value": "{color.semantic.border.default}",
+          "type": "color",
+          "description": "Default card border."
+        }
+      },
+      "muted": {
+        "bg": {
+          "value": "{color.semantic.bg.muted}",
+          "type": "color",
+          "description": "Muted card background."
+        },
+        "text": {
+          "value": "{color.semantic.text.primary}",
+          "type": "color",
+          "description": "Muted card text."
+        }
+      },
+      "interactive": {
+        "bgHover": {
+          "value": "{color.primitive.teal.50}",
+          "type": "color",
+          "description": "Interactive card hover background."
+        },
+        "selected": {
+          "value": "{color.primitive.teal.100}",
+          "type": "color",
+          "description": "Interactive selected card background."
+        }
+      },
+      "radius": {
+        "value": "{radius.component.card}",
+        "type": "radius",
+        "description": "Card radius."
+      },
+      "padding": {
+        "value": "{spacing.6}",
+        "type": "spacing",
+        "description": "Card padding."
+      },
+      "gap": {
+        "value": "{spacing.3}",
+        "type": "spacing",
+        "description": "Card internal gap."
+      },
+      "shadow": {
+        "value": "{shadow.none}",
+        "type": "shadow",
+        "description": "Cards are mostly flat in this system."
+      }
+    },
+    "dialog": {
+      "bg": {
+        "value": "{color.semantic.bg.elevated}",
+        "type": "color",
+        "description": "Dialog background."
+      },
+      "text": {
+        "value": "{color.semantic.text.primary}",
+        "type": "color",
+        "description": "Dialog text."
+      },
+      "overlay": {
+        "value": "rgb(15 17 21 / 0.48)",
+        "type": "color",
+        "description": "Modal overlay."
+      },
+      "radius": {
+        "value": "{radius.component.dialog}",
+        "type": "radius",
+        "description": "Dialog radius."
+      },
+      "padding": {
+        "value": "{spacing.6}",
+        "type": "spacing",
+        "description": "Dialog padding."
+      },
+      "width": {
+        "mobile": {
+          "value": "calc(100vw - 2rem)",
+          "type": "sizing",
+          "description": "Mobile dialog width."
+        }
+      },
+      "shadow": {
+        "value": "{shadow.md}",
+        "type": "shadow",
+        "description": "Dialog elevation."
+      }
+    },
+    "checkbox": {
+      "size": {
+        "value": "{size.4}",
+        "type": "sizing",
+        "description": "Checkbox size."
+      },
+      "radius": {
+        "value": "{radius.sm}",
+        "type": "radius",
+        "description": "Checkbox radius."
+      },
+      "border": {
+        "value": "{color.semantic.border.default}",
+        "type": "color",
+        "description": "Unchecked checkbox border."
+      },
+      "bgChecked": {
+        "value": "{color.semantic.action.primary}",
+        "type": "color",
+        "description": "Checked checkbox background."
+      },
+      "iconChecked": {
+        "value": "{color.semantic.text.inverse}",
+        "type": "color",
+        "description": "Checked checkbox icon."
+      },
+      "disabled": {
+        "bg": {
+          "value": "{color.primitive.neutral.100}",
+          "type": "color",
+          "description": "Disabled checkbox background."
+        },
+        "border": {
+          "value": "{color.primitive.neutral.200}",
+          "type": "color",
+          "description": "Disabled checkbox border."
+        }
+      },
+      "focusRing": {
+        "value": "0 0 0 3px rgb(20 184 166 / 0.22)",
+        "type": "shadow",
+        "description": "Checkbox focus ring."
+      }
+    },
+    "bottomNav": {
+      "bg": {
+        "value": "{color.semantic.bg.elevated}",
+        "type": "color",
+        "description": "Bottom navigation background."
+      },
+      "border": {
+        "value": "{color.semantic.border.default}",
+        "type": "color",
+        "description": "Bottom navigation top border."
+      },
+      "height": {
+        "value": "{size.bottomNav.height}",
+        "type": "sizing",
+        "description": "Bottom navigation height."
+      },
+      "text": {
+        "value": "{color.semantic.text.muted}",
+        "type": "color",
+        "description": "Inactive navigation text."
+      },
+      "textActive": {
+        "value": "{color.semantic.text.primary}",
+        "type": "color",
+        "description": "Active navigation text."
+      },
+      "icon": {
+        "size": {
+          "value": "{size.icon.md}",
+          "type": "sizing",
+          "description": "Bottom navigation icon size."
+        }
+      },
+      "label": {
+        "typography": {
+          "value": "{typography.navLabel}",
+          "type": "typography",
+          "description": "Bottom navigation label typography."
+        }
+      }
+    },
+    "projectItem": {
+      "bg": {
+        "value": "{color.semantic.bg.muted}",
+        "type": "color",
+        "description": "Project item background."
+      },
+      "bgHover": {
+        "value": "{color.primitive.teal.50}",
+        "type": "color",
+        "description": "Project item hover background."
+      },
+      "radius": {
+        "value": "{radius.xl}",
+        "type": "radius",
+        "description": "Project item radius."
+      },
+      "padding": {
+        "value": "{spacing.6}",
+        "type": "spacing",
+        "description": "Project item padding."
+      },
+      "height": {
+        "value": "{size.40}",
+        "type": "sizing",
+        "description": "Project item fixed height."
+      },
+      "title": {
+        "typography": {
+          "value": "{typography.cardTitle}",
+          "type": "typography",
+          "description": "Project item title typography."
+        }
+      },
+      "description": {
+        "typography": {
+          "value": "{typography.caption}",
+          "type": "typography",
+          "description": "Project item description typography."
+        },
+        "text": {
+          "value": "{color.semantic.text.secondary}",
+          "type": "color",
+          "description": "Project item description text."
+        }
+      },
+      "ownerBadge": {
+        "bg": {
+          "value": "{color.semantic.bg.elevated}",
+          "type": "color",
+          "description": "Owner badge background."
+        },
+        "border": {
+          "value": "{color.semantic.border.default}",
+          "type": "color",
+          "description": "Owner badge border."
+        },
+        "radius": {
+          "value": "{radius.sm}",
+          "type": "radius",
+          "description": "Owner badge radius."
+        }
+      }
+    },
+    "todoItem": {
+      "gap": {
+        "value": "{spacing.2}",
+        "type": "spacing",
+        "description": "Todo item internal gap."
+      },
+      "text": {
+        "value": "{color.semantic.text.primary}",
+        "type": "color",
+        "description": "Todo item text."
+      },
+      "ownerActions": {
+        "visibilityRule": {
+          "value": "ownerOnly",
+          "type": "string",
+          "description": "Only event owners can see edit/delete actions."
+        }
+      },
+      "actionButton": {
+        "size": {
+          "value": "{size.8}",
+          "type": "sizing",
+          "description": "Compact todo action button height."
+        }
+      },
+      "confirmed": {
+        "text": {
+          "value": "{color.semantic.text.muted}",
+          "type": "color",
+          "description": "Confirmed todo text."
+        }
+      },
+      "pending": {
+        "text": {
+          "value": "{color.semantic.text.primary}",
+          "type": "color",
+          "description": "Pending todo text."
+        }
+      }
+    },
+    "calendar": {
+      "bg": {
+        "value": "{color.semantic.bg.default}",
+        "type": "color",
+        "description": "Calendar background."
+      },
+      "border": {
+        "value": "{color.semantic.border.default}",
+        "type": "color",
+        "description": "Calendar grid border."
+      },
+      "today": {
+        "bg": {
+          "value": "{color.primitive.sky.50}",
+          "type": "color",
+          "description": "Today background."
+        }
+      },
+      "selected": {
+        "bg": {
+          "value": "{color.primitive.teal.100}",
+          "type": "color",
+          "description": "Selected date background."
+        }
+      },
+      "event": {
+        "confirmed": {
+          "bg": {
+            "value": "{color.semantic.calendar.confirmed}",
+            "type": "color",
+            "description": "Confirmed event background."
+          }
+        },
+        "pending": {
+          "bg": {
+            "value": "{color.semantic.calendar.pending}",
+            "type": "color",
+            "description": "Pending event background."
+          }
+        },
+        "text": {
+          "value": "{color.semantic.text.primary}",
+          "type": "color",
+          "description": "Calendar event text."
+        }
+      },
+      "allday": {
+        "bg": {
+          "value": "{color.semantic.bg.muted}",
+          "type": "color",
+          "description": "All-day event rail background."
+        }
+      }
+    }
+  },
+  "theme": {
+    "light": {
+      "background": {
+        "value": "{color.semantic.bg.default}",
+        "type": "color",
+        "description": "shadcn background."
+      },
+      "foreground": {
+        "value": "{color.semantic.text.primary}",
+        "type": "color",
+        "description": "shadcn foreground."
+      },
+      "card": {
+        "value": "{color.semantic.bg.elevated}",
+        "type": "color",
+        "description": "shadcn card."
+      },
+      "card-foreground": {
+        "value": "{color.semantic.text.primary}",
+        "type": "color",
+        "description": "shadcn card foreground."
+      },
+      "popover": {
+        "value": "{color.semantic.bg.elevated}",
+        "type": "color",
+        "description": "shadcn popover."
+      },
+      "popover-foreground": {
+        "value": "{color.semantic.text.primary}",
+        "type": "color",
+        "description": "shadcn popover foreground."
+      },
+      "primary": {
+        "value": "{color.semantic.action.primary}",
+        "type": "color",
+        "description": "shadcn primary."
+      },
+      "primary-foreground": {
+        "value": "{color.semantic.text.inverse}",
+        "type": "color",
+        "description": "shadcn primary foreground."
+      },
+      "secondary": {
+        "value": "{color.semantic.action.secondary}",
+        "type": "color",
+        "description": "shadcn secondary."
+      },
+      "secondary-foreground": {
+        "value": "{color.semantic.text.primary}",
+        "type": "color",
+        "description": "shadcn secondary foreground."
+      },
+      "muted": {
+        "value": "{color.semantic.bg.muted}",
+        "type": "color",
+        "description": "shadcn muted."
+      },
+      "muted-foreground": {
+        "value": "{color.semantic.text.muted}",
+        "type": "color",
+        "description": "shadcn muted foreground."
+      },
+      "accent": {
+        "value": "{color.primitive.teal.50}",
+        "type": "color",
+        "description": "shadcn accent."
+      },
+      "accent-foreground": {
+        "value": "{color.semantic.text.primary}",
+        "type": "color",
+        "description": "shadcn accent foreground."
+      },
+      "destructive": {
+        "value": "{color.semantic.danger.default}",
+        "type": "color",
+        "description": "shadcn destructive."
+      },
+      "border": {
+        "value": "{color.semantic.border.default}",
+        "type": "color",
+        "description": "shadcn border."
+      },
+      "input": {
+        "value": "{color.semantic.border.default}",
+        "type": "color",
+        "description": "shadcn input border."
+      },
+      "ring": {
+        "value": "{color.semantic.action.primary}",
+        "type": "color",
+        "description": "shadcn focus ring."
+      }
+    },
+    "dark": {
+      "color.semantic.bg.default": {
+        "value": "{color.primitive.neutral.1000}",
+        "type": "color",
+        "description": "Dark app background."
+      },
+      "color.semantic.bg.muted": {
+        "value": "{color.primitive.neutral.900}",
+        "type": "color",
+        "description": "Dark muted surface."
+      },
+      "color.semantic.bg.elevated": {
+        "value": "{color.primitive.neutral.800}",
+        "type": "color",
+        "description": "Dark elevated surface."
+      },
+      "color.semantic.bg.inverse": {
+        "value": "{color.primitive.neutral.0}",
+        "type": "color",
+        "description": "Dark inverse surface."
+      },
+      "color.semantic.text.primary": {
+        "value": "{color.primitive.neutral.50}",
+        "type": "color",
+        "description": "Dark primary text."
+      },
+      "color.semantic.text.secondary": {
+        "value": "{color.primitive.neutral.300}",
+        "type": "color",
+        "description": "Dark secondary text."
+      },
+      "color.semantic.text.muted": {
+        "value": "{color.primitive.neutral.400}",
+        "type": "color",
+        "description": "Dark muted text."
+      },
+      "color.semantic.text.inverse": {
+        "value": "{color.primitive.neutral.1000}",
+        "type": "color",
+        "description": "Dark inverse text."
+      },
+      "color.semantic.border.default": {
+        "value": "rgb(255 255 255 / 0.12)",
+        "type": "color",
+        "description": "Dark default border."
+      },
+      "color.semantic.border.subtle": {
+        "value": "rgb(255 255 255 / 0.08)",
+        "type": "color",
+        "description": "Dark subtle border."
+      },
+      "color.semantic.action.primary": {
+        "value": "{color.primitive.teal.300}",
+        "type": "color",
+        "description": "Dark primary action."
+      },
+      "color.semantic.action.primaryHover": {
+        "value": "{color.primitive.teal.100}",
+        "type": "color",
+        "description": "Dark primary hover."
+      },
+      "color.semantic.action.secondary": {
+        "value": "{color.primitive.neutral.900}",
+        "type": "color",
+        "description": "Dark secondary action."
+      },
+      "color.semantic.action.ghostHover": {
+        "value": "rgb(255 255 255 / 0.08)",
+        "type": "color",
+        "description": "Dark ghost hover."
+      },
+      "color.semantic.danger.default": {
+        "value": "{color.primitive.red.500}",
+        "type": "color",
+        "description": "Dark danger."
+      },
+      "color.semantic.danger.hover": {
+        "value": "{color.primitive.red.600}",
+        "type": "color",
+        "description": "Dark danger hover."
+      },
+      "color.semantic.calendar.confirmed": {
+        "value": "rgb(20 184 166 / 0.22)",
+        "type": "color",
+        "description": "Dark confirmed calendar event."
+      },
+      "color.semantic.calendar.pending": {
+        "value": "rgb(234 179 8 / 0.20)",
+        "type": "color",
+        "description": "Dark pending calendar event."
+      },
+      "background": {
+        "value": "{theme.dark.color.semantic.bg.default}",
+        "type": "color",
+        "description": "Dark shadcn background."
+      },
+      "foreground": {
+        "value": "{theme.dark.color.semantic.text.primary}",
+        "type": "color",
+        "description": "Dark shadcn foreground."
+      },
+      "card": {
+        "value": "{theme.dark.color.semantic.bg.elevated}",
+        "type": "color",
+        "description": "Dark shadcn card."
+      },
+      "card-foreground": {
+        "value": "{theme.dark.color.semantic.text.primary}",
+        "type": "color",
+        "description": "Dark shadcn card foreground."
+      },
+      "popover": {
+        "value": "{theme.dark.color.semantic.bg.elevated}",
+        "type": "color",
+        "description": "Dark shadcn popover."
+      },
+      "popover-foreground": {
+        "value": "{theme.dark.color.semantic.text.primary}",
+        "type": "color",
+        "description": "Dark shadcn popover foreground."
+      },
+      "primary": {
+        "value": "{theme.dark.color.semantic.action.primary}",
+        "type": "color",
+        "description": "Dark shadcn primary."
+      },
+      "primary-foreground": {
+        "value": "{theme.dark.color.semantic.text.inverse}",
+        "type": "color",
+        "description": "Dark shadcn primary foreground."
+      },
+      "secondary": {
+        "value": "{theme.dark.color.semantic.action.secondary}",
+        "type": "color",
+        "description": "Dark shadcn secondary."
+      },
+      "secondary-foreground": {
+        "value": "{theme.dark.color.semantic.text.primary}",
+        "type": "color",
+        "description": "Dark shadcn secondary foreground."
+      },
+      "muted": {
+        "value": "{theme.dark.color.semantic.bg.muted}",
+        "type": "color",
+        "description": "Dark shadcn muted."
+      },
+      "muted-foreground": {
+        "value": "{theme.dark.color.semantic.text.muted}",
+        "type": "color",
+        "description": "Dark shadcn muted foreground."
+      },
+      "accent": {
+        "value": "rgb(20 184 166 / 0.14)",
+        "type": "color",
+        "description": "Dark shadcn accent."
+      },
+      "accent-foreground": {
+        "value": "{theme.dark.color.semantic.text.primary}",
+        "type": "color",
+        "description": "Dark shadcn accent foreground."
+      },
+      "destructive": {
+        "value": "{theme.dark.color.semantic.danger.default}",
+        "type": "color",
+        "description": "Dark shadcn destructive."
+      },
+      "border": {
+        "value": "{theme.dark.color.semantic.border.default}",
+        "type": "color",
+        "description": "Dark shadcn border."
+      },
+      "input": {
+        "value": "{theme.dark.color.semantic.border.default}",
+        "type": "color",
+        "description": "Dark shadcn input border."
+      },
+      "ring": {
+        "value": "{theme.dark.color.semantic.action.primary}",
+        "type": "color",
+        "description": "Dark shadcn focus ring."
+      }
+    }
+  }
+}

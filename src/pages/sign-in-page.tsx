@@ -44,13 +44,15 @@ export default function SignInPage() {
   const isPending = isSignInWithPasswordPending || isSignInWithOAuth;
 
   return (
-    <div className="flex flex-col gap-10">
-      <div className="text-xl font-bold">로그인</div>
+    <div className="flex flex-col gap-[var(--spacing-10)]">
+      <div className="text-[length:var(--font-size-xl)] font-[var(--font-weight-bold)]">
+        로그인
+      </div>
       <div>
         <Input
           type="email"
           placeholder="Email"
-          className="mb-2 px-4 py-6"
+          className="mb-[var(--spacing-2)] h-[var(--size-12)] px-[var(--spacing-4)]"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={isPending}
@@ -58,13 +60,13 @@ export default function SignInPage() {
         <Input
           type="password"
           placeholder="Password"
-          className="px-4 py-6"
+          className="h-[var(--size-12)] px-[var(--spacing-4)]"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           disabled={isPending}
         ></Input>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-[var(--spacing-2)]">
         <Button
           className="cursor-pointer"
           onClick={handleSignInWithPasswordClick}
@@ -78,11 +80,15 @@ export default function SignInPage() {
           className="cursor-pointer"
           disabled={isPending}
         >
-          <img src={googleLogo} alt="구글 로고" className="h-4 w-4" />
+          <img
+            src={googleLogo}
+            alt="구글 로고"
+            className="size-[var(--size-icon-sm)]"
+          />
           Google 계정으로 로그인
         </Button>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-[var(--spacing-2)]">
         <Link to={"/sign-up"}>
           <div className="text-muted-foreground cursor-pointer hover:underline">
             아직 계정이 없으신가요? 회원가입

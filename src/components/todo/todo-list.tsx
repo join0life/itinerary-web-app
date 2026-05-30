@@ -34,12 +34,18 @@ export default function TodoList({ projectId }: { projectId: number }) {
   if (!grouped || grouped.length === 0) return <EmptyTodo />;
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-[var(--spacing-8)]">
       {grouped?.map(({ owner, events }) => (
-        <div key={owner.id} className="flex flex-col gap-5">
-          <div className="flex items-center gap-2">
-            <img className="h-6 w-6 rounded-full object-cover" src={dog}></img>
-            <div className="text-sm font-semibold">{owner.nickname}</div>
+        <div key={owner.id} className="flex flex-col gap-[var(--spacing-5)]">
+          <div className="flex items-center gap-[var(--spacing-2)]">
+            <img
+              className="size-[var(--size-icon-lg)] rounded-[var(--radius-full)] object-cover"
+              src={dog}
+              alt=""
+            ></img>
+            <div className="text-[length:var(--font-size-sm)] font-[var(--font-weight-semibold)]">
+              {owner.nickname}
+            </div>
           </div>
 
           {events.map((event) => (

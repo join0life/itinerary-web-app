@@ -173,7 +173,7 @@ export default function WeeklyCalendar({
 
   return (
     <div
-      className="relative h-360 w-full overflow-y-scroll [&::-webkit-scrollbar]:hidden"
+      className="relative h-[calc(var(--size-15)*24)] w-full overflow-y-scroll [&::-webkit-scrollbar]:hidden"
       style={{ scrollbarWidth: "none" }}
     >
       {/* 시간 그리드 */}
@@ -181,8 +181,13 @@ export default function WeeklyCalendar({
         const time = hour.toString().padStart(2, "0");
 
         return (
-          <div key={hour} className="flex h-15 w-full border-b">
-            <div className="text-muted-foreground w-1/7 text-xs">{time}:00</div>
+          <div
+            key={hour}
+            className="flex h-[var(--size-15)] w-full border-b"
+          >
+            <div className="w-1/7 text-[length:var(--font-size-xs)] text-muted-foreground">
+              {time}:00
+            </div>
             <div className="w-6/7" />
           </div>
         );

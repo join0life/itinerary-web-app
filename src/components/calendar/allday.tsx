@@ -45,7 +45,9 @@ export default function Allday({
         return (
           <div
             key={event.id}
-            className="flex h-full"
+            className="flex h-full outline-none focus-visible:shadow-[var(--component-button-focus-ring)]"
+            role="button"
+            tabIndex={0}
             onClick={() =>
               openTodoEditorModal({
                 id: event.id,
@@ -59,12 +61,28 @@ export default function Allday({
                 isConfirmed: event.isConfirmed!,
               })
             }
+            onKeyDown={(keyEvent) => {
+              if (keyEvent.key === "Enter" || keyEvent.key === " ") {
+                keyEvent.preventDefault();
+                openTodoEditorModal({
+                  id: event.id,
+                  projectId: event.projectId!,
+                  title: event.title,
+                  allday: event.allday,
+                  startAt: event.startAt!,
+                  endAt: event.endAt!,
+                  location: event.location!,
+                  memo: event.memo!,
+                  isConfirmed: event.isConfirmed!,
+                });
+              }
+            }}
           >
             {Array.from({ length: offsetDays }).map((_, i) => (
               <div key={i} className="w-1/7 shrink-0" />
             ))}
             <div
-              className="mb-1 cursor-pointer rounded-sm bg-orange-400 px-2 py-1 text-xs font-semibold text-white"
+              className="mb-[var(--spacing-1)] cursor-pointer rounded-[var(--ds-radius-sm)] bg-[var(--component-calendar-event-accent)] px-[var(--spacing-2)] py-[var(--spacing-1)] text-[length:var(--font-size-xs)] font-[var(--font-weight-semibold)] text-[var(--color-semantic-text-inverse)] outline-none focus-visible:shadow-[var(--component-button-focus-ring)]"
               style={{ width: `${(spanDays / 7) * 100}%` }}
             >
               {event.title}

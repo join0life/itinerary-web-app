@@ -7,7 +7,7 @@ export default function MoreEventBadge({
 }) {
   return (
     <div
-      className="bg-muted absolute right-2 z-20 rounded px-2 py-1 text-xs font-semibold"
+      className="absolute right-[var(--spacing-2)] z-20 rounded-[var(--ds-radius-sm)] bg-muted px-[var(--spacing-2)] py-[var(--spacing-1)] text-[length:var(--font-size-xs)] font-[var(--font-weight-semibold)]"
       style={{ top }}
     >
       +{count}
