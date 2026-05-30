@@ -3,16 +3,21 @@ import Loader from "../loader";
 import Fallback from "../fallback";
 import DeleteProjectButton from "./delete-project-button";
 import ProjectJoinButton from "./project-join-button";
-import { useProjectId } from "@/store/project-join-modal";
 import { useSession } from "@/store/session";
 
-export default function ProjectItem({ showDelete }: { showDelete: boolean }) {
-  const projectId = useProjectId();
-
-  if (!projectId) return null;
-
+export default function ProjectItem({
+  projectId,
+  showDelete,
+}: {
+  projectId: number;
+  showDelete: boolean;
+}) {
   const { data: project, isPending, error } = useProjectByIdData({ projectId });
   const session = useSession();
+
+  if (isPending) return <Loader />;
+  if (error) return <Fallback />;
+  if (!project) return null;
 
   const isProjectOwner = project?.owner.id === session?.user.id;
   const isProjectMember = project?.members.some(
@@ -20,11 +25,6 @@ export default function ProjectItem({ showDelete }: { showDelete: boolean }) {
   );
 
   const isJoined = isProjectOwner || isProjectMember;
-
-  if (!isJoined) return null;
-
-  if (isPending) return <Loader />;
-  if (error) return <Fallback />;
 
   return (
     <div className="w-fll bg-muted flex h-40 cursor-pointer flex-col gap-3 rounded-xl p-6">

@@ -19,13 +19,19 @@ export default function ProjectFeed({ ownerId }: { ownerId?: string }) {
 
   if (error) return <Fallback />;
   if (isPending) return <Loader />;
-  if (!data || data.pages.length === 0) return <EmptyProject />;
+  if (!data || data.pages.every((page) => page.length === 0)) {
+    return <EmptyProject />;
+  }
 
   return (
     <div className="flex flex-col gap-3">
       {data?.pages.map((page) =>
         page.map((projectId) => (
-          <ProjectItem key={projectId} showDelete={!!ownerId} />
+          <ProjectItem
+            key={projectId}
+            projectId={projectId}
+            showDelete={!!ownerId}
+          />
         )),
       )}
       {isFetchingNextPage && <Loader />}

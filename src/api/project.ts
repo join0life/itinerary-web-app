@@ -11,7 +11,9 @@ export async function fetchProjects({
 }) {
   const request = supabase
     .from("project")
-    .select("*, owner:profile!owner_id (*)")
+    .select(
+      "id, name, description, created_at, owner_id, owner:profile!owner_id (id, nickname, avatar_url, bio, created_at)",
+    )
     .order("created_at", { ascending: false })
     .range(from, to);
 
@@ -26,7 +28,9 @@ export async function fetchProjects({
 export async function fetchProjectById(projectId: number) {
   const { data, error } = await supabase
     .from("project")
-    .select("*, owner:profile!owner_id (*), members:project_members (*)")
+    .select(
+      "id, name, description, created_at, owner_id, owner:profile!owner_id (id, nickname, avatar_url, bio, created_at), members:project_members (project_id, user_id, joined_at)",
+    )
     .eq("id", projectId)
     .single();
 
