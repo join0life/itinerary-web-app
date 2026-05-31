@@ -19,11 +19,7 @@ export default function UpdateTodoButton(props: EventEntity) {
     });
   };
   return (
-    <Button
-      onClick={handleButtonClick}
-      className="cursor-pointer px-3 py-1 text-xs"
-      variant={"outline"}
-    >
+    <Button onClick={handleButtonClick} size="xs" variant="outline">
       수정
     </Button>
   );

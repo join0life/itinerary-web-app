@@ -39,8 +39,8 @@ export default function DeleteProjectButton({ id }: { id: number }) {
     <Button
       disabled={isDeleteProjectPending}
       onClick={handleDeleteClick}
-      className="text-destructive hover:text-destructive shrink-0 cursor-pointer text-sm"
-      variant={"ghost"}
+      className="shrink-0"
+      variant="destructiveGhost"
     >
       삭제
     </Button>
