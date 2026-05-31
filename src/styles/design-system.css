@@ -1,0 +1,659 @@
+@theme inline {
+  --font-sans: var(--typography-font-family-sans);
+  --font-brand: var(--typography-font-family-brand);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-brand: var(--color-semantic-brand-default);
+  --color-brand-hover: var(--color-semantic-brand-hover);
+  --color-brand-strong: var(--color-semantic-brand-strong);
+  --color-brand-subtle: var(--color-semantic-brand-subtle);
+  --color-brand-foreground: var(--color-semantic-brand-foreground);
+  --color-hero: var(--component-hero-bg);
+  --color-hero-foreground: var(--component-hero-text);
+  --color-header-project-title: var(--component-header-project-title-text);
+  --color-bottom-nav: var(--component-bottom-nav-bg);
+  --color-bottom-nav-foreground: var(--component-bottom-nav-text);
+  --color-bottom-nav-active: var(--component-bottom-nav-text-active);
+  --color-project-item: var(--component-project-item-bg);
+  --color-project-item-hover: var(--component-project-item-bg-hover);
+  --color-todo-create: var(--component-todo-create-button-bg);
+  --color-todo-create-foreground: var(--component-todo-create-button-text);
+  --color-calendar-selected: var(--component-calendar-selected-bg);
+  --color-calendar-selected-foreground: var(--component-calendar-selected-text);
+  --color-calendar-event: var(--component-calendar-event-confirmed-bg);
+  --color-calendar-event-pending: var(--component-calendar-event-pending-bg);
+  --color-calendar-event-foreground: var(--component-calendar-event-text);
+  --color-calendar-event-border: var(--component-calendar-event-border);
+  --color-calendar-allday: var(--component-calendar-allday-bg);
+  --color-calendar-allday-event: var(--component-calendar-allday-event-bg);
+  --color-calendar-allday-event-foreground: var(
+    --component-calendar-allday-event-text
+  );
+  --color-button-primary: var(--component-button-primary-bg);
+  --color-button-primary-hover: var(--component-button-primary-bg-hover);
+  --color-button-primary-pressed: var(--component-button-primary-bg-pressed);
+  --color-button-primary-foreground: var(--component-button-primary-text);
+  --color-button-secondary: var(--component-button-secondary-bg);
+  --color-button-secondary-foreground: var(--component-button-secondary-text);
+  --color-button-outline: var(--component-button-outline-bg);
+  --color-button-outline-border: var(--component-button-outline-border);
+  --color-button-outline-hover: var(--component-button-outline-bg-hover);
+  --color-button-outline-foreground: var(--component-button-outline-text);
+  --color-button-ghost: var(--component-button-ghost-bg);
+  --color-button-ghost-hover: var(--component-button-ghost-bg-hover);
+  --color-button-ghost-foreground: var(--component-button-ghost-text);
+  --color-button-destructive: var(--component-button-destructive-bg);
+  --color-button-destructive-hover: var(
+    --component-button-destructive-bg-hover
+  );
+  --color-button-destructive-foreground: var(
+    --component-button-destructive-text
+  );
+  --color-button-link: var(--component-button-link-text);
+  --color-button-link-hover: var(--component-button-link-text-hover);
+  --color-button-disabled: var(--component-button-disabled-bg);
+  --color-button-disabled-foreground: var(--component-button-disabled-text);
+  --color-button-disabled-border: var(--component-button-disabled-border);
+
+  --radius-sm: var(--radius-token-sm);
+  --radius-md: var(--radius-token-md);
+  --radius-lg: var(--radius-token-lg);
+  --radius-xl: var(--radius-token-xl);
+  --radius-full: var(--radius-token-full);
+  --radius-none: var(--radius-token-none);
+  --radius-card: var(--component-card-radius);
+  --radius-dialog: var(--component-dialog-radius);
+  --radius-project-item: var(--component-project-item-radius);
+  --radius-todo-create: var(--component-todo-create-button-radius);
+  --radius-calendar-event: var(--component-calendar-event-radius);
+  --radius-calendar-selected: var(--component-calendar-selected-radius);
+  --radius-button: var(--component-button-radius);
+
+  --spacing-page-x: var(--spacing-semantic-page-x);
+  --spacing-page-y: var(--spacing-semantic-page-y);
+  --spacing-section-gap: var(--spacing-semantic-section-gap);
+  --spacing-item-gap: var(--spacing-semantic-item-gap);
+  --spacing-item: var(--spacing-semantic-item-gap);
+  --spacing-card: var(--component-card-padding);
+  --spacing-card-gap: var(--component-card-gap);
+  --spacing-dialog: var(--component-dialog-padding);
+  --spacing-app-shell-x: var(--component-app-shell-page-padding-x);
+  --spacing-app-shell-y: var(--component-app-shell-page-padding-y);
+  --spacing-hero-gap: var(--component-hero-gap);
+  --spacing-header-height: var(--component-header-height);
+  --spacing-header-x: var(--component-header-padding-x);
+  --spacing-bottom-nav-height: var(--component-bottom-nav-height);
+  --spacing-project-item: var(--component-project-item-padding);
+  --spacing-project-item-height: var(--component-project-item-height);
+  --spacing-project-create-bottom: var(
+    --component-project-create-button-bottom
+  );
+  --spacing-project-create-width: var(--component-project-create-button-width);
+  --spacing-project-create-x: var(--component-project-create-button-padding-x);
+  --spacing-project-create-y: var(--component-project-create-button-padding-y);
+  --spacing-todo-create: var(--component-todo-create-button-padding);
+  --spacing-profile-avatar-lg: var(--component-profile-avatar-lg-size);
+  --spacing-profile-avatar-sm: var(--component-profile-avatar-sm-size);
+  --spacing-switch-height: var(--component-switch-height);
+  --spacing-switch-width: var(--component-switch-width);
+  --spacing-switch-thumb: var(--component-switch-thumb-size);
+  --spacing-button-height-sm: var(--component-button-height-sm);
+  --spacing-button-height-md: var(--component-button-height-md);
+  --spacing-button-height-lg: var(--component-button-height-lg);
+  --spacing-button-height-icon: var(--component-button-height-icon);
+  --spacing-button-x-sm: var(--component-button-padding-x-sm);
+  --spacing-button-x-md: var(--component-button-padding-x-md);
+  --spacing-button-x-lg: var(--component-button-padding-x-lg);
+  --spacing-button-icon-x-sm: var(--component-button-padding-x-icon-sm);
+  --spacing-button-icon-x-md: var(--component-button-padding-x-icon-md);
+  --spacing-button-icon-x-lg: var(--component-button-padding-x-icon-lg);
+  --spacing-button-gap: var(--component-button-gap);
+  --spacing-calendar-selected: var(--component-calendar-selected-size);
+  --spacing-calendar-event-x: var(--component-calendar-event-padding-x);
+  --spacing-calendar-event-y: var(--component-calendar-event-padding-y);
+  --spacing-calendar-allday-height: var(--component-calendar-allday-height);
+  --spacing-calendar-hour-height: var(
+    --component-calendar-week-grid-hour-height
+  );
+  --spacing-calendar-canvas-height: var(
+    --component-calendar-week-grid-canvas-height
+  );
+
+  --shadow-card: var(--component-card-shadow);
+  --shadow-dialog: var(--component-dialog-shadow);
+  --shadow-app-shell: var(--component-app-shell-shadow);
+
+  --container-app-shell: var(--component-app-shell-max-width);
+  --container-project-create: var(--component-project-create-button-max-width);
+  --container-dialog-mobile: var(--component-dialog-width-mobile);
+  --container-profile-menu: var(--component-profile-menu-width);
+  --container-theme-menu: var(--component-theme-menu-width);
+
+  --text-page-title: var(--typography-page-title-font-size);
+  --text-page-title--line-height: var(--typography-page-title-line-height);
+  --text-section-title: var(--typography-section-title-font-size);
+  --text-section-title--line-height: var(
+    --typography-section-title-line-height
+  );
+  --text-card-title: var(--typography-card-title-font-size);
+  --text-card-title--line-height: var(--typography-card-title-line-height);
+  --text-caption: var(--typography-caption-font-size);
+  --text-caption--line-height: var(--typography-caption-line-height);
+  --text-nav-label: var(--typography-nav-label-font-size);
+  --text-nav-label--line-height: var(--typography-nav-label-line-height);
+  --text-calendar-label: var(--typography-font-size-calendar-label);
+  --text-button: var(--component-button-typography-font-size);
+  --text-button--line-height: var(--component-button-typography-line-height);
+
+  --font-weight-page-title: var(--typography-page-title-font-weight);
+  --font-weight-section-title: var(--typography-section-title-font-weight);
+  --font-weight-card-title: var(--typography-card-title-font-weight);
+  --font-weight-button: var(--component-button-typography-font-weight);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Primitive colors */
+  --color-primitive-white: #ffffff;
+  --color-primitive-black: #0f1115;
+  --color-primitive-neutral-0: #ffffff;
+  --color-primitive-neutral-50: #fafafa;
+  --color-primitive-neutral-100: #f5f5f4;
+  --color-primitive-neutral-200: #e7e5e4;
+  --color-primitive-neutral-300: #d6d3d1;
+  --color-primitive-neutral-400: #a8a29e;
+  --color-primitive-neutral-500: #78716c;
+  --color-primitive-neutral-600: #57534e;
+  --color-primitive-neutral-700: #44403c;
+  --color-primitive-neutral-800: #292524;
+  --color-primitive-neutral-900: #1c1917;
+  --color-primitive-neutral-1000: #0c0a09;
+  --color-primitive-teal-50: #f0fdfa;
+  --color-primitive-teal-100: #ccfbf1;
+  --color-primitive-teal-300: #5eead4;
+  --color-primitive-teal-500: #14b8a6;
+  --color-primitive-teal-600: #0d9488;
+  --color-primitive-teal-700: #0f766e;
+  --color-primitive-teal-900: #134e4a;
+  --color-primitive-sky-50: #f0f9ff;
+  --color-primitive-sky-100: #e0f2fe;
+  --color-primitive-sky-300: #7dd3fc;
+  --color-primitive-sky-500: #0ea5e9;
+  --color-primitive-sky-600: #0284c7;
+  --color-primitive-sky-900: #0c4a6e;
+  --color-primitive-red-50: #fef2f2;
+  --color-primitive-red-500: #ef4444;
+  --color-primitive-red-600: #dc2626;
+  --color-primitive-red-700: #b91c1c;
+  --color-primitive-yellow-50: #fefce8;
+  --color-primitive-yellow-300: #fde047;
+  --color-primitive-yellow-500: #eab308;
+  --color-primitive-yellow-700: #a16207;
+  --color-primitive-orange-50: #fff7ed;
+  --color-primitive-orange-300: #fdba74;
+  --color-primitive-orange-400: #fb923c;
+  --color-primitive-orange-500: #f97316;
+
+  /* Semantic colors */
+  --color-semantic-bg-default: var(--color-primitive-neutral-0);
+  --color-semantic-bg-muted: var(--color-primitive-neutral-100);
+  --color-semantic-bg-elevated: var(--color-primitive-white);
+  --color-semantic-bg-inverse: var(--color-primitive-neutral-900);
+  --color-semantic-text-primary: var(--color-primitive-neutral-900);
+  --color-semantic-text-secondary: var(--color-primitive-neutral-600);
+  --color-semantic-text-muted: var(--color-primitive-neutral-500);
+  --color-semantic-text-inverse: var(--color-primitive-white);
+  --color-semantic-border-default: var(--color-primitive-neutral-200);
+  --color-semantic-border-subtle: var(--color-primitive-neutral-100);
+  --color-semantic-action-primary: var(--color-primitive-teal-600);
+  --color-semantic-action-primary-hover: var(--color-primitive-teal-700);
+  --color-semantic-action-secondary: var(--color-primitive-neutral-100);
+  --color-semantic-action-ghost-hover: var(--color-primitive-neutral-100);
+  --color-semantic-danger-default: var(--color-primitive-red-500);
+  --color-semantic-danger-hover: var(--color-primitive-red-600);
+  --color-semantic-success-default: var(--color-primitive-teal-600);
+  --color-semantic-brand-default: var(--color-primitive-orange-400);
+  --color-semantic-brand-hover: var(--color-primitive-orange-300);
+  --color-semantic-brand-strong: var(--color-primitive-orange-500);
+  --color-semantic-brand-subtle: var(--color-primitive-orange-50);
+  --color-semantic-brand-foreground: var(--color-primitive-white);
+  --color-semantic-calendar-confirmed: var(--color-semantic-brand-subtle);
+  --color-semantic-calendar-pending: var(--color-semantic-brand-subtle);
+
+  /* Spacing */
+  --spacing-0: 0rem;
+  --spacing-0-5: 0.125rem;
+  --spacing-1: 0.25rem;
+  --spacing-1-5: 0.375rem;
+  --spacing-2: 0.5rem;
+  --spacing-2-5: 0.625rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-15: 3.75rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-semantic-page-x: var(--spacing-4);
+  --spacing-semantic-page-y: var(--spacing-6);
+  --spacing-semantic-section-gap: var(--spacing-8);
+  --spacing-semantic-item-gap: var(--spacing-3);
+
+  /* Radius */
+  --radius-token-none: 0rem;
+  --radius-token-sm: 0.25rem;
+  --radius-token-md: 0.5rem;
+  --radius-token-lg: 0.625rem;
+  --radius-token-xl: 0.75rem;
+  --radius-token-full: 9999px;
+  --radius-component-button: var(--radius-token-md);
+  --radius-component-input: var(--radius-token-md);
+  --radius-component-card: var(--radius-token-xl);
+  --radius-component-dialog: var(--radius-token-lg);
+
+  /* Typography */
+  --typography-font-family-sans: "Noto Sans KR", system-ui, sans-serif;
+  --typography-font-family-brand: "JejuStoneWall", "Noto Sans KR", sans-serif;
+  --typography-font-size-xs: 0.75rem;
+  --typography-font-size-sm: 0.875rem;
+  --typography-font-size-md: 1rem;
+  --typography-font-size-lg: 1.125rem;
+  --typography-font-size-xl: 1.25rem;
+  --typography-font-size-2xl: 1.5rem;
+  --typography-font-size-3xl: 1.875rem;
+  --typography-font-size-6xl: 3.75rem;
+  --typography-font-size-calendar-label: 0.8rem;
+  --typography-font-weight-regular: 400;
+  --typography-font-weight-medium: 500;
+  --typography-font-weight-semibold: 600;
+  --typography-font-weight-bold: 700;
+  --typography-line-height-tight: 1.25;
+  --typography-line-height-normal: 1.5;
+  --typography-line-height-relaxed: 1.7;
+  --typography-page-title-font-family: var(--typography-font-family-sans);
+  --typography-page-title-font-size: var(--typography-font-size-xl);
+  --typography-page-title-font-weight: var(--typography-font-weight-bold);
+  --typography-page-title-line-height: var(--typography-line-height-tight);
+  --typography-section-title-font-family: var(--typography-font-family-sans);
+  --typography-section-title-font-size: var(--typography-font-size-lg);
+  --typography-section-title-font-weight: var(
+    --typography-font-weight-semibold
+  );
+  --typography-section-title-line-height: var(--typography-line-height-tight);
+  --typography-card-title-font-family: var(--typography-font-family-sans);
+  --typography-card-title-font-size: var(--typography-font-size-lg);
+  --typography-card-title-font-weight: var(--typography-font-weight-semibold);
+  --typography-card-title-line-height: var(--typography-line-height-tight);
+  --typography-body-font-family: var(--typography-font-family-sans);
+  --typography-body-font-size: var(--typography-font-size-md);
+  --typography-body-font-weight: var(--typography-font-weight-regular);
+  --typography-body-line-height: var(--typography-line-height-normal);
+  --typography-caption-font-family: var(--typography-font-family-sans);
+  --typography-caption-font-size: var(--typography-font-size-xs);
+  --typography-caption-font-weight: var(--typography-font-weight-regular);
+  --typography-caption-line-height: var(--typography-line-height-normal);
+  --typography-nav-label-font-family: var(--typography-font-family-sans);
+  --typography-nav-label-font-size: var(--typography-font-size-xs);
+  --typography-nav-label-font-weight: var(--typography-font-weight-medium);
+  --typography-nav-label-line-height: var(--typography-line-height-tight);
+  --typography-button-font-family: var(--typography-font-family-sans);
+  --typography-button-font-size: var(--typography-font-size-sm);
+  --typography-button-font-weight: var(--typography-font-weight-medium);
+  --typography-button-line-height: var(--typography-line-height-tight);
+
+  /* Size */
+  --size-3-5: 0.875rem;
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-7: 1.75rem;
+  --size-8: 2rem;
+  --size-9: 2.25rem;
+  --size-10: 2.5rem;
+  --size-12: 3rem;
+  --size-15: 3.75rem;
+  --size-30: 7.5rem;
+  --size-32: 8rem;
+  --size-35: 8.75rem;
+  --size-40: 10rem;
+  --size-142: 35.5rem;
+  --size-150: 37.5rem;
+  --size-360: 90rem;
+  --size-header-height: var(--size-15);
+  --size-bottom-nav-height: var(--size-15);
+  --size-button-sm-height: var(--size-8);
+  --size-button-md-height: var(--size-9);
+  --size-button-lg-height: var(--size-10);
+  --size-icon-sm: var(--size-4);
+  --size-icon-md: var(--size-5);
+  --size-icon-lg: var(--size-6);
+
+  /* Shadow */
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-token-app-shell:
+    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* shadcn/ui */
+  --radius: var(--radius-token-lg);
+  --background: var(--color-semantic-bg-default);
+  --foreground: var(--color-semantic-text-primary);
+  --card: var(--color-semantic-bg-elevated);
+  --card-foreground: var(--color-semantic-text-primary);
+  --popover: var(--color-semantic-bg-elevated);
+  --popover-foreground: var(--color-semantic-text-primary);
+  --primary: var(--color-semantic-action-primary);
+  --primary-foreground: var(--color-semantic-text-inverse);
+  --secondary: var(--color-semantic-action-secondary);
+  --secondary-foreground: var(--color-semantic-text-primary);
+  --muted: var(--color-semantic-bg-muted);
+  --muted-foreground: var(--color-semantic-text-muted);
+  --accent: var(--color-primitive-teal-50);
+  --accent-foreground: var(--color-semantic-text-primary);
+  --destructive: var(--color-semantic-danger-default);
+  --destructive-foreground: var(--color-semantic-text-inverse);
+  --border: var(--color-semantic-border-default);
+  --input: var(--color-semantic-border-default);
+  --ring: var(--color-semantic-action-primary);
+
+  /* App shell, hero and header */
+  --component-app-shell-max-width: var(--size-150);
+  --component-app-shell-shadow: var(--shadow-token-app-shell);
+  --component-app-shell-page-padding-x: var(--spacing-4);
+  --component-app-shell-page-padding-y: var(--spacing-6);
+  --component-hero-bg: var(--color-semantic-brand-default);
+  --component-hero-text: var(--color-semantic-brand-foreground);
+  --component-hero-gap: var(--spacing-5);
+  --component-hero-subtitle-font-size: var(--typography-font-size-3xl);
+  --component-hero-title-font-size: var(--typography-font-size-6xl);
+  --component-header-height: var(--size-header-height);
+  --component-header-padding-x: var(--spacing-4);
+  --component-header-project-title-text: var(--color-semantic-brand-strong);
+
+  /* Buttons and inputs */
+  --component-button-primary-bg: var(--color-semantic-action-primary);
+  --component-button-primary-bg-hover: var(
+    --color-semantic-action-primary-hover
+  );
+  --component-button-primary-bg-pressed: var(--color-primitive-teal-700);
+  --component-button-primary-text: var(--color-semantic-text-inverse);
+  --component-button-secondary-bg: var(--color-semantic-action-secondary);
+  --component-button-secondary-text: var(--color-semantic-text-primary);
+  --component-button-outline-bg: transparent;
+  --component-button-outline-border: var(--color-semantic-border-default);
+  --component-button-outline-bg-hover: var(--color-semantic-action-ghost-hover);
+  --component-button-outline-text: var(--color-semantic-text-primary);
+  --component-button-ghost-bg: transparent;
+  --component-button-ghost-bg-hover: var(--color-semantic-action-ghost-hover);
+  --component-button-ghost-text: var(--color-semantic-text-secondary);
+  --component-button-destructive-bg: var(--color-semantic-danger-default);
+  --component-button-destructive-bg-hover: var(--color-semantic-danger-hover);
+  --component-button-destructive-text: var(--color-semantic-text-inverse);
+  --component-button-link-text: var(--color-semantic-action-primary);
+  --component-button-link-text-hover: var(
+    --color-semantic-action-primary-hover
+  );
+  --component-button-disabled-bg: var(--color-primitive-neutral-100);
+  --component-button-disabled-text: var(--color-primitive-neutral-400);
+  --component-button-disabled-border: var(--color-primitive-neutral-200);
+  --component-button-loading-opacity: 0.72;
+  --component-button-focus-ring: 0 0 0 3px rgb(20 184 166 / 0.28);
+  --component-button-radius: var(--radius-component-button);
+  --component-button-height-sm: var(--size-button-sm-height);
+  --component-button-height-md: var(--size-button-md-height);
+  --component-button-height-lg: var(--size-button-lg-height);
+  --component-button-height-icon: var(--size-9);
+  --component-button-padding-x-sm: var(--spacing-3);
+  --component-button-padding-x-md: var(--spacing-4);
+  --component-button-padding-x-lg: var(--spacing-6);
+  --component-button-padding-x-icon-sm: var(--spacing-2-5);
+  --component-button-padding-x-icon-md: var(--spacing-3);
+  --component-button-padding-x-icon-lg: var(--spacing-4);
+  --component-button-gap: var(--spacing-2);
+  --component-button-typography-font-family: var(
+    --typography-button-font-family
+  );
+  --component-button-typography-font-size: var(--typography-button-font-size);
+  --component-button-typography-font-weight: var(
+    --typography-button-font-weight
+  );
+  --component-button-typography-line-height: var(
+    --typography-button-line-height
+  );
+  --component-input-bg: transparent;
+  --component-input-text: var(--color-semantic-text-primary);
+  --component-input-placeholder: var(--color-semantic-text-muted);
+  --component-input-border: var(--color-semantic-border-default);
+  --component-input-border-focus: var(--color-semantic-action-primary);
+  --component-input-border-invalid: var(--color-semantic-danger-default);
+  --component-input-disabled-bg: var(--color-primitive-neutral-100);
+  --component-input-disabled-text: var(--color-primitive-neutral-400);
+  --component-input-radius: var(--radius-component-input);
+  --component-input-height: var(--size-9);
+  --component-input-padding-x: var(--spacing-3);
+  --component-input-focus-ring: 0 0 0 3px rgb(20 184 166 / 0.22);
+
+  /* Surfaces */
+  --component-card-default-bg: var(--color-semantic-bg-elevated);
+  --component-card-default-text: var(--color-semantic-text-primary);
+  --component-card-default-border: var(--color-semantic-border-default);
+  --component-card-muted-bg: var(--color-semantic-bg-muted);
+  --component-card-muted-text: var(--color-semantic-text-primary);
+  --component-card-interactive-bg-hover: var(--color-primitive-teal-50);
+  --component-card-interactive-selected: var(--color-primitive-teal-100);
+  --component-card-radius: var(--radius-component-card);
+  --component-card-padding: var(--spacing-6);
+  --component-card-gap: var(--spacing-3);
+  --component-card-shadow: var(--shadow-sm);
+  --component-dialog-bg: var(--color-semantic-bg-elevated);
+  --component-dialog-text: var(--color-semantic-text-primary);
+  --component-dialog-overlay: rgb(15 17 21 / 0.48);
+  --component-dialog-radius: var(--radius-component-dialog);
+  --component-dialog-padding: var(--spacing-6);
+  --component-dialog-width-mobile: calc(100vw - 2rem);
+  --component-dialog-shadow: var(--shadow-lg);
+
+  /* Navigation and projects */
+  --component-bottom-nav-bg: var(--color-semantic-bg-elevated);
+  --component-bottom-nav-bg-dark: oklch(0.145 0 0);
+  --component-bottom-nav-border: var(--color-semantic-border-default);
+  --component-bottom-nav-height: var(--size-bottom-nav-height);
+  --component-bottom-nav-text: var(--color-semantic-text-muted);
+  --component-bottom-nav-text-active: var(--color-semantic-text-primary);
+  --component-bottom-nav-icon-size: var(--size-icon-md);
+  --component-bottom-nav-label-typography-font-family: var(
+    --typography-nav-label-font-family
+  );
+  --component-bottom-nav-label-typography-font-size: var(
+    --typography-nav-label-font-size
+  );
+  --component-bottom-nav-label-typography-font-weight: var(
+    --typography-nav-label-font-weight
+  );
+  --component-bottom-nav-label-typography-line-height: var(
+    --typography-nav-label-line-height
+  );
+  --component-project-create-button-bg: var(--color-semantic-brand-default);
+  --component-project-create-button-bg-hover: var(--color-semantic-brand-hover);
+  --component-project-create-button-bottom: var(--spacing-20);
+  --component-project-create-button-width: calc(100% - 2rem);
+  --component-project-create-button-max-width: var(--size-142);
+  --component-project-create-button-padding-x: var(--spacing-4);
+  --component-project-create-button-padding-y: var(--spacing-6);
+  --component-project-item-bg: var(--color-semantic-bg-muted);
+  --component-project-item-bg-hover: var(--color-primitive-teal-50);
+  --component-project-item-radius: var(--radius-token-xl);
+  --component-project-item-padding: var(--spacing-6);
+  --component-project-item-height: var(--size-40);
+  --component-project-item-title-typography-font-family: var(
+    --typography-card-title-font-family
+  );
+  --component-project-item-title-typography-font-size: var(
+    --typography-card-title-font-size
+  );
+  --component-project-item-title-typography-font-weight: var(
+    --typography-card-title-font-weight
+  );
+  --component-project-item-title-typography-line-height: var(
+    --typography-card-title-line-height
+  );
+  --component-project-item-description-typography-font-family: var(
+    --typography-caption-font-family
+  );
+  --component-project-item-description-typography-font-size: var(
+    --typography-caption-font-size
+  );
+  --component-project-item-description-typography-font-weight: var(
+    --typography-caption-font-weight
+  );
+  --component-project-item-description-typography-line-height: var(
+    --typography-caption-line-height
+  );
+  --component-project-item-description-text: var(
+    --color-semantic-text-secondary
+  );
+  --component-project-item-owner-badge-bg: var(--color-semantic-bg-elevated);
+  --component-project-item-owner-badge-border: var(
+    --color-semantic-border-default
+  );
+  --component-project-item-owner-badge-radius: var(--radius-token-sm);
+
+  /* Todos and profile */
+  --component-todo-item-gap: var(--spacing-2);
+  --component-todo-item-text: var(--color-semantic-text-primary);
+  --component-todo-item-owner-actions-visibility-rule: ownerOnly;
+  --component-todo-item-action-button-size: var(--size-8);
+  --component-todo-item-confirmed-text: var(--color-semantic-text-muted);
+  --component-todo-item-pending-text: var(--color-semantic-text-primary);
+  --component-todo-create-button-bg: var(--color-semantic-bg-muted);
+  --component-todo-create-button-text: var(--color-semantic-text-muted);
+  --component-todo-create-button-radius: var(--radius-token-xl);
+  --component-todo-create-button-padding: var(--spacing-4);
+  --component-profile-avatar-lg-size: var(--size-30);
+  --component-profile-avatar-sm-size: var(--size-6);
+  --component-profile-avatar-radius: var(--radius-token-full);
+  --component-profile-menu-width: var(--size-40);
+  --component-theme-menu-width: var(--size-35);
+
+  /* Checkbox and switch */
+  --component-checkbox-size: var(--size-4);
+  --component-checkbox-radius: var(--radius-token-sm);
+  --component-checkbox-border: var(--color-semantic-border-default);
+  --component-checkbox-bg-checked: var(--color-semantic-action-primary);
+  --component-checkbox-icon-checked: var(--color-semantic-text-inverse);
+  --component-checkbox-disabled-bg: var(--color-primitive-neutral-100);
+  --component-checkbox-disabled-border: var(--color-primitive-neutral-200);
+  --component-checkbox-focus-ring: 0 0 0 3px rgb(20 184 166 / 0.22);
+  --component-switch-height: var(--size-8);
+  --component-switch-width: 3.5rem;
+  --component-switch-thumb-size: var(--size-7);
+  --component-switch-radius: var(--radius-token-full);
+
+  /* Calendar */
+  --component-calendar-bg: var(--color-semantic-bg-default);
+  --component-calendar-border: var(--color-semantic-border-default);
+  --component-calendar-today-bg: var(--color-primitive-sky-50);
+  --component-calendar-selected-bg: var(--color-semantic-brand-default);
+  --component-calendar-selected-text: var(--color-semantic-brand-foreground);
+  --component-calendar-selected-size: var(--size-9);
+  --component-calendar-selected-radius: var(--radius-token-full);
+  --component-calendar-event-confirmed-bg: var(
+    --color-semantic-calendar-confirmed
+  );
+  --component-calendar-event-pending-bg: var(--color-semantic-calendar-pending);
+  --component-calendar-event-text: var(--color-semantic-brand-strong);
+  --component-calendar-event-border: var(--color-semantic-brand-strong);
+  --component-calendar-event-radius: var(--radius-token-sm);
+  --component-calendar-event-padding-x: var(--spacing-2);
+  --component-calendar-event-padding-y: var(--spacing-3);
+  --component-calendar-allday-bg: var(--color-semantic-bg-muted);
+  --component-calendar-allday-height: var(--size-15);
+  --component-calendar-allday-event-bg: var(--color-semantic-brand-default);
+  --component-calendar-allday-event-text: var(
+    --color-semantic-brand-foreground
+  );
+  --component-calendar-allday-event-radius: var(--radius-token-sm);
+  --component-calendar-week-grid-hour-height: var(--size-15);
+  --component-calendar-week-grid-canvas-height: var(--size-360);
+  --component-calendar-week-grid-viewport-height-sm: 32.5rem;
+  --component-calendar-week-grid-viewport-height-md: 37.5rem;
+  --component-calendar-week-grid-viewport-height-lg: 42.5rem;
+}
+
+.dark {
+  --color-semantic-bg-default: var(--color-primitive-neutral-1000);
+  --color-semantic-bg-muted: var(--color-primitive-neutral-900);
+  --color-semantic-bg-elevated: var(--color-primitive-neutral-800);
+  --color-semantic-bg-inverse: var(--color-primitive-neutral-0);
+  --color-semantic-text-primary: var(--color-primitive-neutral-50);
+  --color-semantic-text-secondary: var(--color-primitive-neutral-300);
+  --color-semantic-text-muted: var(--color-primitive-neutral-400);
+  --color-semantic-text-inverse: var(--color-primitive-neutral-1000);
+  --color-semantic-border-default: rgb(255 255 255 / 0.12);
+  --color-semantic-border-subtle: rgb(255 255 255 / 0.08);
+  --color-semantic-action-primary: var(--color-primitive-teal-300);
+  --color-semantic-action-primary-hover: var(--color-primitive-teal-100);
+  --color-semantic-action-secondary: var(--color-primitive-neutral-900);
+  --color-semantic-action-ghost-hover: rgb(255 255 255 / 0.08);
+  --color-semantic-danger-default: var(--color-primitive-red-500);
+  --color-semantic-danger-hover: var(--color-primitive-red-600);
+  --color-semantic-calendar-confirmed: rgb(251 146 60 / 0.18);
+  --color-semantic-calendar-pending: rgb(251 146 60 / 0.18);
+
+  --background: var(--color-semantic-bg-default);
+  --foreground: var(--color-semantic-text-primary);
+  --card: var(--color-semantic-bg-elevated);
+  --card-foreground: var(--color-semantic-text-primary);
+  --popover: var(--color-semantic-bg-elevated);
+  --popover-foreground: var(--color-semantic-text-primary);
+  --primary: var(--color-semantic-action-primary);
+  --primary-foreground: var(--color-semantic-text-inverse);
+  --secondary: var(--color-semantic-action-secondary);
+  --secondary-foreground: var(--color-semantic-text-primary);
+  --muted: var(--color-semantic-bg-muted);
+  --muted-foreground: var(--color-semantic-text-muted);
+  --accent: rgb(20 184 166 / 0.14);
+  --accent-foreground: var(--color-semantic-text-primary);
+  --destructive: var(--color-semantic-danger-default);
+  --destructive-foreground: var(--color-semantic-text-inverse);
+  --border: var(--color-semantic-border-default);
+  --input: var(--color-semantic-border-default);
+  --ring: var(--color-semantic-action-primary);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}

@@ -185,6 +185,28 @@
           "type": "color",
           "description": "Warning text."
         }
+      },
+      "orange": {
+        "50": {
+          "value": "#fff7ed",
+          "type": "color",
+          "description": "Light orange surface used for calendar events."
+        },
+        "300": {
+          "value": "#fdba74",
+          "type": "color",
+          "description": "Soft orange used for hover states."
+        },
+        "400": {
+          "value": "#fb923c",
+          "type": "color",
+          "description": "Main brand orange used for prominent travel actions."
+        },
+        "500": {
+          "value": "#f97316",
+          "type": "color",
+          "description": "Strong orange used for event text and borders."
+        }
       }
     },
     "semantic": {
@@ -285,14 +307,41 @@
           "description": "Success/confirmed state."
         }
       },
+      "brand": {
+        "default": {
+          "value": "{color.primitive.orange.400}",
+          "type": "color",
+          "description": "Main app brand surface."
+        },
+        "hover": {
+          "value": "{color.primitive.orange.300}",
+          "type": "color",
+          "description": "Brand surface hover state."
+        },
+        "strong": {
+          "value": "{color.primitive.orange.500}",
+          "type": "color",
+          "description": "High-emphasis brand text and border."
+        },
+        "subtle": {
+          "value": "{color.primitive.orange.50}",
+          "type": "color",
+          "description": "Low-emphasis brand surface."
+        },
+        "foreground": {
+          "value": "{color.primitive.white}",
+          "type": "color",
+          "description": "Text displayed on a brand surface."
+        }
+      },
       "calendar": {
         "confirmed": {
-          "value": "{color.primitive.teal.100}",
+          "value": "{color.semantic.brand.subtle}",
           "type": "color",
           "description": "Confirmed calendar event background."
         },
         "pending": {
-          "value": "{color.primitive.yellow.50}",
+          "value": "{color.semantic.brand.subtle}",
           "type": "color",
           "description": "Pending calendar event background."
         }
@@ -305,15 +354,30 @@
       "type": "spacing",
       "description": "No spacing."
     },
+    "0.5": {
+      "value": "0.125rem",
+      "type": "spacing",
+      "description": "Tailwind spacing 0.5."
+    },
     "1": {
       "value": "0.25rem",
       "type": "spacing",
       "description": "Tailwind spacing 1."
     },
+    "1.5": {
+      "value": "0.375rem",
+      "type": "spacing",
+      "description": "Tailwind spacing 1.5."
+    },
     "2": {
       "value": "0.5rem",
       "type": "spacing",
       "description": "Tailwind spacing 2."
+    },
+    "2.5": {
+      "value": "0.625rem",
+      "type": "spacing",
+      "description": "Tailwind spacing 2.5."
     },
     "3": {
       "value": "0.75rem",
@@ -350,10 +414,20 @@
       "type": "spacing",
       "description": "Extra-large spacing."
     },
+    "15": {
+      "value": "3.75rem",
+      "type": "spacing",
+      "description": "Header-sized vertical spacing."
+    },
     "16": {
       "value": "4rem",
       "type": "spacing",
       "description": "Hero or empty-state spacing."
+    },
+    "20": {
+      "value": "5rem",
+      "type": "spacing",
+      "description": "Floating action offset above bottom navigation."
     },
     "semantic": {
       "page": {
@@ -427,9 +501,9 @@
         "description": "Input radius."
       },
       "card": {
-        "value": "{radius.md}",
+        "value": "{radius.xl}",
         "type": "radius",
-        "description": "Card radius kept restrained."
+        "description": "Card radius."
       },
       "dialog": {
         "value": "{radius.lg}",
@@ -482,6 +556,21 @@
           "value": "1.5rem",
           "type": "fontSize",
           "description": "Large title."
+        },
+        "3xl": {
+          "value": "1.875rem",
+          "type": "fontSize",
+          "description": "Hero supporting title."
+        },
+        "6xl": {
+          "value": "3.75rem",
+          "type": "fontSize",
+          "description": "Hero brand title."
+        },
+        "calendarLabel": {
+          "value": "0.8rem",
+          "type": "fontSize",
+          "description": "Compact calendar weekday label."
         }
       },
       "weight": {
@@ -596,6 +685,11 @@
     }
   },
   "size": {
+    "3.5": {
+      "value": "0.875rem",
+      "type": "sizing",
+      "description": "Compact select or checkbox icon."
+    },
     "4": {
       "value": "1rem",
       "type": "sizing",
@@ -610,6 +704,11 @@
       "value": "1.5rem",
       "type": "sizing",
       "description": "Avatar small."
+    },
+    "7": {
+      "value": "1.75rem",
+      "type": "sizing",
+      "description": "Switch thumb."
     },
     "8": {
       "value": "2rem",
@@ -636,10 +735,40 @@
       "type": "sizing",
       "description": "Header and bottom navigation height."
     },
+    "30": {
+      "value": "7.5rem",
+      "type": "sizing",
+      "description": "Large profile avatar."
+    },
+    "32": {
+      "value": "8rem",
+      "type": "sizing",
+      "description": "Date picker trigger width."
+    },
+    "35": {
+      "value": "8.75rem",
+      "type": "sizing",
+      "description": "Theme popover width."
+    },
     "40": {
       "value": "10rem",
       "type": "sizing",
       "description": "Project item height."
+    },
+    "142": {
+      "value": "35.5rem",
+      "type": "sizing",
+      "description": "Floating project action maximum width."
+    },
+    "150": {
+      "value": "37.5rem",
+      "type": "sizing",
+      "description": "Mobile app shell maximum width."
+    },
+    "360": {
+      "value": "90rem",
+      "type": "sizing",
+      "description": "Weekly calendar scroll canvas height."
     },
     "header": {
       "height": {
@@ -703,27 +832,108 @@
       "description": "No shadow."
     },
     "xs": {
-      "value": "0 1px 2px rgb(15 17 21 / 0.05)",
+      "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
       "type": "shadow",
-      "description": "Subtle component shadow."
+      "description": "Tailwind shadow-xs."
     },
     "sm": {
-      "value": "0 1px 3px rgb(15 17 21 / 0.08), 0 1px 2px rgb(15 17 21 / 0.04)",
+      "value": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
       "type": "shadow",
-      "description": "Small elevated shadow."
+      "description": "Tailwind shadow-sm."
     },
     "md": {
-      "value": "0 8px 24px rgb(15 17 21 / 0.10)",
+      "value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
       "type": "shadow",
-      "description": "Dialog or popover shadow."
+      "description": "Tailwind shadow-md."
+    },
+    "lg": {
+      "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+      "type": "shadow",
+      "description": "Tailwind shadow-lg."
     },
     "appShell": {
-      "value": "0 18px 48px rgb(15 17 21 / 0.16)",
+      "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
       "type": "shadow",
-      "description": "Mobile app shell shadow."
+      "description": "Tailwind shadow-xl used by the mobile app shell."
     }
   },
   "component": {
+    "appShell": {
+      "maxWidth": {
+        "value": "{size.150}",
+        "type": "sizing",
+        "description": "Maximum width of the centered mobile app shell."
+      },
+      "shadow": {
+        "value": "{shadow.appShell}",
+        "type": "shadow",
+        "description": "App shell elevation."
+      },
+      "pagePadding": {
+        "x": {
+          "value": "{spacing.4}",
+          "type": "spacing",
+          "description": "Default page horizontal padding."
+        },
+        "y": {
+          "value": "{spacing.6}",
+          "type": "spacing",
+          "description": "Default page vertical padding."
+        }
+      }
+    },
+    "hero": {
+      "bg": {
+        "value": "{color.semantic.brand.default}",
+        "type": "color",
+        "description": "Landing hero background."
+      },
+      "text": {
+        "value": "{color.semantic.brand.foreground}",
+        "type": "color",
+        "description": "Landing hero text."
+      },
+      "gap": {
+        "value": "{spacing.5}",
+        "type": "spacing",
+        "description": "Gap between landing hero headings."
+      },
+      "subtitle": {
+        "fontSize": {
+          "value": "{typography.font.size.3xl}",
+          "type": "fontSize",
+          "description": "Landing hero subtitle size."
+        }
+      },
+      "title": {
+        "fontSize": {
+          "value": "{typography.font.size.6xl}",
+          "type": "fontSize",
+          "description": "Landing hero title size."
+        }
+      }
+    },
+    "header": {
+      "height": {
+        "value": "{size.header.height}",
+        "type": "sizing",
+        "description": "Global and project header height."
+      },
+      "padding": {
+        "x": {
+          "value": "{spacing.4}",
+          "type": "spacing",
+          "description": "Header horizontal padding."
+        }
+      },
+      "projectTitle": {
+        "text": {
+          "value": "{color.semantic.brand.strong}",
+          "type": "color",
+          "description": "Current project title text."
+        }
+      }
+    },
     "button": {
       "primary": {
         "bg": {
@@ -899,6 +1109,21 @@
             "value": "{spacing.6}",
             "type": "spacing",
             "description": "Large horizontal button padding."
+          },
+          "iconSm": {
+            "value": "0.625rem",
+            "type": "spacing",
+            "description": "Small horizontal button padding when an icon is present."
+          },
+          "iconMd": {
+            "value": "{spacing.3}",
+            "type": "spacing",
+            "description": "Default horizontal button padding when an icon is present."
+          },
+          "iconLg": {
+            "value": "{spacing.4}",
+            "type": "spacing",
+            "description": "Large horizontal button padding when an icon is present."
           }
         }
       },
@@ -1037,9 +1262,9 @@
         "description": "Card internal gap."
       },
       "shadow": {
-        "value": "{shadow.none}",
+        "value": "{shadow.sm}",
         "type": "shadow",
-        "description": "Cards are mostly flat in this system."
+        "description": "Default card elevation."
       }
     },
     "dialog": {
@@ -1076,7 +1301,7 @@
         }
       },
       "shadow": {
-        "value": "{shadow.md}",
+        "value": "{shadow.lg}",
         "type": "shadow",
         "description": "Dialog elevation."
       }
@@ -1131,6 +1356,11 @@
         "type": "color",
         "description": "Bottom navigation background."
       },
+      "bgDark": {
+        "value": "oklch(0.145 0 0)",
+        "type": "color",
+        "description": "Bottom navigation dark background."
+      },
       "border": {
         "value": "{color.semantic.border.default}",
         "type": "color",
@@ -1163,6 +1393,45 @@
           "value": "{typography.navLabel}",
           "type": "typography",
           "description": "Bottom navigation label typography."
+        }
+      }
+    },
+    "projectCreateButton": {
+      "bg": {
+        "value": "{color.semantic.brand.default}",
+        "type": "color",
+        "description": "Floating create-project action background."
+      },
+      "bgHover": {
+        "value": "{color.semantic.brand.hover}",
+        "type": "color",
+        "description": "Floating create-project action hover background."
+      },
+      "bottom": {
+        "value": "{spacing.20}",
+        "type": "spacing",
+        "description": "Offset above the bottom navigation."
+      },
+      "width": {
+        "value": "calc(100% - 2rem)",
+        "type": "sizing",
+        "description": "Floating action width with page gutters."
+      },
+      "maxWidth": {
+        "value": "{size.142}",
+        "type": "sizing",
+        "description": "Floating action maximum width."
+      },
+      "padding": {
+        "x": {
+          "value": "{spacing.4}",
+          "type": "spacing",
+          "description": "Floating action horizontal padding."
+        },
+        "y": {
+          "value": "{spacing.6}",
+          "type": "spacing",
+          "description": "Floating action vertical padding."
         }
       }
     },
@@ -1269,6 +1538,87 @@
         }
       }
     },
+    "todoCreateButton": {
+      "bg": {
+        "value": "{color.semantic.bg.muted}",
+        "type": "color",
+        "description": "Create-todo row background."
+      },
+      "text": {
+        "value": "{color.semantic.text.muted}",
+        "type": "color",
+        "description": "Create-todo row text."
+      },
+      "radius": {
+        "value": "{radius.xl}",
+        "type": "radius",
+        "description": "Create-todo row radius."
+      },
+      "padding": {
+        "value": "{spacing.4}",
+        "type": "spacing",
+        "description": "Create-todo row padding."
+      }
+    },
+    "profile": {
+      "avatar": {
+        "lg": {
+          "size": {
+            "value": "{size.30}",
+            "type": "sizing",
+            "description": "Profile detail and editor avatar size."
+          }
+        },
+        "sm": {
+          "size": {
+            "value": "{size.6}",
+            "type": "sizing",
+            "description": "Header and todo owner avatar size."
+          }
+        },
+        "radius": {
+          "value": "{radius.full}",
+          "type": "radius",
+          "description": "Profile avatar radius."
+        }
+      },
+      "menu": {
+        "width": {
+          "value": "{size.40}",
+          "type": "sizing",
+          "description": "Profile menu popover width."
+        }
+      }
+    },
+    "themeMenu": {
+      "width": {
+        "value": "{size.35}",
+        "type": "sizing",
+        "description": "Theme selector popover width."
+      }
+    },
+    "switch": {
+      "height": {
+        "value": "{size.8}",
+        "type": "sizing",
+        "description": "Switch track height."
+      },
+      "width": {
+        "value": "3.5rem",
+        "type": "sizing",
+        "description": "Switch track width."
+      },
+      "thumbSize": {
+        "value": "{size.7}",
+        "type": "sizing",
+        "description": "Switch thumb diameter."
+      },
+      "radius": {
+        "value": "{radius.full}",
+        "type": "radius",
+        "description": "Switch track and thumb radius."
+      }
+    },
     "calendar": {
       "bg": {
         "value": "{color.semantic.bg.default}",
@@ -1289,9 +1639,24 @@
       },
       "selected": {
         "bg": {
-          "value": "{color.primitive.teal.100}",
+          "value": "{color.semantic.brand.default}",
           "type": "color",
           "description": "Selected date background."
+        },
+        "text": {
+          "value": "{color.semantic.brand.foreground}",
+          "type": "color",
+          "description": "Selected date text."
+        },
+        "size": {
+          "value": "{size.9}",
+          "type": "sizing",
+          "description": "Selected date circular marker size."
+        },
+        "radius": {
+          "value": "{radius.full}",
+          "type": "radius",
+          "description": "Selected date circular marker radius."
         }
       },
       "event": {
@@ -1310,9 +1675,31 @@
           }
         },
         "text": {
-          "value": "{color.semantic.text.primary}",
+          "value": "{color.semantic.brand.strong}",
           "type": "color",
           "description": "Calendar event text."
+        },
+        "border": {
+          "value": "{color.semantic.brand.strong}",
+          "type": "color",
+          "description": "Calendar event left border."
+        },
+        "radius": {
+          "value": "{radius.sm}",
+          "type": "radius",
+          "description": "Calendar event radius."
+        },
+        "padding": {
+          "x": {
+            "value": "{spacing.2}",
+            "type": "spacing",
+            "description": "Calendar event horizontal padding."
+          },
+          "y": {
+            "value": "{spacing.3}",
+            "type": "spacing",
+            "description": "Calendar event vertical padding."
+          }
         }
       },
       "allday": {
@@ -1320,6 +1707,57 @@
           "value": "{color.semantic.bg.muted}",
           "type": "color",
           "description": "All-day event rail background."
+        },
+        "height": {
+          "value": "{size.15}",
+          "type": "sizing",
+          "description": "All-day event rail height."
+        },
+        "event": {
+          "bg": {
+            "value": "{color.semantic.brand.default}",
+            "type": "color",
+            "description": "All-day event badge background."
+          },
+          "text": {
+            "value": "{color.semantic.brand.foreground}",
+            "type": "color",
+            "description": "All-day event badge text."
+          },
+          "radius": {
+            "value": "{radius.sm}",
+            "type": "radius",
+            "description": "All-day event badge radius."
+          }
+        }
+      },
+      "weekGrid": {
+        "hourHeight": {
+          "value": "{size.15}",
+          "type": "sizing",
+          "description": "Weekly calendar hour row height."
+        },
+        "canvasHeight": {
+          "value": "{size.360}",
+          "type": "sizing",
+          "description": "Weekly calendar scroll canvas height."
+        },
+        "viewportHeight": {
+          "sm": {
+            "value": "32.5rem",
+            "type": "sizing",
+            "description": "Weekly calendar viewport at the small breakpoint."
+          },
+          "md": {
+            "value": "37.5rem",
+            "type": "sizing",
+            "description": "Weekly calendar viewport at the medium breakpoint."
+          },
+          "lg": {
+            "value": "42.5rem",
+            "type": "sizing",
+            "description": "Weekly calendar viewport at the large breakpoint."
+          }
         }
       }
     }
@@ -1418,95 +1856,111 @@
       }
     },
     "dark": {
-      "color.semantic.bg.default": {
-        "value": "{color.primitive.neutral.1000}",
-        "type": "color",
-        "description": "Dark app background."
-      },
-      "color.semantic.bg.muted": {
-        "value": "{color.primitive.neutral.900}",
-        "type": "color",
-        "description": "Dark muted surface."
-      },
-      "color.semantic.bg.elevated": {
-        "value": "{color.primitive.neutral.800}",
-        "type": "color",
-        "description": "Dark elevated surface."
-      },
-      "color.semantic.bg.inverse": {
-        "value": "{color.primitive.neutral.0}",
-        "type": "color",
-        "description": "Dark inverse surface."
-      },
-      "color.semantic.text.primary": {
-        "value": "{color.primitive.neutral.50}",
-        "type": "color",
-        "description": "Dark primary text."
-      },
-      "color.semantic.text.secondary": {
-        "value": "{color.primitive.neutral.300}",
-        "type": "color",
-        "description": "Dark secondary text."
-      },
-      "color.semantic.text.muted": {
-        "value": "{color.primitive.neutral.400}",
-        "type": "color",
-        "description": "Dark muted text."
-      },
-      "color.semantic.text.inverse": {
-        "value": "{color.primitive.neutral.1000}",
-        "type": "color",
-        "description": "Dark inverse text."
-      },
-      "color.semantic.border.default": {
-        "value": "rgb(255 255 255 / 0.12)",
-        "type": "color",
-        "description": "Dark default border."
-      },
-      "color.semantic.border.subtle": {
-        "value": "rgb(255 255 255 / 0.08)",
-        "type": "color",
-        "description": "Dark subtle border."
-      },
-      "color.semantic.action.primary": {
-        "value": "{color.primitive.teal.300}",
-        "type": "color",
-        "description": "Dark primary action."
-      },
-      "color.semantic.action.primaryHover": {
-        "value": "{color.primitive.teal.100}",
-        "type": "color",
-        "description": "Dark primary hover."
-      },
-      "color.semantic.action.secondary": {
-        "value": "{color.primitive.neutral.900}",
-        "type": "color",
-        "description": "Dark secondary action."
-      },
-      "color.semantic.action.ghostHover": {
-        "value": "rgb(255 255 255 / 0.08)",
-        "type": "color",
-        "description": "Dark ghost hover."
-      },
-      "color.semantic.danger.default": {
-        "value": "{color.primitive.red.500}",
-        "type": "color",
-        "description": "Dark danger."
-      },
-      "color.semantic.danger.hover": {
-        "value": "{color.primitive.red.600}",
-        "type": "color",
-        "description": "Dark danger hover."
-      },
-      "color.semantic.calendar.confirmed": {
-        "value": "rgb(20 184 166 / 0.22)",
-        "type": "color",
-        "description": "Dark confirmed calendar event."
-      },
-      "color.semantic.calendar.pending": {
-        "value": "rgb(234 179 8 / 0.20)",
-        "type": "color",
-        "description": "Dark pending calendar event."
+      "color": {
+        "semantic": {
+          "bg": {
+            "default": {
+              "value": "{color.primitive.neutral.1000}",
+              "type": "color",
+              "description": "Dark app background."
+            },
+            "muted": {
+              "value": "{color.primitive.neutral.900}",
+              "type": "color",
+              "description": "Dark muted surface."
+            },
+            "elevated": {
+              "value": "{color.primitive.neutral.800}",
+              "type": "color",
+              "description": "Dark elevated surface."
+            },
+            "inverse": {
+              "value": "{color.primitive.neutral.0}",
+              "type": "color",
+              "description": "Dark inverse surface."
+            }
+          },
+          "text": {
+            "primary": {
+              "value": "{color.primitive.neutral.50}",
+              "type": "color",
+              "description": "Dark primary text."
+            },
+            "secondary": {
+              "value": "{color.primitive.neutral.300}",
+              "type": "color",
+              "description": "Dark secondary text."
+            },
+            "muted": {
+              "value": "{color.primitive.neutral.400}",
+              "type": "color",
+              "description": "Dark muted text."
+            },
+            "inverse": {
+              "value": "{color.primitive.neutral.1000}",
+              "type": "color",
+              "description": "Dark inverse text."
+            }
+          },
+          "border": {
+            "default": {
+              "value": "rgb(255 255 255 / 0.12)",
+              "type": "color",
+              "description": "Dark default border."
+            },
+            "subtle": {
+              "value": "rgb(255 255 255 / 0.08)",
+              "type": "color",
+              "description": "Dark subtle border."
+            }
+          },
+          "action": {
+            "primary": {
+              "value": "{color.primitive.teal.300}",
+              "type": "color",
+              "description": "Dark primary action."
+            },
+            "primaryHover": {
+              "value": "{color.primitive.teal.100}",
+              "type": "color",
+              "description": "Dark primary hover."
+            },
+            "secondary": {
+              "value": "{color.primitive.neutral.900}",
+              "type": "color",
+              "description": "Dark secondary action."
+            },
+            "ghostHover": {
+              "value": "rgb(255 255 255 / 0.08)",
+              "type": "color",
+              "description": "Dark ghost hover."
+            }
+          },
+          "danger": {
+            "default": {
+              "value": "{color.primitive.red.500}",
+              "type": "color",
+              "description": "Dark danger."
+            },
+            "hover": {
+              "value": "{color.primitive.red.600}",
+              "type": "color",
+              "description": "Dark danger hover."
+            }
+          },
+          "calendar": {
+            "confirmed": {
+              "value": "rgb(251 146 60 / 0.18)",
+              "type": "color",
+              "description": "Dark confirmed calendar event."
+            },
+            "pending": {
+              "value": "rgb(251 146 60 / 0.18)",
+              "type": "color",
+              "description": "Dark pending calendar event."
+            }
+          }
+        }
       },
       "background": {
         "value": "{theme.dark.color.semantic.bg.default}",
