@@ -27,7 +27,7 @@ export default function ProjectItem({
   const isJoined = isProjectOwner || isProjectMember;
 
   return (
-    <div className="w-fll bg-muted flex h-40 cursor-pointer flex-col gap-3 rounded-xl p-6">
+    <div className="bg-muted flex h-40 w-full cursor-pointer flex-col gap-3 rounded-xl p-6">
       <div className="flex items-center justify-between">
         <div className="truncate text-lg font-semibold">{project.name}</div>
         <div className="flex shrink-0 items-center justify-between">

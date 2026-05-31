@@ -35,8 +35,8 @@ export default function DeleteTodoButton({ id }: { id: number }) {
     <Button
       disabled={isDeleteTodoPending}
       onClick={handleDeleteClick}
-      className="cursor-pointer px-3 py-1 text-xs"
-      variant={"destructive"}
+      size="xs"
+      variant="destructive"
     >
       삭제
     </Button>

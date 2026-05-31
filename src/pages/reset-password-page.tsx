@@ -48,7 +48,6 @@ export default function ResetPasswordPage() {
       <Button
         disabled={isUpdatePasswordPending}
         onClick={handleUpdatePasswordClick}
-        className="cursor-pointer"
       >
         비밀번호 변경하기
       </Button>

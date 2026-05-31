@@ -24,9 +24,9 @@ export default function ProjectJoinButton({
 
   return (
     <Button
-      className="text-muted-foreground shrink-0 cursor-pointer text-sm"
+      className="shrink-0"
       onClick={handleProjectJoinClick}
-      variant={"ghost"}
+      variant="mutedGhost"
     >
       {label}
     </Button>

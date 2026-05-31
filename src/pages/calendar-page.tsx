@@ -75,7 +75,7 @@ export default function CalendarPage() {
   if (error) return <Fallback />;
 
   return (
-    <div className="h-min-dv">
+    <div className="min-h-dvh">
       <CalendarHeader
         baseDate={baseDate}
         onChangeBaseDate={setBaseDate}
@@ -88,7 +88,7 @@ export default function CalendarPage() {
         <Allday baseDate={baseDate} events={calendarEvents} />
       </div>
 
-      <div className="flex flex-col sm:h-130 md:h-150 lg:h-170">
+      <div className="sm:h-calendar-viewport-sm md:h-calendar-viewport-md lg:h-calendar-viewport-lg flex flex-col">
         <WeeklyCalendar
           events={filteredCalendarEvents}
           baseDate={baseDate}

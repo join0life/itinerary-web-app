@@ -8,7 +8,7 @@ export default function ProfileEditButton() {
     <Button
       onClick={openProfileEditorModal}
       variant={"secondary"}
-      className="w-fit cursor-pointer"
+      className="w-fit"
     >
       프로필 수정
     </Button>

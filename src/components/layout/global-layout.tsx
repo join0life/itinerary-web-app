@@ -14,7 +14,7 @@ export default function GlobalLayout() {
 
   return (
     <div>
-      <div className="m-auto flex min-h-dvh max-w-150 flex-col shadow-xl">
+      <div className="max-w-app-shell m-auto flex min-h-dvh flex-col shadow-xl">
         {!isProjectHeaderPage ? <GlobalHeader /> : <ProjectHeader />}
         {!isIndexPage ? (
           <div className="m-auto h-full w-full flex-1 px-4 py-6">

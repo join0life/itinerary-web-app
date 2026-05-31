@@ -247,7 +247,71 @@ className="rounded-card p-card"
 
 ---
 
-## 9. Component Abstraction Rules
+## 9. Semantic Utility and Variant Boundary
+
+일반 레이아웃과 조합 UI에서는 semantic utility를 직접 사용한다.
+
+```tsx
+<section className="bg-background text-foreground">
+  <div className="bg-muted text-muted-foreground">...</div>
+</section>
+```
+
+재사용 컴포넌트에서는 색상, 상태, 크기처럼 반복되는 스타일 조합을 variant API로 한 번 더 캡슐화한다.
+
+```tsx
+const buttonVariants = cva("inline-flex items-center justify-center", {
+  variants: {
+    variant: {
+      brand: "bg-brand text-brand-foreground hover:bg-brand-hover",
+      destructiveGhost:
+        "text-destructive hover:bg-accent hover:text-destructive",
+    },
+    size: {
+      xs: "h-7 px-2.5 text-xs",
+      xl: "h-12 px-4 text-base",
+    },
+  },
+});
+```
+
+재사용 컴포넌트 호출부에서는 semantic utility 조합을 다시 작성하지 않는다.
+
+비권장:
+
+```tsx
+<Button className="bg-brand text-brand-foreground hover:bg-brand-hover px-4 py-6 text-base">
+  새 프로젝트 추가
+</Button>
+```
+
+권장:
+
+```tsx
+<Button variant="brand" size="xl" className="fixed bottom-20 w-full">
+  새 프로젝트 추가
+</Button>
+```
+
+호출부 `className`에는 해당 화면에서만 필요한 배치 스타일을 남길 수 있다.
+
+```txt
+허용: fixed, absolute, flex-1, w-full, max-w-*, translate-*, margin
+variant로 이동: bg-*, text-*, border-*, hover:*, active:*, focus:*, disabled:*
+size prop으로 이동: 반복되는 height, padding, gap, font-size 조합
+```
+
+판단 기준:
+
+1. 한 화면의 구조와 배치를 표현하는 스타일은 호출부에 둔다.
+2. 여러 호출부에서 재사용할 수 있는 시각적 의미는 semantic utility 조합으로 만든다.
+3. 재사용 컴포넌트의 semantic utility 조합은 cva variant 또는 component props로 노출한다.
+4. hover, active, focus, disabled 상태는 가능한 한 variant 내부에서 함께 관리한다.
+5. 단발성 배치 차이를 위해 불필요한 variant를 만들지 않는다.
+
+---
+
+## 10. Component Abstraction Rules
 
 의미 있는 UI 단위는 CSS class만으로 관리하지 말고 React component로 만든다.
 
@@ -283,7 +347,7 @@ EmptyState
 
 ---
 
-## 10. Component Styling Rules
+## 11. Component Styling Rules
 
 컴포넌트 내부에서도 가능한 한 semantic utility 또는 custom utility를 사용한다.
 
@@ -324,7 +388,7 @@ function ProjectItemCard({ className, ...props }: ProjectItemCardProps) {
 
 ---
 
-## 11. Variant Rules
+## 12. Variant Rules
 
 variant, size, state가 있는 컴포넌트는 `class-variance-authority` 또는 shadcn/ui의 cva 패턴을 우선 사용한다.
 
@@ -358,7 +422,7 @@ const projectItemCardVariants = cva(
 
 ---
 
-## 12. Styling Priority
+## 13. Styling Priority
 
 스타일 적용 우선순위:
 
@@ -374,7 +438,7 @@ hard-coded value는 피한다.
 
 ---
 
-## 13. Accessibility Rules
+## 14. Accessibility Rules
 
 1. 텍스트 대비는 WCAG AA 수준을 목표로 한다.
 2. disabled state는 opacity만 쓰지 말고 text, bg, border token을 구분한다.
@@ -385,7 +449,7 @@ hard-coded value는 피한다.
 
 ---
 
-## 14. Expected Workflow
+## 15. Expected Workflow
 
 디자인 시스템 작업 순서:
 
@@ -398,11 +462,14 @@ hard-coded value는 피한다.
 7. 반복되는 UI 패턴을 찾는다.
 8. 의미 있는 UI 단위는 React component로 추상화한다.
 9. className의 `bg-[var(--*)]`, `text-[var(--*)]`, `rounded-[var(--*)]`, `p-[var(--*)]`를 semantic utility나 component API로 대체한다.
-10. 기존 기능, 레이아웃, 접근성 동작을 유지한다.
+10. 일반 레이아웃과 조합 UI에는 semantic utility를 직접 사용한다.
+11. 재사용 컴포넌트 호출부에 반복되는 semantic utility 조합은 variant API로 이동한다.
+12. 호출부에는 화면 배치에 필요한 className만 남긴다.
+13. 기존 기능, 레이아웃, 접근성 동작을 유지한다.
 
 ---
 
-## 15. File Editing Priority
+## 16. File Editing Priority
 
 Codex가 우선 확인할 파일:
 
@@ -428,7 +495,7 @@ Tailwind v4 프로젝트에서는 `tailwind.config.*`보다 CSS의 `@theme` 수�
 
 ---
 
-## 16. Do Not
+## 17. Do Not
 
 - 컴포넌트에 새 디자인 값을 hard-code하지 않는다.
 - primitive token을 컴포넌트 className에 직접 매핑하지 않는다.
@@ -437,3 +504,4 @@ Tailwind v4 프로젝트에서는 `tailwind.config.*`보다 CSS의 `@theme` 수�
 - 기존 shadcn/ui variant API를 임의로 깨지 않는다.
 - 접근성 상태인 focus, disabled, destructive 스타일을 제거하지 않는다.
 - 의미 있는 UI 단위를 CSS class만으로 관리하지 않는다.
+- 재사용 컴포넌트 호출부에서 동일한 semantic utility 조합을 반복하지 않는다.

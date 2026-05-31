@@ -65,17 +65,12 @@ export default function SignInPage() {
         ></Input>
       </div>
       <div className="flex flex-col gap-2">
-        <Button
-          className="cursor-pointer"
-          onClick={handleSignInWithPasswordClick}
-          disabled={isPending}
-        >
+        <Button onClick={handleSignInWithPasswordClick} disabled={isPending}>
           로그인
         </Button>
         <Button
           onClick={handleSignInWithGoogleClick}
           variant={"outline"}
-          className="cursor-pointer"
           disabled={isPending}
         >
           <img src={googleLogo} alt="구글 로고" className="h-4 w-4" />

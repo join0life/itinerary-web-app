@@ -8,7 +8,7 @@ export default function GlobalHeader() {
       <div className="m-auto flex h-full w-full items-center justify-between px-4">
         <Link to={"/"}>
           {/** @TODO 텍스트 -> 로고 이미지로 대체 */}
-          <div className="font-lg font-bold">단순여행</div>
+          <div className="text-lg font-bold">단순여행</div>
         </Link>
         <div className="flex items-center gap-3">
           <ThemeButton />
