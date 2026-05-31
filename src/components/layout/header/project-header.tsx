@@ -1,4 +1,4 @@
-import {useNavigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import ThemeButton from "./theme-button";
 import { ChevronLeftIcon } from "lucide-react";
 import { useProjectByIdData } from "@/hooks/queries/use-project-by-id-data";
@@ -21,7 +21,7 @@ export default function ProjectHeader() {
           <div onClick={() => navigate(-1)}>
             <ChevronLeftIcon className="text-muted-foreground cursor-pointer hover:font-black" />
           </div>
-          <div className="text-md line-clamp-1 font-bold text-orange-500">
+          <div className="text-brand-strong line-clamp-1 text-base font-bold">
             {project?.name}
           </div>
         </div>

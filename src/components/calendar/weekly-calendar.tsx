@@ -173,7 +173,7 @@ export default function WeeklyCalendar({
 
   return (
     <div
-      className="relative h-360 w-full overflow-y-scroll [&::-webkit-scrollbar]:hidden"
+      className="h-calendar-canvas-height relative w-full overflow-y-scroll [&::-webkit-scrollbar]:hidden"
       style={{ scrollbarWidth: "none" }}
     >
       {/* 시간 그리드 */}

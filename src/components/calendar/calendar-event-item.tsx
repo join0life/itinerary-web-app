@@ -74,14 +74,14 @@ export default function CalendarEventItem({
   return (
     <div
       onClick={handleOpenModalClick}
-      className="absolute right-0 left-1/7 w-full cursor-pointer rounded-sm border-l-3 border-l-orange-500 bg-orange-50 px-2 py-3"
+      className="border-l-calendar-event-border bg-calendar-event absolute right-0 left-1/7 w-full cursor-pointer rounded-sm border-l-3 px-2 py-3"
       style={style}
       draggable={true}
     >
-      <p className="line-clamp-1 text-sm font-semibold text-orange-500">
+      <p className="text-calendar-event-foreground line-clamp-1 text-sm font-semibold">
         {event.title}
       </p>
-      <span className="text-xs text-orange-500">
+      <span className="text-calendar-event-foreground text-xs">
         {event.startAt === event.endAt
           ? `${formatTime(event.startAt!)}`
           : `${formatTime(event.startAt!)} ~ ${formatTime(event.endAt!)}`}

@@ -8,7 +8,7 @@ export default function CreateProjectButton() {
   return (
     <Button
       onClick={openProjectEditorModal}
-      className="fixed bottom-20 left-1/2 z-50 w-[calc(100%-2rem)] max-w-142 -translate-x-1/2 bg-orange-400 px-4 py-6 text-base hover:bg-orange-300"
+      className="bg-brand hover:bg-brand-hover max-w-project-create fixed bottom-20 left-1/2 z-50 w-[calc(100%-2rem)] -translate-x-1/2 px-4 py-6 text-base"
     >
       <PlusCircleIcon />새 프로젝트 추가
     </Button>

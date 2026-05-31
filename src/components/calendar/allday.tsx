@@ -64,7 +64,7 @@ export default function Allday({
               <div key={i} className="w-1/7 shrink-0" />
             ))}
             <div
-              className="mb-1 cursor-pointer rounded-sm bg-orange-400 px-2 py-1 text-xs font-semibold text-white"
+              className="bg-brand text-brand-foreground mb-1 cursor-pointer rounded-sm px-2 py-1 text-xs font-semibold"
               style={{ width: `${(spanDays / 7) * 100}%` }}
             >
               {event.title}

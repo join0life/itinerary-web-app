@@ -49,12 +49,12 @@ export default function CalendarHeader({
       <div className="flex items-center justify-between border-b px-4 pb-6 text-center">
         <ChevronLeft
           onClick={() => moveWeek(-7)}
-          className="text-muted-foreground cursor-pointer hover:text-black"
+          className="text-muted-foreground hover:text-foreground cursor-pointer"
         />
         <div className="text-xl font-semibold">{dateHeader}</div>
         <ChevronRight
           onClick={() => moveWeek(7)}
-          className="text-muted-foreground cursor-pointer hover:text-black"
+          className="text-muted-foreground hover:text-foreground cursor-pointer"
         />
       </div>
 
@@ -78,11 +78,11 @@ export default function CalendarHeader({
           return (
             <div key={`${date}-${idx}`} className="relative w-1/7">
               {isSelected && (
-                <div className="absolute inset-0 m-auto flex aspect-square h-9 w-9 items-center justify-center rounded-full bg-orange-400"></div>
+                <div className="bg-brand absolute inset-0 m-auto flex aspect-square h-9 w-9 items-center justify-center rounded-full"></div>
               )}
               <div
                 key={date.toISOString()}
-                className={`relative flex h-full w-full items-center justify-center p-2 text-center font-semibold hover:cursor-pointer ${idx === 0 ? "text-muted-foreground" : "border-l"} ${idx === 6 ? "text-muted-foreground" : ""} ${isSelected ? "text-white" : ""}`}
+                className={`relative flex h-full w-full items-center justify-center p-2 text-center font-semibold hover:cursor-pointer ${idx === 0 ? "text-muted-foreground" : "border-l"} ${idx === 6 ? "text-muted-foreground" : ""} ${isSelected ? "text-brand-foreground" : ""}`}
                 onClick={() => onSelectDate(date)}
               >
                 {date.getDate()}
