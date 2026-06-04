@@ -12,7 +12,9 @@ export default function ProjectJoinButton({
   const openJoinModal = useOpenProjectJoinModal();
   const navigate = useNavigate();
 
-  const handleProjectJoinClick = () => {
+  const handleProjectJoinClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+
     if (isJoined) {
       navigate(`/project/${projectId}/todo`);
     } else {

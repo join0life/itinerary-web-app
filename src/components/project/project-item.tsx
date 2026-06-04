@@ -27,23 +27,21 @@ export default function ProjectItem({
   const isJoined = isProjectOwner || isProjectMember;
 
   return (
-    <div className="bg-muted flex h-40 w-full cursor-pointer flex-col gap-3 rounded-xl p-6">
-      <div className="flex items-center justify-between">
-        <div className="truncate text-lg font-semibold">{project.name}</div>
+    <article className="bg-muted flex h-40 w-full cursor-pointer flex-col gap-3 rounded-xl p-6">
+      <header className="flex items-center justify-between gap-3">
+        <h3 className="truncate text-lg font-semibold">{project.name}</h3>
         <div className="flex shrink-0 items-center justify-between">
           {!showDelete && (
             <ProjectJoinButton projectId={projectId} isJoined={isJoined} />
           )}
           {showDelete && <DeleteProjectButton id={project.id} />}
         </div>
-      </div>
+      </header>
 
-      <div>
-        <div className="line-clamp-1 text-sm">{project.description}</div>
-      </div>
-      <div className="w-fit truncate rounded-sm border px-1 py-0.5 text-xs">
+      <p className="line-clamp-1 text-sm">{project.description}</p>
+      <footer className="w-fit truncate rounded-sm border px-1 py-0.5 text-xs">
         {project.owner.nickname}
-      </div>
-    </div>
+      </footer>
+    </article>
   );
 }

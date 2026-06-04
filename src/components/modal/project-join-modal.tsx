@@ -14,13 +14,13 @@ export default function ProjectJoinModal() {
   const projectId = useProjectId();
   const navigate = useNavigate();
 
-  if (!projectId) return null;
-
   const { mutate: joinProject, isPending: isJoinProjectPending } =
     useJoinProject({
       onSuccess: () => {
         close();
-        navigate(`/project/${projectId}/todo`);
+        if (projectId) {
+          navigate(`/project/${projectId}/todo`);
+        }
       },
       onError: (error) => {
         toast.error("입장에 실패했습니다. 비밀번호를 다시 입력해주세요.", {
@@ -28,6 +28,8 @@ export default function ProjectJoinModal() {
         });
       },
     });
+
+  if (!projectId) return null;
 
   const handleValidatePasswordClick = () => {
     if (password.trim() === "") return;
