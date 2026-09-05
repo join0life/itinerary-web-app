@@ -1,0 +1,25 @@
+{
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "interactive": true
+    }
+  },
+  "globalEnv": [
+    "NODE_OPTIONS",
+    "VITE_SUPABASE_URL",
+    "VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY",
+    "VITE_PUBLIC_URL"
+  ]
+}

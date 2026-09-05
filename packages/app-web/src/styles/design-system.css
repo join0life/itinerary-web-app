@@ -1,0 +1,177 @@
+@theme inline {
+  --font-sans: var(--typography-semantic-font-family-sans);
+  --font-brand: var(--typography-semantic-font-family-brand);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-action-primary-hover: var(--color-semantic-action-primary-hover);
+  --color-action-primary-pressed: var(--color-semantic-action-primary-pressed);
+  --color-disabled: var(--color-semantic-action-disabled);
+  --color-disabled-foreground: var(--color-semantic-text-disabled);
+  --color-status-danger-hover: var(--color-semantic-status-danger-hover);
+  --color-brand: var(--color-semantic-brand-default);
+  --color-brand-hover: var(--color-semantic-brand-hover);
+  --color-brand-strong: var(--color-semantic-brand-strong);
+  --color-brand-subtle: var(--color-semantic-brand-subtle);
+  --color-brand-foreground: var(--color-semantic-brand-foreground);
+  --color-calendar-today: var(--color-semantic-calendar-today);
+  --color-calendar-event: var(--color-semantic-calendar-event);
+  --color-calendar-event-foreground: var(
+    --color-semantic-calendar-event-foreground
+  );
+  --color-calendar-event-border: var(
+    --color-semantic-calendar-event-foreground
+  );
+
+  --container-app-shell: var(--layout-semantic-app-shell-max-width);
+  --container-project-create: var(
+    --layout-semantic-project-create-action-max-width
+  );
+  --spacing-calendar-canvas-height: var(
+    --layout-semantic-calendar-week-canvas-height
+  );
+  --spacing-calendar-viewport-sm: var(
+    --layout-semantic-calendar-viewport-height-sm
+  );
+  --spacing-calendar-viewport-md: var(
+    --layout-semantic-calendar-viewport-height-md
+  );
+  --spacing-calendar-viewport-lg: var(
+    --layout-semantic-calendar-viewport-height-lg
+  );
+  --text-calendar-label: var(--typography-semantic-calendar-label-font-size);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --typography-semantic-font-family-sans: "Noto Sans KR", system-ui, sans-serif;
+  --typography-semantic-font-family-brand:
+    "JejuStoneWall", "Noto Sans KR", sans-serif;
+  --typography-semantic-calendar-label-font-size: 0.8rem;
+
+  --layout-semantic-app-shell-max-width: 37.5rem;
+  --layout-semantic-project-create-action-max-width: 35.5rem;
+  --layout-semantic-calendar-week-canvas-height: 90rem;
+  --layout-semantic-calendar-viewport-height-sm: 32.5rem;
+  --layout-semantic-calendar-viewport-height-md: 37.5rem;
+  --layout-semantic-calendar-viewport-height-lg: 42.5rem;
+
+  --color-semantic-surface-default: var(--color-white);
+  --color-semantic-surface-muted: var(--color-neutral-100);
+  --color-semantic-surface-elevated: var(--color-white);
+  --color-semantic-surface-inverse: var(--color-neutral-900);
+  --color-semantic-text-primary: var(--color-neutral-900);
+  --color-semantic-text-secondary: var(--color-neutral-600);
+  --color-semantic-text-muted: var(--color-neutral-500);
+  --color-semantic-text-disabled: var(--color-neutral-400);
+  --color-semantic-text-inverse: var(--color-white);
+  --color-semantic-border-default: var(--color-neutral-200);
+  --color-semantic-border-subtle: var(--color-neutral-100);
+  --color-semantic-border-focus: var(--color-semantic-action-primary);
+  --color-semantic-border-danger: var(--color-semantic-status-danger);
+  --color-semantic-action-primary: var(--color-orange-500);
+  --color-semantic-action-primary-hover: var(--color-orange-400);
+  --color-semantic-action-primary-pressed: var(--color-orange-600);
+  --color-semantic-action-secondary: var(--color-neutral-100);
+  --color-semantic-action-ghost-hover: var(--color-neutral-100);
+  --color-semantic-action-disabled: var(--color-neutral-100);
+  --color-semantic-status-danger: var(--color-red-500);
+  --color-semantic-status-danger-hover: var(--color-red-600);
+  --color-semantic-status-success: var(--color-teal-600);
+  --color-semantic-brand-default: var(--color-orange-400);
+  --color-semantic-brand-hover: var(--color-orange-300);
+  --color-semantic-brand-strong: var(--color-orange-500);
+  --color-semantic-brand-subtle: var(--color-orange-50);
+  --color-semantic-brand-foreground: var(--color-white);
+  --color-semantic-calendar-today: var(--color-sky-50);
+  --color-semantic-calendar-event: var(--color-semantic-brand-subtle);
+  --color-semantic-calendar-event-foreground: var(
+    --color-semantic-brand-strong
+  );
+
+  --radius: 0.625rem;
+  --background: var(--color-semantic-surface-default);
+  --foreground: var(--color-semantic-text-primary);
+  --card: var(--color-semantic-surface-elevated);
+  --card-foreground: var(--color-semantic-text-primary);
+  --popover: var(--color-semantic-surface-elevated);
+  --popover-foreground: var(--color-semantic-text-primary);
+  --primary: var(--color-semantic-action-primary);
+  --primary-foreground: var(--color-semantic-text-inverse);
+  --secondary: var(--color-semantic-action-secondary);
+  --secondary-foreground: var(--color-semantic-text-primary);
+  --muted: var(--color-semantic-surface-muted);
+  --muted-foreground: var(--color-semantic-text-muted);
+  --accent: var(--color-teal-50);
+  --accent-foreground: var(--color-semantic-text-primary);
+  --destructive: var(--color-semantic-status-danger);
+  --destructive-foreground: var(--color-semantic-text-inverse);
+  --border: var(--color-semantic-border-default);
+  --input: var(--color-semantic-border-default);
+  --ring: var(--color-semantic-border-focus);
+}
+
+.dark {
+  --color-semantic-surface-default: var(--color-neutral-950);
+  --color-semantic-surface-muted: var(--color-neutral-900);
+  --color-semantic-surface-elevated: var(--color-neutral-800);
+  --color-semantic-text-primary: var(--color-neutral-50);
+  --color-semantic-text-secondary: var(--color-neutral-300);
+  --color-semantic-text-muted: var(--color-neutral-400);
+  --color-semantic-text-disabled: var(--color-neutral-500);
+  --color-semantic-text-inverse: var(--color-neutral-950);
+  --color-semantic-border-default: rgb(255 255 255 / 0.12);
+  --color-semantic-border-subtle: rgb(255 255 255 / 0.08);
+  --color-semantic-action-secondary: var(--color-neutral-900);
+  --color-semantic-action-ghost-hover: rgb(255 255 255 / 0.08);
+  --color-semantic-action-disabled: var(--color-neutral-900);
+
+  --background: var(--color-semantic-surface-default);
+  --foreground: var(--color-semantic-text-primary);
+  --card: var(--color-semantic-surface-elevated);
+  --card-foreground: var(--color-semantic-text-primary);
+  --popover: var(--color-semantic-surface-elevated);
+  --popover-foreground: var(--color-semantic-text-primary);
+  --primary: var(--color-semantic-action-primary);
+  --primary-foreground: var(--color-semantic-text-inverse);
+  --secondary: var(--color-semantic-action-secondary);
+  --secondary-foreground: var(--color-semantic-text-primary);
+  --muted: var(--color-semantic-surface-muted);
+  --muted-foreground: var(--color-semantic-text-muted);
+  --accent: rgb(20 184 166 / 0.14);
+  --accent-foreground: var(--color-semantic-text-primary);
+  --destructive: var(--color-semantic-status-danger);
+  --destructive-foreground: var(--color-semantic-text-inverse);
+  --border: var(--color-semantic-border-default);
+  --input: var(--color-semantic-border-default);
+  --ring: var(--color-semantic-border-focus);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
