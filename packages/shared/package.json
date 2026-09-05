@@ -13,9 +13,9 @@
   },
   "files": ["src"],
   "scripts": {
-    "build": "tsc --noEmit",
-    "lint": "echo \"No linting for shared package\"",
-    "dev": "echo \"Shared package has no dev mode\""
+    "build": "echo 'shared: no build needed (types & utils only)'",
+    "lint": "echo 'No linting for shared package'",
+    "dev": "echo 'Shared package has no dev mode'"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.87.0",
