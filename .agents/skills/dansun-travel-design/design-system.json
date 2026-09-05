@@ -1,0 +1,386 @@
+{
+  "$schema": "https://design-tokens.org/format",
+  "meta": {
+    "name": "단순여행 Design System",
+    "description": "여행/모임 일정을 프로젝트 단위로 관리하는 웹앱 단순여행의 디자인 시스템",
+    "version": "1.0.0",
+    "exportedAt": "2026-09-05T06:21:15.748Z",
+    "namespace": "DesignSystem_2c1582",
+    "audience": "20~30대 친구 모임·소모임, 모바일 우선, 다크모드 기본",
+    "sources": {
+      "spec": "uploads/DESIGN.md",
+      "repo": "https://github.com/join0life/itinerary-web-app",
+      "branch": "main",
+      "liveApp": "https://itinerary-web-app-three.vercel.app/"
+    },
+    "entryStylesheet": "styles.css",
+    "bundle": "_ds_bundle.js",
+    "darkMode": { "strategy": "class", "selector": ".dark", "applyTo": "html" }
+  },
+  "tokens": {
+    "color": {
+      "light": {
+        "color-primary-50": "#FFF1EC", "color-primary-100": "#FFDBCE", "color-primary-300": "#FF9C7D",
+        "color-primary-500": "#FF6F4D", "color-primary-600": "#F0552E", "color-primary-700": "#C13F1F",
+        "color-secondary-50": "#EAFBF6", "color-secondary-300": "#8FE3CB", "color-secondary-500": "#2FBF8F", "color-secondary-600": "#22A97A",
+        "color-neutral-0": "#FFFFFF", "color-neutral-50": "#FAF9F7", "color-neutral-100": "#F1EFEC", "color-neutral-200": "#E4E1DC",
+        "color-neutral-400": "#B3AEA6", "color-neutral-600": "#7A756C", "color-neutral-800": "#4A463F", "color-neutral-900": "#252220",
+        "color-success": "#2FBF8F", "color-warning": "#F5A623", "color-error": "#E5484D", "color-info": "#4C8DFF",
+        "color-white": "#FFFFFF", "color-overlay": "rgba(37,34,32,0.45)"
+      },
+      "dark": {
+        "color-primary-50": "#2A1A16", "color-primary-100": "#3D251E", "color-primary-300": "#FF9C7D",
+        "color-primary-500": "#FF7A56", "color-primary-600": "#FF5A32", "color-primary-700": "#D6421F",
+        "color-secondary-50": "#0F211D", "color-secondary-300": "#4FBE9E", "color-secondary-500": "#3ECB9B", "color-secondary-600": "#2FB587",
+        "color-neutral-0": "#121212", "color-neutral-50": "#181818", "color-neutral-100": "#1F1F1F", "color-neutral-200": "#2A2A2A",
+        "color-neutral-400": "#5C5C5C", "color-neutral-600": "#9A9A9A", "color-neutral-800": "#D4D4D4", "color-neutral-900": "#F5F5F5",
+        "color-success": "#3ECB9B", "color-warning": "#F7B84D", "color-error": "#F2696D", "color-info": "#6FA1FF",
+        "color-overlay": "rgba(0,0,0,0.6)"
+      }
+    },
+    "semantic": {
+      "light": {
+        "surface-page": "var(--color-neutral-50)", "surface-card": "var(--color-neutral-0)", "surface-elevated": "var(--color-neutral-0)",
+        "surface-muted": "var(--color-neutral-100)", "surface-inverse": "var(--color-neutral-900)",
+        "text-primary": "var(--color-neutral-900)", "text-secondary": "var(--color-neutral-800)", "text-muted": "var(--color-neutral-600)",
+        "text-disabled": "var(--color-neutral-400)", "text-inverse": "var(--color-white)",
+        "border-default": "var(--color-neutral-200)", "border-subtle": "var(--color-neutral-100)", "border-focus": "var(--color-primary-500)", "border-danger": "var(--color-error)",
+        "action-primary": "var(--color-primary-500)", "action-primary-hover": "var(--color-primary-600)", "action-primary-pressed": "var(--color-primary-700)", "action-primary-foreground": "var(--color-white)",
+        "action-secondary": "var(--color-secondary-500)", "action-secondary-hover": "var(--color-secondary-600)", "action-secondary-foreground": "var(--color-white)",
+        "action-ghost-border": "var(--color-neutral-200)", "action-ghost-hover": "var(--color-neutral-100)",
+        "action-disabled": "var(--color-neutral-200)", "action-disabled-foreground": "var(--color-neutral-400)",
+        "brand": "var(--color-primary-500)", "brand-hover": "var(--color-primary-600)", "brand-strong": "var(--color-primary-600)", "brand-subtle": "var(--color-primary-50)", "brand-foreground": "var(--color-white)",
+        "status-success": "var(--color-success)", "status-warning": "var(--color-warning)", "status-danger": "var(--color-error)", "status-info": "var(--color-info)",
+        "calendar-today": "var(--color-primary-50)", "calendar-event": "var(--color-primary-50)", "calendar-event-foreground": "var(--color-primary-600)", "calendar-grid-line": "var(--border-subtle)",
+        "overlay": "var(--color-overlay)", "focus-ring": "0 0 0 3px var(--color-primary-100)"
+      },
+      "dark": {
+        "action-disabled": "var(--color-neutral-200)", "action-disabled-foreground": "var(--color-neutral-400)", "surface-elevated": "var(--color-neutral-100)"
+      }
+    },
+    "typography": {
+      "font-sans": "\"Pretendard Variable\",\"Pretendard\",\"Noto Sans KR\",-apple-system,BlinkMacSystemFont,\"Apple SD Gothic Neo\",\"Segoe UI\",system-ui,sans-serif",
+      "font-brand": "\"JejuStoneWall\",\"Pretendard Variable\",\"Noto Sans KR\",sans-serif",
+      "text-h1-size": "2rem", "text-h1-line": "1.3", "text-h1-weight": "700",
+      "text-h2-size": "1.625rem", "text-h2-line": "1.35", "text-h2-weight": "700",
+      "text-h3-size": "1.375rem", "text-h3-line": "1.4", "text-h3-weight": "600",
+      "text-h4-size": "1.125rem", "text-h4-line": "1.4", "text-h4-weight": "600",
+      "text-h5-size": "1rem", "text-h5-line": "1.5", "text-h5-weight": "600",
+      "text-body-size": "0.9375rem", "text-body-line": "1.6", "text-body-weight": "400",
+      "text-body-sm-size": "0.8125rem", "text-body-sm-line": "1.55", "text-body-sm-weight": "400",
+      "text-caption-size": "0.75rem", "text-caption-line": "1.4", "text-caption-weight": "500",
+      "text-button-size": "0.9375rem", "text-button-line": "1", "text-button-weight": "600",
+      "text-calendar-label-size": "0.8rem"
+    },
+    "spacingAndLayout": {
+      "space-1": "4px", "space-2": "8px", "space-3": "12px", "space-4": "16px", "space-5": "20px", "space-6": "24px", "space-8": "32px", "space-10": "40px", "space-12": "48px",
+      "radius-sm": "6px", "radius-md": "10px", "radius-lg": "12px", "radius-xl": "16px", "radius-2xl": "20px", "radius-full": "999px",
+      "radius-input": "10px", "radius-card": "16px", "radius-modal": "20px", "radius-media": "16px",
+      "shadow-card": "0 2px 8px rgba(0,0,0,0.06)", "shadow-popover": "0 4px 16px rgba(0,0,0,0.10)", "shadow-modal": "0 12px 40px rgba(0,0,0,0.18)",
+      "card-dark-border": "1px solid var(--border-default)",
+      "control-height-sm": "32px", "control-height-md": "44px", "control-height-lg": "52px", "touch-target-min": "44px",
+      "app-shell-max-width": "37.5rem", "project-create-action-max-width": "35.5rem",
+      "container-tablet": "720px", "container-desktop": "1080px",
+      "gutter-mobile": "16px", "gutter-tablet": "20px", "gutter-desktop": "24px",
+      "calendar-hour-height": "60px", "calendar-canvas-height": "90rem",
+      "calendar-viewport-sm": "32.5rem", "calendar-viewport-md": "37.5rem", "calendar-viewport-lg": "42.5rem",
+      "calendar-event-min-height": "65px", "header-height": "60px", "bottom-nav-height": "60px"
+    },
+    "motion": { "ease-out": "cubic-bezier(0.2,0,0,1)", "press-scale": "0.98" }
+  },
+  "fonts": [
+    { "family": "Pretendard Variable", "role": "UI / 본문 · 헤딩", "weights": "45–920 (variable)", "source": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/woff2/PretendardVariable.woff2", "license": "SIL OFL 1.1" },
+    { "family": "JejuStoneWall", "role": "브랜드 워드마크 · 랜딩 히어로 전용", "weights": "400", "source": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2" },
+    { "family": "Noto Sans KR", "role": "폴백", "source": "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900" }
+  ],
+  "iconography": {
+    "set": "Lucide",
+    "delivery": "lucide-static via CDN, rendered as a CSS mask so icons inherit currentColor",
+    "baseUrl": "https://unpkg.com/lucide-static@0.542.0/icons/",
+    "component": "Icon",
+    "namesInUse": ["home", "folder", "list-todo", "calendar", "plus-circle", "search", "sun", "chevron-left", "chevron-right", "check", "x", "trash-2", "pencil", "loader-circle"],
+    "sizes": { "inlineRowAction": 16, "navAndHeader": 20, "composerAndWeekNav": 24 },
+    "rules": ["filled 아이콘은 '선택됨' 상태에만", "이모지·유니코드 아이콘 사용 금지", "직접 SVG를 그리지 않고 Icon 컴포넌트 사용"],
+    "knownDeviation": "DESIGN.md는 1.5px 스트로크를 요구하지만 Lucide/제품 구현은 2px — 제품 기준을 따름"
+  },
+  "components": {
+    "forms": [
+      { "name": "Button", "description": "Primary action control. One primary Button per screen.", "files": { "jsx": "components/forms/Button.jsx", "types": "components/forms/Button.d.ts", "usage": "components/forms/Button.prompt.md" },
+        "props": [
+          { "name": "variant", "type": "\"primary\" | \"secondary\" | \"ghost\" | \"brand\" | \"destructive\" | \"link\"", "optional": true },
+          { "name": "size", "type": "\"sm\" | \"md\" | \"lg\"", "optional": true },
+          { "name": "disabled", "type": "boolean", "optional": true },
+          { "name": "fullWidth", "type": "boolean", "optional": true },
+          { "name": "iconOnly", "type": "boolean", "optional": true },
+          { "name": "onClick", "type": "() => void", "optional": true },
+          { "name": "children", "type": "React.ReactNode", "optional": true }
+        ] },
+      { "name": "Checkbox", "description": "18px square check used to confirm (확정) a todo row.", "files": { "jsx": "components/forms/Checkbox.jsx", "types": "components/forms/Checkbox.d.ts", "usage": "components/forms/Checkbox.prompt.md" },
+        "props": [
+          { "name": "checked", "type": "boolean", "optional": true },
+          { "name": "onChange", "type": "(next: boolean) => void", "optional": true },
+          { "name": "disabled", "type": "boolean", "optional": true },
+          { "name": "label", "type": "string", "optional": true },
+          { "name": "id", "type": "string", "optional": true }
+        ] },
+      { "name": "Input", "description": "Single-line text field, 44px tall with a coral focus ring.", "files": { "jsx": "components/forms/Input.jsx", "types": "components/forms/Input.d.ts", "usage": "components/forms/Input.prompt.md" },
+        "props": [
+          { "name": "placeholder", "type": "string", "optional": true },
+          { "name": "value", "type": "string", "optional": true },
+          { "name": "type", "type": "string", "optional": true },
+          { "name": "invalid", "type": "boolean", "optional": true },
+          { "name": "disabled", "type": "boolean", "optional": true },
+          { "name": "leadingIcon", "type": "React.ReactNode", "optional": true },
+          { "name": "onChange", "type": "(e: React.ChangeEvent<HTMLInputElement>) => void", "optional": true }
+        ] },
+      { "name": "InputGroup", "description": "Field shell with inline addons — the app's project search box.", "files": { "jsx": "components/forms/InputGroup.jsx", "types": "components/forms/InputGroup.d.ts", "usage": "components/forms/InputGroup.prompt.md" }, "props": [] },
+      { "name": "Label", "description": "Field label — 13px, weight 500, sits 8px above its control.", "files": { "jsx": "components/forms/Label.jsx", "types": "components/forms/Label.d.ts", "usage": "components/forms/Label.prompt.md" }, "props": [] },
+      { "name": "Select", "description": "Single-choice dropdown matching Input's 44px shell.", "files": { "jsx": "components/forms/Select.jsx", "types": "components/forms/Select.d.ts", "usage": "components/forms/Select.prompt.md" },
+        "props": [
+          { "name": "options", "type": "{ value: string", "optional": false },
+          { "name": "value", "type": "string", "optional": true },
+          { "name": "placeholder", "type": "string", "optional": true },
+          { "name": "disabled", "type": "boolean", "optional": true },
+          { "name": "onChange", "type": "(value: string) => void", "optional": true }
+        ] },
+      { "name": "Switch", "description": "56x32 toggle — used for 하루종일 (all-day) in the event modal.", "files": { "jsx": "components/forms/Switch.jsx", "types": "components/forms/Switch.d.ts", "usage": "components/forms/Switch.prompt.md" }, "props": [] },
+      { "name": "Textarea", "description": "Multi-line field for memos and descriptions.", "files": { "jsx": "components/forms/Textarea.jsx", "types": "components/forms/Textarea.d.ts", "usage": "components/forms/Textarea.prompt.md" },
+        "props": [
+          { "name": "placeholder", "type": "string", "optional": true },
+          { "name": "value", "type": "string", "optional": true },
+          { "name": "rows", "type": "number", "optional": true },
+          { "name": "invalid", "type": "boolean", "optional": true },
+          { "name": "disabled", "type": "boolean", "optional": true },
+          { "name": "onChange", "type": "(e: React.ChangeEvent<HTMLTextAreaElement>) => void", "optional": true }
+        ] }
+    ],
+    "surfaces": [
+      { "name": "Card", "description": "Content container: 16px radius, 16px padding, soft shadow (border-only in dark).", "files": { "jsx": "components/surfaces/Card.jsx", "types": "components/surfaces/Card.d.ts", "usage": "components/surfaces/Card.prompt.md" },
+        "props": [
+          { "name": "accentColor", "type": "string", "optional": true },
+          { "name": "muted", "type": "boolean", "optional": true },
+          { "name": "padding", "type": "string", "optional": true },
+          { "name": "children", "type": "React.ReactNode", "optional": true }
+        ] }
+    ],
+    "overlays": [
+      { "name": "AlertModal", "description": "Confirmation dialog for destructive or discard-work decisions.", "files": { "jsx": "components/overlays/AlertModal.jsx", "types": "components/overlays/AlertModal.d.ts", "usage": "components/overlays/AlertModal.prompt.md" },
+        "props": [
+          { "name": "open", "type": "boolean", "optional": true },
+          { "name": "title", "type": "string", "optional": true },
+          { "name": "description", "type": "string", "optional": true },
+          { "name": "confirmLabel", "type": "string", "optional": true },
+          { "name": "cancelLabel", "type": "string", "optional": true },
+          { "name": "onConfirm", "type": "() => void", "optional": true },
+          { "name": "onCancel", "type": "() => void", "optional": true }
+        ] },
+      { "name": "Dialog", "description": "Centered modal (480px max) for creating/editing a project or an event.", "files": { "jsx": "components/overlays/Dialog.jsx", "types": "components/overlays/Dialog.d.ts", "usage": "components/overlays/Dialog.prompt.md" },
+        "props": [
+          { "name": "open", "type": "boolean", "optional": true },
+          { "name": "title", "type": "string", "optional": true },
+          { "name": "onClose", "type": "() => void", "optional": true },
+          { "name": "footer", "type": "React.ReactNode", "optional": true },
+          { "name": "width", "type": "number", "optional": true },
+          { "name": "children", "type": "React.ReactNode", "optional": true }
+        ] },
+      { "name": "Popover", "description": "Small anchored menu — theme picker and profile menu in the header.", "files": { "jsx": "components/overlays/Popover.jsx", "types": "components/overlays/Popover.d.ts", "usage": "components/overlays/Popover.prompt.md" },
+        "props": [
+          { "name": "trigger", "type": "React.ReactNode", "optional": false },
+          { "name": "items", "type": "{ label: string", "optional": false },
+          { "name": "align", "type": "\"start\" | \"end\"", "optional": true },
+          { "name": "width", "type": "number", "optional": true }
+        ] }
+    ],
+    "feedback": [
+      { "name": "Badge", "description": "12px pill for owner names, overflow counts (+2) and statuses.", "files": { "jsx": "components/feedback/Badge.jsx", "types": "components/feedback/Badge.d.ts", "usage": "components/feedback/Badge.prompt.md" }, "props": [] },
+      { "name": "Empty", "description": "Empty state: what's missing on line 1, the next step on line 2.", "files": { "jsx": "components/feedback/Empty.jsx", "types": "components/feedback/Empty.d.ts", "usage": "components/feedback/Empty.prompt.md" },
+        "props": [
+          { "name": "title", "type": "string", "optional": true },
+          { "name": "description", "type": "string", "optional": true },
+          { "name": "action", "type": "React.ReactNode", "optional": true },
+          { "name": "illustration", "type": "React.ReactNode", "optional": true }
+        ] },
+      { "name": "Loader", "description": "Spinner + Korean loading line, centred in the content area.", "files": { "jsx": "components/feedback/Loader.jsx", "types": "components/feedback/Loader.d.ts", "usage": "components/feedback/Loader.prompt.md" }, "props": [] },
+      { "name": "Toast", "description": "Transient message, shown top-center in the product (sonner).", "files": { "jsx": "components/feedback/Toast.jsx", "types": "components/feedback/Toast.d.ts", "usage": "components/feedback/Toast.prompt.md" }, "props": [] }
+    ],
+    "calendar": [
+      { "name": "AlldayEventBar", "description": "All-day event spanning whole day columns above the hour grid.", "files": { "jsx": "components/calendar/AlldayEventBar.jsx", "types": "components/calendar/AlldayEventBar.d.ts", "usage": "components/calendar/AlldayEventBar.prompt.md" },
+        "props": [
+          { "name": "title", "type": "string", "optional": false },
+          { "name": "offsetDays", "type": "number", "optional": true },
+          { "name": "spanDays", "type": "number", "optional": true },
+          { "name": "onClick", "type": "() => void", "optional": true }
+        ] },
+      { "name": "CalendarEventItem", "description": "A timed event block on the weekly grid (60px per hour, 65px minimum height).", "files": { "jsx": "components/calendar/CalendarEventItem.jsx", "types": "components/calendar/CalendarEventItem.d.ts", "usage": "components/calendar/CalendarEventItem.prompt.md" },
+        "props": [
+          { "name": "title", "type": "string", "optional": false },
+          { "name": "startHour", "type": "number", "optional": true },
+          { "name": "startMinute", "type": "number", "optional": true },
+          { "name": "endHour", "type": "number", "optional": true },
+          { "name": "endMinute", "type": "number", "optional": true },
+          { "name": "columnIndex", "type": "number", "optional": true },
+          { "name": "onClick", "type": "() => void", "optional": true }
+        ] },
+      { "name": "WeekStrip", "description": "Month header + one week of dates; the selected date sits in a coral circle.", "files": { "jsx": "components/calendar/WeekStrip.jsx", "types": "components/calendar/WeekStrip.d.ts", "usage": "components/calendar/WeekStrip.prompt.md" },
+        "props": [
+          { "name": "monthLabel", "type": "string", "optional": false },
+          { "name": "dates", "type": "number[]", "optional": false },
+          { "name": "selectedIndex", "type": "number", "optional": true },
+          { "name": "onSelect", "type": "(index: number) => void", "optional": true },
+          { "name": "onPrev", "type": "() => void", "optional": true },
+          { "name": "onNext", "type": "() => void", "optional": true }
+        ] },
+      { "name": "WeeklyCalendar", "description": "Scrollable 24-hour day canvas (60px/hour) that positions CalendarEventItem children.", "files": { "jsx": "components/calendar/WeeklyCalendar.jsx", "types": "components/calendar/WeeklyCalendar.d.ts", "usage": "components/calendar/WeeklyCalendar.prompt.md" },
+        "props": [
+          { "name": "children", "type": "React.ReactNode", "optional": true },
+          { "name": "height", "type": "string", "optional": true },
+          { "name": "startHour", "type": "number", "optional": true }
+        ] }
+    ],
+    "app": [
+      { "name": "AppHeader", "description": "60px app bar. `global` shows the brand wordmark; `project` shows a back chevron + coral project name.", "files": { "jsx": "components/app/AppHeader.jsx", "types": "components/app/AppHeader.d.ts", "usage": "components/app/AppHeader.prompt.md" },
+        "props": [
+          { "name": "variant", "type": "\"global\" | \"project\"", "optional": true },
+          { "name": "title", "type": "string", "optional": true },
+          { "name": "avatarSrc", "type": "string", "optional": true },
+          { "name": "theme", "type": "\"system\" | \"light\" | \"dark\"", "optional": true },
+          { "name": "onBack", "type": "() => void", "optional": true },
+          { "name": "onThemeChange", "type": "(theme: string) => void", "optional": true },
+          { "name": "onProfile", "type": "() => void", "optional": true },
+          { "name": "onSignOut", "type": "() => void", "optional": true }
+        ] },
+      { "name": "BottomNav", "description": "Sticky four-tab bar: 소개 / 프로젝트 / 일정 / 캘린더.", "files": { "jsx": "components/app/BottomNav.jsx", "types": "components/app/BottomNav.d.ts", "usage": "components/app/BottomNav.prompt.md" },
+        "props": [
+          { "name": "active", "type": "\"home\" | \"project\" | \"todo\" | \"calendar\"", "optional": true },
+          { "name": "onChange", "type": "(key: string) => void", "optional": true }
+        ] },
+      { "name": "CreateTodoPrompt", "description": "Muted \"composer\" row that opens the event modal, at the top of the 일정 screen.", "files": { "jsx": "components/app/CreateTodoPrompt.jsx", "types": "components/app/CreateTodoPrompt.d.ts", "usage": "components/app/CreateTodoPrompt.prompt.md" }, "props": [] },
+      { "name": "ProfileSummary", "description": "Centred profile block: 120px round avatar, nickname, bio, optional edit action.", "files": { "jsx": "components/app/ProfileSummary.jsx", "types": "components/app/ProfileSummary.d.ts", "usage": "components/app/ProfileSummary.prompt.md" },
+        "props": [
+          { "name": "avatarSrc", "type": "string", "optional": true },
+          { "name": "nickname", "type": "string", "optional": false },
+          { "name": "bio", "type": "string", "optional": true },
+          { "name": "editable", "type": "boolean", "optional": true },
+          { "name": "onEdit", "type": "() => void", "optional": true }
+        ] },
+      { "name": "ProjectCard", "description": "A team space in the project feed: 160px tall muted card, name + description + owner badge.", "files": { "jsx": "components/app/ProjectCard.jsx", "types": "components/app/ProjectCard.d.ts", "usage": "components/app/ProjectCard.prompt.md" },
+        "props": [
+          { "name": "name", "type": "string", "optional": false },
+          { "name": "description", "type": "string", "optional": true },
+          { "name": "owner", "type": "string", "optional": true },
+          { "name": "joined", "type": "boolean", "optional": true },
+          { "name": "onJoin", "type": "() => void", "optional": true },
+          { "name": "onDelete", "type": "() => void", "optional": true },
+          { "name": "onClick", "type": "() => void", "optional": true }
+        ] },
+      { "name": "TodoItem", "description": "One schedule row: confirm checkbox, title, edit + delete icons.", "files": { "jsx": "components/app/TodoItem.jsx", "types": "components/app/TodoItem.d.ts", "usage": "components/app/TodoItem.prompt.md" },
+        "props": [
+          { "name": "title", "type": "string", "optional": false },
+          { "name": "confirmed", "type": "boolean", "optional": true },
+          { "name": "onToggle", "type": "(next: boolean) => void", "optional": true },
+          { "name": "onEdit", "type": "() => void", "optional": true },
+          { "name": "onDelete", "type": "() => void", "optional": true }
+        ] }
+    ],
+    "icons": [
+      { "name": "Icon", "description": "Lucide icon by name, rendered as a CSS mask so it takes currentColor.", "files": { "jsx": "components/icons/Icon.jsx", "types": "components/icons/Icon.d.ts", "usage": "components/icons/Icon.prompt.md" },
+        "props": [
+          { "name": "name", "type": "string", "optional": false },
+          { "name": "size", "type": "number", "optional": true },
+          { "name": "color", "type": "string", "optional": true }
+        ] }
+    ]
+  },
+  "uiKits": [
+    { "id": "dansun-app", "title": "단순여행 웹앱", "entry": "ui_kits/dansun-app/index.html", "readme": "ui_kits/dansun-app/README.md",
+      "screens": [
+        { "name": "LandingScreen", "file": "ui_kits/dansun-app/LandingScreen.jsx", "source": "src/pages/index-page.tsx" },
+        { "name": "AuthScreen", "file": "ui_kits/dansun-app/AuthScreen.jsx", "source": "src/pages/sign-in-page.tsx, sign-up-page.tsx" },
+        { "name": "ProjectScreen", "file": "ui_kits/dansun-app/ProjectScreen.jsx", "source": "src/pages/project-page.tsx, src/components/project/*" },
+        { "name": "TodoScreen", "file": "ui_kits/dansun-app/TodoScreen.jsx", "source": "src/pages/todo-page.tsx, src/components/todo/*" },
+        { "name": "CalendarScreen", "file": "ui_kits/dansun-app/CalendarScreen.jsx", "source": "src/pages/calendar-page.tsx, src/components/calendar/*" },
+        { "name": "ProfileScreen", "file": "ui_kits/dansun-app/ProfileScreen.jsx", "source": "src/pages/profile-detail-page.tsx" }
+      ] }
+  ],
+  "templates": [
+    { "name": "단순여행 앱 화면", "description": "600px 앱 셸 — 헤더, 콘텐츠 영역, 하단 내비게이션", "entry": "templates/app-screen/AppScreen.dc.html" }
+  ],
+  "assets": [
+    { "path": "assets/avatar-dog-yellow.png", "role": "기본 프로필 아바타 (제품 자산)", "crop": "circle" },
+    { "path": "assets/avatar-dog.png", "role": "기본 프로필 아바타 (대체)", "crop": "circle" },
+    { "path": "assets/google-symbol.png", "role": "Google OAuth 버튼 심볼" }
+  ],
+  "logo": { "exists": false, "note": "소스 저장소에 로고 파일이 없음 (global-header.tsx의 @TODO). 로고 위치에는 JejuStoneWall로 조판한 워드마크 '단순여행'을 사용." },
+  "principles": [
+    "Glanceable First — 정보 밀도보다 시인성. '오늘 뭐 하지?'를 3초 안에",
+    "Minimal but Playful — 중립 웜그레이 기본 + 코랄 포인트를 CTA에만",
+    "Clarity for Shared Use — 상태는 색상 단독이 아니라 색상 + 아이콘/라벨",
+    "Thumb-friendly — 핵심 액션은 화면 하단, 터치 타겟 최소 44px",
+    "Dark Mode as First-class — 모든 토큰은 라이트/다크 쌍"
+  ],
+  "contentFundamentals": {
+    "language": "한국어. Email/Password 플레이스홀더와 테마 메뉴(system/light/dark)만 영문 소문자",
+    "voice": "해요체 질문형. 명령이 아니라 제안 — '어떤 일정을 만들까요?'",
+    "person": "2인칭은 어미로만 표현 (당신/귀하 사용 금지)",
+    "buttons": ["확인", "취소", "삭제", "로그인", "참여", "시작하기", "새 프로젝트 추가"],
+    "buttonRules": "2~5자, 확정 버튼은 항상 '확인'이며 쌍의 오른쪽",
+    "emptyState": ["등록된 일정이 없습니다.", "첫 번째 일정을 등록해 보세요."],
+    "errors": ["일정 작성이 마무리되지 않았습니다.", "이 화면에서 나가면 작성 중이던 내용이 사라집니다.", "입장에 실패했습니다. 비밀번호를 다시 입력해주세요."],
+    "labels": ["제목", "하루종일", "시작", "종료", "위치", "메모", "프로젝트 이름", "자세한 설명", "비밀번호"],
+    "casing": "ALL CAPS 금지, 느낌표 금지, 말줄임표는 검색 플레이스홀더에만",
+    "dates": { "header": "2026년 9월", "field": "2026. 09. 08 09:00", "days": ["일", "월", "화", "수", "목", "금", "토"] },
+    "emoji": "사용하지 않음",
+    "marketing": "여행을 단순하게 / 단순여행"
+  },
+  "visualFoundations": {
+    "colorUse": "코랄은 화면당 1~2곳(주 CTA, 선택된 날짜, 하루종일 바, 프로젝트명). 민트는 완료/확정 전용",
+    "neutrals": "웜 그레이 — 페이지 #FAF9F7, muted #F1EFEC, 잉크 #252220. 블루그레이 금지",
+    "darkMode": "표면 #121212/#181818/#1F1F1F, 잉크 #F5F5F5, 코랄 #FF6F4D→#FF7A56. 다크에서는 그림자 대신 1px 보더",
+    "radii": { "input": "10px", "listCard": "12px", "card": "16px", "media": "16px", "modal": "20px", "pill": "full" },
+    "card": "흰 배경, radius 16, padding 16, shadow 0 2px 8px rgba(0,0,0,0.06). 피드 카드는 muted 배경 + radius 12 + 고정 높이 160px",
+    "accentBorder": "일정 카드 좌측 4px 컬러 바 — 시스템 내 유일한 액센트 보더 패턴",
+    "backgrounds": "사진·그라디언트·텍스처·패턴 없음. 유일한 풀블리드는 랜딩 히어로(플랫 코랄)",
+    "transparency": "모달 오버레이에만 — 라이트 rgba(37,34,32,0.45), 다크 rgba(0,0,0,0.6). 글래스모피즘 없음",
+    "animation": "120ms cubic-bezier(0.2,0,0,1) 색상/보더/트랜스폼, 모달은 180~200ms fade+scale(0.95→1). 바운스·스프링·스크롤 애니메이션 없음",
+    "states": {
+      "hover": "배경 한 단계 어둡게",
+      "press": "scale(0.98) + 한 단계 더",
+      "focus": "코랄 1px 보더 + 0 0 0 3px 코랄100 링, outline 제거 금지",
+      "disabled": "중립 배경 + disabled 텍스트 색상, opacity 사용 금지",
+      "activeNav": "잉크 색 아이콘+라벨, 코랄 미사용"
+    },
+    "layout": {
+      "appShell": "최대 600px 중앙 정렬 + 외곽 소프트 섀도 (데스크톱도 모바일 레이아웃)",
+      "header": "60px", "bottomNav": "60px sticky", "floatingCta": "하단 내비 위 80px, 최대 568px", "touchTargetMin": "44px"
+    },
+    "breakpoints": [
+      { "name": "Mobile", "range": "~479px", "columns": 4, "gutter": "16px", "container": "100%" },
+      { "name": "Mobile L", "range": "480~767px", "columns": 4, "gutter": "16px", "container": "100%" },
+      { "name": "Tablet", "range": "768~1023px", "columns": 8, "gutter": "20px", "container": "720px" },
+      { "name": "Desktop", "range": "1024px~", "columns": 12, "gutter": "24px", "container": "1080px" }
+    ],
+    "imagery": "웜톤, 원형 크롭 아바타, 사진은 카드와 동일한 16px 라운드"
+  },
+  "accessibility": {
+    "contrast": "본문 4.5:1 이상, 큰 텍스트(24px+ 또는 19px bold+) 3:1 이상",
+    "primaryOnWhite": "primary-500(#FF6F4D) 위 흰 텍스트는 3.2:1 — 큰 텍스트/아이콘 전용. 본문은 primary-600 이상",
+    "focus": "모든 인터랙티브 요소에 box-shadow 0 0 0 3px 코랄100 포커스 링",
+    "touchTarget": "최소 44×44px",
+    "colorAlone": "상태는 색상 단독 전달 금지 — 아이콘 또는 텍스트 라벨 병기",
+    "darkText": "다크 배경 #121212 위 #F5F5F5 = 14:1 이상"
+  },
+  "knownDivergences": [
+    { "topic": "팔레트", "spec": "DESIGN.md — 코랄 #FF6F4D / 민트 #2FBF8F / 웜 그레이", "shipped": "Tailwind orange-500 / teal / neutral gray", "resolution": "DESIGN.md를 채택하고 제품의 시맨틱 토큰 이름을 유지" },
+    { "topic": "폰트", "spec": "Pretendard", "shipped": "Noto Sans KR + JejuStoneWall", "resolution": "Pretendard를 UI 폰트로, JejuStoneWall을 브랜드 디스플레이로 유지" },
+    { "topic": "아이콘 스트로크", "spec": "1.5px 라운드 아웃라인", "shipped": "Lucide 기본 2px", "resolution": "제품 구현을 따름" },
+    { "topic": "빈 상태 일러스트", "spec": "코랄+민트 2색 미니 일러스트 권장", "shipped": "없음", "resolution": "소스에 자산이 없어 텍스트만 사용 (임의 생성하지 않음)" }
+  ],
+  "notRebuilt": [
+    "react-day-picker 기반 월간 캘린더 및 날짜/시간 피커 (ui/calendar.tsx)",
+    "비밀번호 재설정 화면",
+    "프로젝트 참여 비밀번호 모달",
+    "이미지 업로드",
+    "무한 스크롤 페이징",
+    "Supabase 연동"
+  ]
+}
