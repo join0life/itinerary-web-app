@@ -1,21 +1,17 @@
 {
   "version": 2,
-  "builds": [
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm turbo run build --filter=app-web...",
+  "outputDirectory": "packages/app-web/dist",
+  "headers": [
     {
-      "src": "packages/app-web/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "packages/app-web/dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "headers": {
-        "Cache-Control": "s-maxage=0"
-      },
-      "continue": true
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=0"
+        }
+      ]
     }
   ]
 }
