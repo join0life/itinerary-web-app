@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "builds": [
+    {
+      "src": "packages/app-web/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "packages/app-web/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "headers": {
+        "Cache-Control": "s-maxage=0"
+      },
+      "continue": true
+    }
+  ]
+}
