@@ -1,0 +1,10 @@
+[
+  {
+    "context": "itinerary-web-app 프로젝트를 pnpm + Turborepo 모노레포로 전환합니다. 프로젝트 위치: ~/Desktop/Coding/itinerary-web-app. 현재는 Vite + React 19 단일 SPA. GitHub: join0life/itinerary-web-app (develop 브랜치). 구체적 작업: 루트 package.json 재작성, turbo.json 작성, packages/app-web/으로 기존 src 이동, packages/shared/ 패키지 생성, tsconfig 설정, pnpm install + turbo dev 검증. 제약사항: Supabase 의존성 유지. 결과를 C0BUHLFRV6U 채널로 전달.",
+    "goal": "EPIC 1: 모노레포 구조 변경 - pnpm + Turborepo 워크스페이스 설정, packages/app-web/으로 이동, packages/shared/ 생성, turbo.json/tsconfig 설정, 검증"
+  },
+  {
+    "context": "claude-pr-review.yml을 GitHub에 커밋하고 시크릿 설정을 완료합니다. .github/workflows/claude-pr-review.yml 작성됨 (sol/woo 조건 제거 버전). .env.example 작성됨. 구체적 작업: YAML 검증, feature 브랜치 커밋, develop 브랜치로 PR 생성, 티켓 #29/#30 체크리스트 업데이트. 제약사항: .env.example은 git에 커밋하지 않음. 결과를 C0BUHLFRV6U 채널로 전달.",
+    "goal": "EPIC 5: GitHub Actions claude-pr-review.yml 커밋 및 PR 생성, YAML 검증, 시크릿 가이드 완료, 티켓 체크리스트 업데이트"
+  }
+]
