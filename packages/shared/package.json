@@ -13,7 +13,7 @@
   },
   "files": ["src"],
   "scripts": {
-    "build": "tsc --build",
+    "build": "tsc --noEmit",
     "lint": "echo \"No linting for shared package\"",
     "dev": "echo \"Shared package has no dev mode\""
   },
