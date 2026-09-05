@@ -1,0 +1,25 @@
+{
+  "name": "@itinerary/tokens",
+  "version": "1.0.0",
+  "description": "Design token package for Dansun Travel - shared between web and React Native",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "styles"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts",
+    "gen:css": "node src/scripts/generate-css.ts",
+    "gen:rn": "node src/scripts/generate-rn.ts",
+    "dev": "tsup src/index.ts --watch"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "~5.8.3"
+  },
+  "peerDependencies": {
+    "react": ">=19.0.0"
+  }
+}
