@@ -27,6 +27,8 @@
   --color-disabled: var(--color-semantic-action-disabled);
   --color-disabled-foreground: var(--color-semantic-text-disabled);
   --color-status-danger-hover: var(--color-semantic-status-danger-hover);
+  --color-status-warning: var(--color-semantic-status-warning);
+  --color-status-info: var(--color-semantic-status-info);
   --color-brand: var(--color-semantic-brand-default);
   --color-brand-hover: var(--color-semantic-brand-hover);
   --color-brand-strong: var(--color-semantic-brand-strong);
@@ -40,6 +42,8 @@
   --color-calendar-event-border: var(
     --color-semantic-calendar-event-foreground
   );
+  --color-calendar-grid-line: var(--color-semantic-calendar-grid-line);
+  --color-overlay: var(--color-semantic-overlay);
 
   --container-app-shell: var(--layout-semantic-app-shell-max-width);
   --container-project-create: var(
@@ -58,12 +62,30 @@
     --layout-semantic-calendar-viewport-height-lg
   );
   --text-calendar-label: var(--typography-semantic-calendar-label-font-size);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 999px;
+  --radius-input: 10px;
+  --radius-card: 16px;
+  --radius-modal: 20px;
+  --radius-media: 16px;
+
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-popover: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-modal: 0 12px 40px rgba(0, 0, 0, 0.18);
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --typography-semantic-font-family-sans: "Noto Sans KR", system-ui, sans-serif;
+  --typography-semantic-font-family-sans:
+    "Pretendard Variable", "Pretendard", "Noto Sans KR", -apple-system,
+    BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", system-ui,
+    sans-serif;
   --typography-semantic-font-family-brand:
     "JejuStoneWall", "Noto Sans KR", sans-serif;
   --typography-semantic-calendar-label-font-size: 0.8rem;
@@ -75,38 +97,72 @@
   --layout-semantic-calendar-viewport-height-md: 37.5rem;
   --layout-semantic-calendar-viewport-height-lg: 42.5rem;
 
-  --color-semantic-surface-default: var(--color-white);
+  /* Primitive palette — 단순여행 design system (coral/mint warm palette). */
+  --color-primary-50: #fff1ec;
+  --color-primary-100: #ffdbce;
+  --color-primary-300: #ff9c7d;
+  --color-primary-500: #ff6f4d;
+  --color-primary-600: #f0552e;
+  --color-primary-700: #c13f1f;
+  --color-secondary-50: #eafbf6;
+  --color-secondary-300: #8fe3cb;
+  --color-secondary-500: #2fbf8f;
+  --color-secondary-600: #22a97a;
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #faf9f7;
+  --color-neutral-100: #f1efec;
+  --color-neutral-200: #e4e1dc;
+  --color-neutral-400: #b3aea6;
+  --color-neutral-600: #7a756c;
+  --color-neutral-800: #4a463f;
+  --color-neutral-900: #252220;
+  --color-success: #2fbf8f;
+  --color-warning: #f5a623;
+  --color-error: #e5484d;
+  --color-info: #4c8dff;
+  --color-white: #ffffff;
+  --color-overlay: rgba(37, 34, 32, 0.45);
+
+  --color-semantic-surface-default: var(--color-neutral-50);
   --color-semantic-surface-muted: var(--color-neutral-100);
-  --color-semantic-surface-elevated: var(--color-white);
+  --color-semantic-surface-elevated: var(--color-neutral-0);
   --color-semantic-surface-inverse: var(--color-neutral-900);
   --color-semantic-text-primary: var(--color-neutral-900);
-  --color-semantic-text-secondary: var(--color-neutral-600);
-  --color-semantic-text-muted: var(--color-neutral-500);
+  --color-semantic-text-secondary: var(--color-neutral-800);
+  --color-semantic-text-muted: var(--color-neutral-600);
   --color-semantic-text-disabled: var(--color-neutral-400);
   --color-semantic-text-inverse: var(--color-white);
   --color-semantic-border-default: var(--color-neutral-200);
   --color-semantic-border-subtle: var(--color-neutral-100);
   --color-semantic-border-focus: var(--color-semantic-action-primary);
   --color-semantic-border-danger: var(--color-semantic-status-danger);
-  --color-semantic-action-primary: var(--color-orange-500);
-  --color-semantic-action-primary-hover: var(--color-orange-400);
-  --color-semantic-action-primary-pressed: var(--color-orange-600);
-  --color-semantic-action-secondary: var(--color-neutral-100);
+  --color-semantic-action-primary: var(--color-primary-500);
+  --color-semantic-action-primary-hover: var(--color-primary-600);
+  --color-semantic-action-primary-pressed: var(--color-primary-700);
+  --color-semantic-action-secondary: var(--color-secondary-500);
   --color-semantic-action-ghost-hover: var(--color-neutral-100);
-  --color-semantic-action-disabled: var(--color-neutral-100);
-  --color-semantic-status-danger: var(--color-red-500);
-  --color-semantic-status-danger-hover: var(--color-red-600);
-  --color-semantic-status-success: var(--color-teal-600);
-  --color-semantic-brand-default: var(--color-orange-400);
-  --color-semantic-brand-hover: var(--color-orange-300);
-  --color-semantic-brand-strong: var(--color-orange-500);
-  --color-semantic-brand-subtle: var(--color-orange-50);
-  --color-semantic-brand-foreground: var(--color-white);
-  --color-semantic-calendar-today: var(--color-sky-50);
-  --color-semantic-calendar-event: var(--color-semantic-brand-subtle);
-  --color-semantic-calendar-event-foreground: var(
-    --color-semantic-brand-strong
+  --color-semantic-action-disabled: var(--color-neutral-200);
+  --color-semantic-action-disabled-foreground: var(--color-neutral-400);
+  --color-semantic-status-danger: var(--color-error);
+  --color-semantic-status-danger-hover: color-mix(
+    in oklab,
+    var(--color-semantic-status-danger) 85%,
+    black
   );
+  --color-semantic-status-success: var(--color-success);
+  --color-semantic-status-warning: var(--color-warning);
+  --color-semantic-status-info: var(--color-info);
+  --color-semantic-brand-default: var(--color-primary-500);
+  --color-semantic-brand-hover: var(--color-primary-600);
+  --color-semantic-brand-strong: var(--color-primary-600);
+  --color-semantic-brand-subtle: var(--color-primary-50);
+  --color-semantic-brand-foreground: var(--color-white);
+  --color-semantic-calendar-today: var(--color-primary-50);
+  --color-semantic-calendar-event: var(--color-primary-50);
+  --color-semantic-calendar-event-foreground: var(--color-primary-600);
+  --color-semantic-calendar-grid-line: var(--color-semantic-border-subtle);
+  --color-semantic-overlay: var(--color-overlay);
+  --color-semantic-focus-ring: 0 0 0 3px var(--color-primary-100);
 
   --radius: 0.625rem;
   --background: var(--color-semantic-surface-default);
@@ -121,49 +177,98 @@
   --secondary-foreground: var(--color-semantic-text-primary);
   --muted: var(--color-semantic-surface-muted);
   --muted-foreground: var(--color-semantic-text-muted);
-  --accent: var(--color-teal-50);
+  --accent: var(--color-semantic-action-ghost-hover);
   --accent-foreground: var(--color-semantic-text-primary);
   --destructive: var(--color-semantic-status-danger);
   --destructive-foreground: var(--color-semantic-text-inverse);
   --border: var(--color-semantic-border-default);
   --input: var(--color-semantic-border-default);
   --ring: var(--color-semantic-border-focus);
+
+  /* Spacing, motion and type-scale tokens — available for use, not yet
+     retrofitted onto every existing utility class. */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --duration-modal: 200ms;
+  --transition-control:
+    background-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+  --press-scale: 0.98;
+
+  --text-h1-size: 2rem;
+  --text-h1-line: 1.3;
+  --text-h1-weight: 700;
+  --text-h2-size: 1.625rem;
+  --text-h2-line: 1.35;
+  --text-h2-weight: 700;
+  --text-h3-size: 1.375rem;
+  --text-h3-line: 1.4;
+  --text-h3-weight: 600;
+  --text-h4-size: 1.125rem;
+  --text-h4-line: 1.4;
+  --text-h4-weight: 600;
+  --text-h5-size: 1rem;
+  --text-h5-line: 1.5;
+  --text-h5-weight: 600;
+  --text-body-size: 0.9375rem;
+  --text-body-line: 1.6;
+  --text-body-weight: 400;
+  --text-body-sm-size: 0.8125rem;
+  --text-body-sm-line: 1.55;
+  --text-body-sm-weight: 400;
+  --text-caption-size: 0.75rem;
+  --text-caption-line: 1.4;
+  --text-caption-weight: 500;
+  --text-button-size: 0.9375rem;
+  --text-button-line: 1;
+  --text-button-weight: 600;
 }
 
 .dark {
-  --color-semantic-surface-default: var(--color-neutral-950);
-  --color-semantic-surface-muted: var(--color-neutral-900);
-  --color-semantic-surface-elevated: var(--color-neutral-800);
-  --color-semantic-text-primary: var(--color-neutral-50);
-  --color-semantic-text-secondary: var(--color-neutral-300);
-  --color-semantic-text-muted: var(--color-neutral-400);
-  --color-semantic-text-disabled: var(--color-neutral-500);
-  --color-semantic-text-inverse: var(--color-neutral-950);
-  --color-semantic-border-default: rgb(255 255 255 / 0.12);
-  --color-semantic-border-subtle: rgb(255 255 255 / 0.08);
-  --color-semantic-action-secondary: var(--color-neutral-900);
-  --color-semantic-action-ghost-hover: rgb(255 255 255 / 0.08);
-  --color-semantic-action-disabled: var(--color-neutral-900);
+  --color-primary-50: #2a1a16;
+  --color-primary-100: #3d251e;
+  --color-primary-300: #ff9c7d;
+  --color-primary-500: #ff7a56;
+  --color-primary-600: #ff5a32;
+  --color-primary-700: #d6421f;
+  --color-secondary-50: #0f211d;
+  --color-secondary-300: #4fbe9e;
+  --color-secondary-500: #3ecb9b;
+  --color-secondary-600: #2fb587;
+  --color-neutral-0: #121212;
+  --color-neutral-50: #181818;
+  --color-neutral-100: #1f1f1f;
+  --color-neutral-200: #2a2a2a;
+  --color-neutral-400: #5c5c5c;
+  --color-neutral-600: #9a9a9a;
+  --color-neutral-800: #d4d4d4;
+  --color-neutral-900: #f5f5f5;
+  --color-success: #3ecb9b;
+  --color-warning: #f7b84d;
+  --color-error: #f2696d;
+  --color-info: #6fa1ff;
+  --color-overlay: rgba(0, 0, 0, 0.6);
 
-  --background: var(--color-semantic-surface-default);
-  --foreground: var(--color-semantic-text-primary);
-  --card: var(--color-semantic-surface-elevated);
-  --card-foreground: var(--color-semantic-text-primary);
-  --popover: var(--color-semantic-surface-elevated);
-  --popover-foreground: var(--color-semantic-text-primary);
-  --primary: var(--color-semantic-action-primary);
-  --primary-foreground: var(--color-semantic-text-inverse);
-  --secondary: var(--color-semantic-action-secondary);
-  --secondary-foreground: var(--color-semantic-text-primary);
-  --muted: var(--color-semantic-surface-muted);
-  --muted-foreground: var(--color-semantic-text-muted);
-  --accent: rgb(20 184 166 / 0.14);
-  --accent-foreground: var(--color-semantic-text-primary);
-  --destructive: var(--color-semantic-status-danger);
-  --destructive-foreground: var(--color-semantic-text-inverse);
-  --border: var(--color-semantic-border-default);
-  --input: var(--color-semantic-border-default);
-  --ring: var(--color-semantic-border-focus);
+  /* The only three semantic relationships that genuinely differ in dark
+     mode (not just a primitive-value flip) — everything else cascades
+     automatically from the primitive overrides above. */
+  --color-semantic-surface-elevated: var(--color-neutral-100);
+  --color-semantic-action-disabled: var(--color-neutral-200);
+  --color-semantic-action-disabled-foreground: var(--color-neutral-400);
 }
 
 @layer base {
