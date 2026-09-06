@@ -1,0 +1,306 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/app/**",
+              "components/calendar/**",
+              "components/feedback/**",
+              "components/forms/**",
+              "components/icons/**",
+              "components/overlays/**",
+              "components/surfaces/**",
+              "ui_kits/dansun-app/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Pretendard Variable|JejuStoneWall|Noto Sans KR))/i]",
+        "message": "Font not provided by the design system. Available: Pretendard Variable, JejuStoneWall, Noto Sans KR."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='AlertModal'] > JSXAttribute > JSXIdentifier[name!=/^(?:open|title|description|confirmLabel|cancelLabel|onConfirm|onCancel|key|ref|className|style|children)$/]",
+        "message": "<AlertModal> doesn't accept that prop. Declared props: open, title, description, confirmLabel, cancelLabel, onConfirm, onCancel."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='AlldayEventBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|offsetDays|spanDays|onClick|key|ref|className|style|children)$/]",
+        "message": "<AlldayEventBar> doesn't accept that prop. Declared props: title, offsetDays, spanDays, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='AppHeader'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|title|avatarSrc|theme|onBack|onThemeChange|onProfile|onSignOut|key|ref|className|style|children)$/]",
+        "message": "<AppHeader> doesn't accept that prop. Declared props: variant, title, avatarSrc, theme, onBack, onThemeChange, onProfile, onSignOut."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='AppHeader'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:global|project)$/]",
+        "message": "<AppHeader> variant must be one of 'global' | 'project'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='AppHeader'] > JSXAttribute[name.name='theme'] > Literal[value!=/^(?:system|light|dark)$/]",
+        "message": "<AppHeader> theme must be one of 'system' | 'light' | 'dark'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|children|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: tone, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:neutral|brand|success|outline)$/]",
+        "message": "<Badge> tone must be one of 'neutral' | 'brand' | 'success' | 'outline'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BottomNav'] > JSXAttribute > JSXIdentifier[name!=/^(?:active|onChange|key|ref|className|style|children)$/]",
+        "message": "<BottomNav> doesn't accept that prop. Declared props: active, onChange."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BottomNav'] > JSXAttribute[name.name='active'] > Literal[value!=/^(?:home|project|todo|calendar)$/]",
+        "message": "<BottomNav> active must be one of 'home' | 'project' | 'todo' | 'calendar'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|disabled|fullWidth|iconOnly|onClick|children|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, size, disabled, fullWidth, iconOnly, onClick, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|secondary|ghost|brand|destructive|link)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'secondary' | 'ghost' | 'brand' | 'destructive' | 'link'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CalendarEventItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|startHour|startMinute|endHour|endMinute|columnIndex|onClick|key|ref|className|style|children)$/]",
+        "message": "<CalendarEventItem> doesn't accept that prop. Declared props: title, startHour, startMinute, endHour, endMinute, columnIndex, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:accentColor|muted|padding|children|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: accentColor, muted, padding, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Checkbox'] > JSXAttribute > JSXIdentifier[name!=/^(?:checked|onChange|disabled|label|id|key|ref|className|style|children)$/]",
+        "message": "<Checkbox> doesn't accept that prop. Declared props: checked, onChange, disabled, label, id."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CreateTodoPrompt'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|onClick|key|ref|className|style|children)$/]",
+        "message": "<CreateTodoPrompt> doesn't accept that prop. Declared props: label, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Dialog'] > JSXAttribute > JSXIdentifier[name!=/^(?:open|title|onClose|footer|width|children|key|ref|className|style|children)$/]",
+        "message": "<Dialog> doesn't accept that prop. Declared props: open, title, onClose, footer, width, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Empty'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|description|action|illustration|key|ref|className|style|children)$/]",
+        "message": "<Empty> doesn't accept that prop. Declared props: title, description, action, illustration."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|color|key|ref|className|style|children)$/]",
+        "message": "<Icon> doesn't accept that prop. Declared props: name, size, color."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Input'] > JSXAttribute > JSXIdentifier[name!=/^(?:placeholder|value|type|invalid|disabled|leadingIcon|onChange|key|ref|className|style|children)$/]",
+        "message": "<Input> doesn't accept that prop. Declared props: placeholder, value, type, invalid, disabled, leadingIcon, onChange."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='InputGroup'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|key|ref|className|style|children)$/]",
+        "message": "<InputGroup> doesn't accept that prop. Declared props: children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Label'] > JSXAttribute > JSXIdentifier[name!=/^(?:htmlFor|muted|children|key|ref|className|style|children)$/]",
+        "message": "<Label> doesn't accept that prop. Declared props: htmlFor, muted, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Loader'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|size|key|ref|className|style|children)$/]",
+        "message": "<Loader> doesn't accept that prop. Declared props: label, size."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Popover'] > JSXAttribute > JSXIdentifier[name!=/^(?:trigger|items|align|width|key|ref|className|style|children)$/]",
+        "message": "<Popover> doesn't accept that prop. Declared props: trigger, items, align, width."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Popover'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:start|end)$/]",
+        "message": "<Popover> align must be one of 'start' | 'end'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ProfileSummary'] > JSXAttribute > JSXIdentifier[name!=/^(?:avatarSrc|nickname|bio|editable|onEdit|key|ref|className|style|children)$/]",
+        "message": "<ProfileSummary> doesn't accept that prop. Declared props: avatarSrc, nickname, bio, editable, onEdit."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ProjectCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|description|owner|joined|onJoin|onDelete|onClick|key|ref|className|style|children)$/]",
+        "message": "<ProjectCard> doesn't accept that prop. Declared props: name, description, owner, joined, onJoin, onDelete, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Select'] > JSXAttribute > JSXIdentifier[name!=/^(?:options|value|placeholder|disabled|onChange|key|ref|className|style|children)$/]",
+        "message": "<Select> doesn't accept that prop. Declared props: options, value, placeholder, disabled, onChange."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Switch'] > JSXAttribute > JSXIdentifier[name!=/^(?:checked|onChange|disabled|id|key|ref|className|style|children)$/]",
+        "message": "<Switch> doesn't accept that prop. Declared props: checked, onChange, disabled, id."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Textarea'] > JSXAttribute > JSXIdentifier[name!=/^(?:placeholder|value|rows|invalid|disabled|onChange|key|ref|className|style|children)$/]",
+        "message": "<Textarea> doesn't accept that prop. Declared props: placeholder, value, rows, invalid, disabled, onChange."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Toast'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|message|key|ref|className|style|children)$/]",
+        "message": "<Toast> doesn't accept that prop. Declared props: tone, message."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Toast'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:success|error|warning|info)$/]",
+        "message": "<Toast> tone must be one of 'success' | 'error' | 'warning' | 'info'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TodoItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|confirmed|onToggle|onEdit|onDelete|key|ref|className|style|children)$/]",
+        "message": "<TodoItem> doesn't accept that prop. Declared props: title, confirmed, onToggle, onEdit, onDelete."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='WeeklyCalendar'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|height|startHour|key|ref|className|style|children)$/]",
+        "message": "<WeeklyCalendar> doesn't accept that prop. Declared props: children, height, startHour."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='WeekStrip'] > JSXAttribute > JSXIdentifier[name!=/^(?:monthLabel|dates|selectedIndex|onSelect|onPrev|onNext|key|ref|className|style|children)$/]",
+        "message": "<WeekStrip> doesn't accept that prop. Declared props: monthLabel, dates, selectedIndex, onSelect, onPrev, onNext."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "AlertModal": { "replaces": [] },
+      "AlldayEventBar": { "replaces": [] },
+      "AppHeader": { "replaces": [] },
+      "Badge": { "replaces": [] },
+      "BottomNav": { "replaces": [] },
+      "Button": { "replaces": [] },
+      "CalendarEventItem": { "replaces": [] },
+      "Card": { "replaces": [] },
+      "Checkbox": { "replaces": [] },
+      "CreateTodoPrompt": { "replaces": [] },
+      "Dialog": { "replaces": [] },
+      "Empty": { "replaces": [] },
+      "Icon": { "replaces": [] },
+      "Input": { "replaces": [] },
+      "InputGroup": { "replaces": [] },
+      "Label": { "replaces": [] },
+      "Loader": { "replaces": [] },
+      "Popover": { "replaces": [] },
+      "ProfileSummary": { "replaces": [] },
+      "ProjectCard": { "replaces": [] },
+      "Select": { "replaces": [] },
+      "Switch": { "replaces": [] },
+      "Textarea": { "replaces": [] },
+      "Toast": { "replaces": [] },
+      "TodoItem": { "replaces": [] },
+      "WeeklyCalendar": { "replaces": [] },
+      "WeekStrip": { "replaces": [] }
+    },
+    "tokens": [
+      "--action-disabled", "--action-disabled-foreground", "--action-ghost-border", "--action-ghost-hover",
+      "--action-primary", "--action-primary-foreground", "--action-primary-hover", "--action-primary-pressed",
+      "--action-secondary", "--action-secondary-foreground", "--action-secondary-hover", "--app-shell-max-width",
+      "--border-danger", "--border-default", "--border-focus", "--border-subtle", "--bottom-nav-height",
+      "--brand", "--brand-foreground", "--brand-hover", "--brand-strong", "--brand-subtle",
+      "--calendar-canvas-height", "--calendar-event", "--calendar-event-foreground", "--calendar-event-min-height",
+      "--calendar-grid-line", "--calendar-hour-height", "--calendar-today", "--calendar-viewport-lg",
+      "--calendar-viewport-md", "--calendar-viewport-sm", "--card-dark-border", "--color-error", "--color-info",
+      "--color-neutral-0", "--color-neutral-100", "--color-neutral-200", "--color-neutral-400", "--color-neutral-50",
+      "--color-neutral-600", "--color-neutral-800", "--color-neutral-900", "--color-overlay", "--color-primary-100",
+      "--color-primary-300", "--color-primary-50", "--color-primary-500", "--color-primary-600", "--color-primary-700",
+      "--color-secondary-300", "--color-secondary-50", "--color-secondary-500", "--color-secondary-600",
+      "--color-success", "--color-warning", "--color-white", "--container-desktop", "--container-tablet",
+      "--control-height-lg", "--control-height-md", "--control-height-sm", "--duration-base", "--duration-fast",
+      "--duration-modal", "--ease-out", "--focus-ring", "--font-brand", "--font-sans", "--gutter-desktop",
+      "--gutter-mobile", "--gutter-tablet", "--header-height", "--overlay", "--press-scale",
+      "--project-create-action-max-width", "--radius-2xl", "--radius-card", "--radius-full", "--radius-input",
+      "--radius-lg", "--radius-md", "--radius-media", "--radius-modal", "--radius-sm", "--radius-xl",
+      "--shadow-card", "--shadow-modal", "--shadow-popover", "--space-1", "--space-10", "--space-12", "--space-2",
+      "--space-3", "--space-4", "--space-5", "--space-6", "--space-8", "--status-danger", "--status-info",
+      "--status-success", "--status-warning", "--surface-card", "--surface-elevated", "--surface-inverse",
+      "--surface-muted", "--surface-page", "--text-body-line", "--text-body-size", "--text-body-sm-line",
+      "--text-body-sm-size", "--text-body-sm-weight", "--text-body-weight", "--text-button-line", "--text-button-size",
+      "--text-button-weight", "--text-calendar-label-size", "--text-caption-line", "--text-caption-size",
+      "--text-caption-weight", "--text-disabled", "--text-h1-line", "--text-h1-size", "--text-h1-weight",
+      "--text-h2-line", "--text-h2-size", "--text-h2-weight", "--text-h3-line", "--text-h3-size", "--text-h3-weight",
+      "--text-h4-line", "--text-h4-size", "--text-h4-weight", "--text-h5-line", "--text-h5-size", "--text-h5-weight",
+      "--text-inverse", "--text-muted", "--text-primary", "--text-secondary", "--touch-target-min",
+      "--transition-control"
+    ],
+    "tokenKinds": {
+      "--color-primary-50": "color", "--color-primary-100": "color", "--color-primary-300": "color",
+      "--color-primary-500": "color", "--color-primary-600": "color", "--color-primary-700": "color",
+      "--color-secondary-50": "color", "--color-secondary-300": "color", "--color-secondary-500": "color",
+      "--color-secondary-600": "color", "--color-neutral-0": "color", "--color-neutral-50": "color",
+      "--color-neutral-100": "color", "--color-neutral-200": "color", "--color-neutral-400": "color",
+      "--color-neutral-600": "color", "--color-neutral-800": "color", "--color-neutral-900": "color",
+      "--color-success": "color", "--color-warning": "color", "--color-error": "color", "--color-info": "color",
+      "--color-white": "color", "--color-overlay": "color", "--surface-page": "color", "--surface-card": "color",
+      "--surface-elevated": "color", "--surface-muted": "color", "--surface-inverse": "color",
+      "--text-primary": "font", "--text-secondary": "font", "--text-muted": "font", "--text-disabled": "font",
+      "--text-inverse": "font", "--border-default": "color", "--border-subtle": "color", "--border-focus": "color",
+      "--border-danger": "color", "--action-primary": "color", "--action-primary-hover": "color",
+      "--action-primary-pressed": "color", "--action-primary-foreground": "color", "--action-secondary": "color",
+      "--action-secondary-hover": "color", "--action-secondary-foreground": "color", "--action-ghost-border": "color",
+      "--action-ghost-hover": "color", "--action-disabled": "color", "--action-disabled-foreground": "color",
+      "--brand": "color", "--brand-hover": "color", "--brand-strong": "color", "--brand-subtle": "color",
+      "--brand-foreground": "color", "--status-success": "color", "--status-warning": "color",
+      "--status-danger": "color", "--status-info": "color", "--calendar-today": "color", "--calendar-event": "color",
+      "--calendar-event-foreground": "color", "--calendar-grid-line": "color", "--overlay": "color",
+      "--focus-ring": "color", "--font-sans": "font", "--font-brand": "font", "--text-h1-size": "font",
+      "--text-h1-line": "font", "--text-h1-weight": "font", "--text-h2-size": "font", "--text-h2-line": "font",
+      "--text-h2-weight": "font", "--text-h3-size": "font", "--text-h3-line": "font", "--text-h3-weight": "font",
+      "--text-h4-size": "font", "--text-h4-line": "font", "--text-h4-weight": "font", "--text-h5-size": "font",
+      "--text-h5-line": "font", "--text-h5-weight": "font", "--text-body-size": "font", "--text-body-line": "font",
+      "--text-body-weight": "font", "--text-body-sm-size": "font", "--text-body-sm-line": "font",
+      "--text-body-sm-weight": "font", "--text-caption-size": "font", "--text-caption-line": "font",
+      "--text-caption-weight": "font", "--text-button-size": "font", "--text-button-line": "font",
+      "--text-button-weight": "font", "--text-calendar-label-size": "font", "--space-1": "spacing",
+      "--space-2": "spacing", "--space-3": "spacing", "--space-4": "spacing", "--space-5": "spacing",
+      "--space-6": "spacing", "--space-8": "spacing", "--space-10": "spacing", "--space-12": "spacing",
+      "--radius-sm": "radius", "--radius-md": "radius", "--radius-lg": "radius", "--radius-xl": "radius",
+      "--radius-2xl": "radius", "--radius-full": "radius", "--radius-input": "radius", "--radius-card": "radius",
+      "--radius-modal": "radius", "--radius-media": "radius", "--shadow-card": "shadow", "--shadow-popover": "shadow",
+      "--shadow-modal": "shadow", "--card-dark-border": "color", "--control-height-sm": "spacing",
+      "--control-height-md": "spacing", "--control-height-lg": "spacing", "--touch-target-min": "spacing",
+      "--app-shell-max-width": "spacing", "--project-create-action-max-width": "spacing",
+      "--container-tablet": "spacing", "--container-desktop": "spacing", "--gutter-mobile": "spacing",
+      "--gutter-tablet": "spacing", "--gutter-desktop": "spacing", "--calendar-hour-height": "spacing",
+      "--calendar-canvas-height": "spacing", "--calendar-viewport-sm": "spacing", "--calendar-viewport-md": "spacing",
+      "--calendar-viewport-lg": "spacing", "--calendar-event-min-height": "spacing", "--header-height": "spacing",
+      "--bottom-nav-height": "spacing", "--ease-out": "other", "--duration-fast": "other", "--duration-base": "other",
+      "--duration-modal": "other", "--transition-control": "color", "--press-scale": "other"
+    },
+    "fontFamilies": ["JejuStoneWall", "Noto Sans KR", "Pretendard Variable"]
+  }
+}

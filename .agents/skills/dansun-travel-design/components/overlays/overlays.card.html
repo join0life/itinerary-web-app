@@ -1,0 +1,31 @@
+<!-- @dsCard group="Components" viewport="700x380" name="Overlays" subtitle="Modal form, confirm alert, anchored menu" -->
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>Overlays</title><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;padding:16px;background:var(--surface-page);font-family:var(--font-sans)}#root{display:flex;flex-direction:column;gap:14px}.lbl{font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}.grp{display:flex;gap:10px;align-items:center;flex-wrap:wrap}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script></head><body><div id="root"></div>
+<script type="text/babel">
+const { Dialog, AlertModal, Popover, Button, Input, Label, Switch, Icon } = window.DesignSystem_2c1582;
+function Demo(){
+  const [tab,setTab]=React.useState('dialog');
+  return (<div style={{display:'flex',flexDirection:'column',gap:12}}>
+    <div className="grp">
+      <Button size="sm" variant={tab==='dialog'?'primary':'ghost'} onClick={()=>setTab('dialog')}>Dialog</Button>
+      <Button size="sm" variant={tab==='alert'?'primary':'ghost'} onClick={()=>setTab('alert')}>AlertModal</Button>
+      <Popover align="start" width={140} trigger={<span style={{display:'flex',padding:8,color:'var(--text-secondary)'}}><Icon name="sun" size={20} /></span>}
+        items={[{label:'system'},{label:'light',selected:true},{label:'dark'}]} />
+      <span style={{fontSize:11,color:'var(--text-muted)'}}>← 테마 팝오버 클릭</span></div>
+    <div style={{position:'relative',height:290,borderRadius:'var(--radius-card)',overflow:'hidden',background:'var(--surface-muted)'}}>
+      {tab==='dialog'?(
+        <Dialog title="새 일정 만들기" onClose={()=>{}} footer={<><Button variant="ghost" fullWidth>취소</Button><Button fullWidth>확인</Button></>}>
+          <div style={{display:'flex',flexDirection:'column',gap:6}}><Label htmlFor="d1">제목</Label><Input id="d1" defaultValue="성산일출봉 일출" /></div>
+          <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}><Label htmlFor="d2">하루종일</Label><Switch id="d2" checked={false} /></div>
+        </Dialog>
+      ):(
+        <AlertModal title="일정 작성이 마무리되지 않았습니다." description="이 화면에서 나가면 작성 중이던 내용이 사라집니다." />
+      )}
+    </div></div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script></body></html>

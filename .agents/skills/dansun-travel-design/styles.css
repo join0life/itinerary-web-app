@@ -1,0 +1,8 @@
+/* 단순여행 Design System — global entry. Consumers link this one file. */
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/semantic.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/motion.css";
+@import "./tokens/base.css";

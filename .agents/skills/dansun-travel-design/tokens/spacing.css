@@ -1,0 +1,26 @@
+/* Space, radius, elevation, layout — DESIGN.md §4/§5 + shipped layout tokens. */
+:root{
+--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;
+
+--radius-sm:6px;--radius-md:10px;--radius-lg:12px;--radius-xl:16px;--radius-2xl:20px;--radius-full:999px;
+--radius-input:10px;--radius-card:16px;--radius-modal:20px;--radius-media:16px;
+
+--shadow-card:0 2px 8px rgba(0,0,0,0.06);
+--shadow-popover:0 4px 16px rgba(0,0,0,0.10);
+--shadow-modal:0 12px 40px rgba(0,0,0,0.18);
+--card-dark-border:1px solid var(--border-default);
+
+--control-height-sm:32px;--control-height-md:44px;--control-height-lg:52px;
+--touch-target-min:44px;
+
+--app-shell-max-width:37.5rem;
+--project-create-action-max-width:35.5rem;
+--container-tablet:720px;--container-desktop:1080px;
+--gutter-mobile:16px;--gutter-tablet:20px;--gutter-desktop:24px;
+
+--calendar-hour-height:60px;
+--calendar-canvas-height:90rem;
+--calendar-viewport-sm:32.5rem;--calendar-viewport-md:37.5rem;--calendar-viewport-lg:42.5rem;
+--calendar-event-min-height:65px;
+--header-height:60px;--bottom-nav-height:60px;
+}
