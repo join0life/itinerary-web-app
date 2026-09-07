@@ -1,4 +1,5 @@
 import CreateTodoButton from "@/components/todo/create-todo-button";
+import SharedScheduleCallout from "@/components/todo/shared-schedule-callout";
 import TodoList from "@/components/todo/todo-list";
 import Loader from "@/components/loader";
 import Fallback from "@/components/fallback";
@@ -49,6 +50,7 @@ export default function TodoPage() {
   return (
     <div className="flex w-full flex-col gap-5">
       <CreateTodoButton />
+      <SharedScheduleCallout />
       <TodoList projectId={Number(projectId)} />
     </div>
   );
