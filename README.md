@@ -4,7 +4,7 @@
 프로젝트 기반으로 일정과 캘린더를 함께 확인하고, 사용자 간 일정 공유까지 고려한 Supabase 기반의 프론트엔드 프로젝트입니다.
 현재는 웹 서비스이지만 추후 앱(모바일)으로도 확장할 계획이 있어, pnpm workspace + Turborepo 기반 모노레포로 구성해 웹 앱과 디자인 토큰/공유 로직 패키지를 미리 분리해 관리하고 있습니다.
 
-[제작 기간] 25. 12. 01 ~ 진행 중 
+[제작 기간] 25. 12. 01 ~ 진행 중
 
 [링크]
 
@@ -74,21 +74,27 @@ pnpm workspace 기반 모노레포로, `packages/` 아래 앱과 공유 패키�
 
 ```
 packages/
-  app-web/          # 웹 앱 (Vite + React)
+  app-web/            # 웹 앱 (Vite + React)
     src/
-      api/          # Supabase API 연동
-      components/   # UI 컴포넌트
-      hooks/        # React Query 기반 커스텀 훅
-      pages/        # 라우팅 페이지
-      store/        # Zustand 전역 상태
-      styles/       # 디자인 시스템 CSS (design-system.css)
-      lib/          # 공통 유틸리티 및 Supabase 설정
-  shared/           # 웹/모바일 공유 타입 · 유틸 · 상수 (@itinerary/shared)
+      api/            # Supabase API 연동
+      components/     # UI 컴포넌트
+      hooks/          # React Query 기반 커스텀 훅
+      pages/          # 라우팅 페이지
+      store/          # Zustand 전역 상태
+      styles/         # 디자인 시스템 CSS (design-system.css)
+      lib/            # 공통 유틸리티 및 Supabase 설정
+  shared/             # 웹/모바일 공유 타입 · 유틸 · 상수 (@itinerary/shared)
     src/
-  tokens/           # 디자인 토큰 원본 및 CSS 변환 스크립트 (@itinerary/tokens)
+      types.ts        # 공유 엔티티 타입
+      constants.ts    # QUERY_KEYS 등 공통 상수
+      utils.ts        # 공통 유틸 함수
+      error.ts        # 공통 에러 처리
+  tokens/             # 디자인 토큰 원본 및 CSS 변환 스크립트 (@itinerary/tokens)
     src/
-turbo.json          # Turborepo 파이프라인 설정
-pnpm-workspace.yaml # pnpm workspace 설정
+      design-tokens.json # 디자인 토큰 원본
+      scripts/        # 토큰 → CSS 변환 스크립트
+turbo.json            # Turborepo 파이프라인 설정
+pnpm-workspace.yaml   # pnpm workspace 설정
 ```
 
 ---
