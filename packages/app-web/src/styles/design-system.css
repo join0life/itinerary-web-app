@@ -63,16 +63,11 @@
   );
   --text-calendar-label: var(--typography-semantic-calendar-label-font-size);
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-2xl: 20px;
-  --radius-full: 999px;
   --radius-input: 10px;
   --radius-card: 16px;
   --radius-modal: 20px;
   --radius-media: 16px;
+  --radius-popover: 10px;
 
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
   --shadow-popover: 0 4px 16px rgba(0, 0, 0, 0.1);

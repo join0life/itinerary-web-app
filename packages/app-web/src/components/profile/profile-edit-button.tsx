@@ -7,7 +7,7 @@ export default function ProfileEditButton() {
   return (
     <Button
       onClick={openProfileEditorModal}
-      variant={"secondary"}
+      variant={"ghost"}
       className="w-fit"
     >
       프로필 수정
