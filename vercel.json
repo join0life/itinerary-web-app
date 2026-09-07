@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm turbo run build --filter=app-web...",
+  "outputDirectory": "packages/app-web/dist",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=0"
+        }
+      ]
+    }
+  ]
+}
