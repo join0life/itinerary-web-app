@@ -96,11 +96,16 @@ pnpm-workspace.yaml # pnpm workspace 설정
 ## 주요 화면 UI
 
 ### 프로젝트 페이지
+<img width="3360" height="1856" alt="image" src="https://github.com/user-attachments/assets/b956bd68-0e67-483c-ab80-732602d25f0e" />
 
 ### 일정 페이지
+<img width="3360" height="1856" alt="image" src="https://github.com/user-attachments/assets/730b0361-1d2a-4c38-8670-8f8fc2a356f6" />
 
 ### 캘린더 페이지
+<img width="3360" height="2192" alt="image" src="https://github.com/user-attachments/assets/93346409-6659-4e83-a47f-b0f67a7ff15c" />
 
 ### 모달(생성, 수정)
+<img width="3360" height="1856" alt="image" src="https://github.com/user-attachments/assets/e10ef54b-2d77-43f4-8513-363c10b22f76" />
 
 ### 마이페이지
+<img width="3360" height="1856" alt="image" src="https://github.com/user-attachments/assets/63d2337d-4176-4df4-af5c-2203f4d324e9" />
