@@ -1,0 +1,9 @@
+/* Motion — short, functional. No bounce, no spring. */
+:root{
+--ease-out:cubic-bezier(0.2,0,0,1); /* @kind other */
+--duration-fast:120ms; /* @kind other */
+--duration-base:180ms; /* @kind other */
+--duration-modal:200ms; /* @kind other */
+--transition-control:background-color var(--duration-fast) var(--ease-out),color var(--duration-fast) var(--ease-out),border-color var(--duration-fast) var(--ease-out),box-shadow var(--duration-fast) var(--ease-out),transform var(--duration-fast) var(--ease-out);
+--press-scale:0.98; /* @kind other */
+}
