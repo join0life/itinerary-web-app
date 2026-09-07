@@ -139,11 +139,7 @@
   --color-semantic-action-disabled: var(--color-neutral-200);
   --color-semantic-action-disabled-foreground: var(--color-neutral-400);
   --color-semantic-status-danger: var(--color-error);
-  --color-semantic-status-danger-hover: color-mix(
-    in oklab,
-    var(--color-semantic-status-danger) 85%,
-    black
-  );
+  --color-semantic-status-danger-hover: #c33d41;
   --color-semantic-status-success: var(--color-success);
   --color-semantic-status-warning: var(--color-warning);
   --color-semantic-status-info: var(--color-info);
@@ -258,12 +254,17 @@
   --color-info: #6fa1ff;
   --color-overlay: rgba(0, 0, 0, 0.6);
 
-  /* The only three semantic relationships that genuinely differ in dark
-     mode (not just a primitive-value flip) — everything else cascades
+  /* The only semantic relationships that genuinely differ in dark mode
+     (not just a primitive-value flip) — everything else cascades
      automatically from the primitive overrides above. */
   --color-semantic-surface-elevated: var(--color-neutral-100);
   --color-semantic-action-disabled: var(--color-neutral-200);
   --color-semantic-action-disabled-foreground: var(--color-neutral-400);
+  /* color-mix() isn't supported on older WebView engines, so this hover
+     shade (85% status-danger, mixed toward black) is precomputed per
+     theme instead of computed live — same convention every other
+     hover/pressed token in this file already follows. */
+  --color-semantic-status-danger-hover: #ce595d;
 }
 
 @layer base {
