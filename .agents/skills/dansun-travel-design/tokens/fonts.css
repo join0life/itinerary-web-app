@@ -1,0 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+/* UI font. Served from the Pretendard CDN; upload PretendardVariable.woff2 to vendor it locally. */
+@font-face{font-family:"Pretendard Variable";src:url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/woff2/PretendardVariable.woff2") format("woff2-variations");font-weight:45 920;font-style:normal;font-display:swap}
+/* Brand display font shipped by the product (noonfonts CDN, same URL as the app's index.css). */
+@font-face{font-family:"JejuStoneWall";src:url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2") format("woff2");font-weight:normal;font-display:swap}
