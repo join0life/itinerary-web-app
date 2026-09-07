@@ -4,6 +4,17 @@
   "version": "0.0.0",
   "description": "Dansun Travel web app (WebView target)",
   "type": "module",
+  "vercel": {
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist"
+        }
+      }
+    ]
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
