@@ -1,4 +1,4 @@
-import { dirname, join } from "path";
+import { dirname, resolve } from "path";
 import { fileURLToPath } from "url";
 import { mergeConfig } from "vite";
 
@@ -24,19 +24,18 @@ const config: StorybookConfig = {
     options: {},
   },
   async viteFinal(config) {
-    const path = await import("path");
     const tailwindcss = (await import("@tailwindcss/vite")).default;
 
     return mergeConfig(config, {
       plugins: [tailwindcss()],
       resolve: {
         alias: {
-          "@": path.resolve(dirname(fileURLToPath(import.meta.url)), "../src"),
-          "@itinerary/shared": path.resolve(
+          "@": resolve(dirname(fileURLToPath(import.meta.url)), "../src"),
+          "@itinerary/shared": resolve(
             dirname(fileURLToPath(import.meta.url)),
             "../../shared/src",
           ),
-          "@itinerary/tokens": path.resolve(
+          "@itinerary/tokens": resolve(
             dirname(fileURLToPath(import.meta.url)),
             "../../tokens/src",
           ),
