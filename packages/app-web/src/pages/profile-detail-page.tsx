@@ -1,6 +1,5 @@
 import ProfileInfo from "@/components/profile/profile-info";
 import ProjectFeed from "@/components/project/project-feed";
-import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import { Navigate, useParams } from "react-router";
 

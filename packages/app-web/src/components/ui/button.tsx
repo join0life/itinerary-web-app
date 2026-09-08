@@ -67,4 +67,9 @@ function Button({
   );
 }
 
+// buttonVariants is exported alongside the Button component (standard
+// shadcn/ui pattern, also consumed by alert-dialog.tsx and calendar.tsx).
+// Splitting it into its own module is an unrelated structural refactor to
+// this lint-config change, so the fast-refresh warning is suppressed here.
+// eslint-disable-next-line react-refresh/only-export-components
 export { Button, buttonVariants };

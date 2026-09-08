@@ -56,7 +56,7 @@ export default function TodoEditorModal() {
       onSuccess: () => {
         todoEditorModal.actions.close();
       },
-      onError: (error) => {
+      onError: () => {
         toast.error("일정 수정에 실패했습니다.", {
           position: "top-center",
         });
@@ -100,6 +100,11 @@ export default function TodoEditorModal() {
         memo: todoEditorModal.memo,
       });
     }
+    // Intentionally only re-run when the modal opens/closes: this effect
+    // seeds the form from the modal's snapshot at open-time, and including
+    // the other todoEditorModal fields would re-seed the form on every
+    // keystroke while the modal is open, clobbering in-progress edits.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [todoEditorModal.isOpen]);
 
   const handleSaveEventClick = () => {

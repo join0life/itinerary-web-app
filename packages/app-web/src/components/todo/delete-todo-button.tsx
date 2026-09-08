@@ -13,7 +13,7 @@ export default function DeleteTodoButton({ id }: { id: number }) {
           position: "top-center",
         });
       },
-      onError: (error) => {
+      onError: () => {
         toast.error("일정 삭제에 실패했습니다.", {
           position: "top-center",
         });
