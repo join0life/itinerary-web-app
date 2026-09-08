@@ -13,13 +13,9 @@ export default function SessionProvider({ children }: { children: ReactNode }) {
     supabase.auth.onAuthStateChange((event, session) => {
       setSession(session);
     });
-  }, []);
+  }, [setSession]);
 
-  const {
-    data: profile,
-    isLoading: isProfileLoading,
-    isPending,
-  } = useProfileData(session?.user.id);
+  const { isLoading: isProfileLoading } = useProfileData(session?.user.id);
 
   if (!isSessionLoaded) return <GlobalLoader />;
   if (isProfileLoading) return <GlobalLoader />;

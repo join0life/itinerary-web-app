@@ -1,8 +1,7 @@
-import { Outlet, useLocation, useMatch, useParams } from "react-router";
+import { Outlet, useLocation, useMatch } from "react-router";
 import BottomNavigationBar from "./bottom-navigation-bar";
 import GlobalHeader from "./header/global-header";
 import ProjectHeader from "./header/project-header";
-import { DialogOverlay } from "@radix-ui/react-dialog";
 
 export default function GlobalLayout() {
   const location = useLocation();

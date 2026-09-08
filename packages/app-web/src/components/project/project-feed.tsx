@@ -15,7 +15,7 @@ export default function ProjectFeed({ ownerId }: { ownerId?: string }) {
     if (inView) {
       fetchNextPage();
     }
-  }, [inView]);
+  }, [inView, fetchNextPage]);
 
   if (error) return <Fallback />;
   if (isPending) return <Loader />;

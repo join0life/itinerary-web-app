@@ -22,7 +22,7 @@ export default function ProjectJoinModal() {
           navigate(`/project/${projectId}/todo`);
         }
       },
-      onError: (error) => {
+      onError: () => {
         toast.error("입장에 실패했습니다. 비밀번호를 다시 입력해주세요.", {
           position: "top-center",
         });

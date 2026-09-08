@@ -2,9 +2,10 @@ import { fetchConfirmedEvent } from "@/api/calendar";
 import { QUERY_KEYS } from "@itinerary/shared";
 import { useQuery } from "@tanstack/react-query";
 
-export function useConfirmedEventData(projectId?: number) {
+export function useConfirmedEventData(projectId?: number | null) {
   return useQuery({
     queryKey: QUERY_KEYS.event.confirmed(projectId!),
     queryFn: () => fetchConfirmedEvent(projectId!),
+    enabled: !!projectId,
   });
 }
