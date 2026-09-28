@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import dog from "@/assets/dog-yellow.png";
+import airplaneYellow from "@/assets/airplane-yellow.png";
 import { useSession } from "@/store/session";
 import {
   Popover,
@@ -27,7 +27,7 @@ export default function ProfileEnterButton() {
     <Popover>
       <PopoverTrigger>
         <img
-          src={profile?.avatar_url || dog}
+          src={profile?.avatar_url || airplaneYellow}
           className="h-6 w-6 cursor-pointer rounded-full object-cover"
           alt="프로필 이미지"
         />

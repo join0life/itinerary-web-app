@@ -3,7 +3,7 @@ import { useProfileEditorModal } from "@/store/profile-editor-modal";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import dog from "@/assets/dog-yellow.png";
+import airplaneYellow from "@/assets/airplane-yellow.png";
 import { useSession } from "@/store/session";
 import { useProfileData } from "@/hooks/queries/use-profile-data";
 import { useEffect, useRef, useState, type ChangeEvent } from "react";
@@ -102,7 +102,9 @@ export default function ProfileEditorModal() {
                 onClick={() => {
                   if (fileInputRef.current) fileInputRef.current.click();
                 }}
-                src={avatarImage?.previewUrl || profile.avatar_url || dog}
+                src={
+                  avatarImage?.previewUrl || profile.avatar_url || airplaneYellow
+                }
                 id="profile-image"
                 className="h-30 w-30 rounded-full object-cover"
               />
