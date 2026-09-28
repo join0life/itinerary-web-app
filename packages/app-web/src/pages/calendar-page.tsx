@@ -20,8 +20,6 @@ export default function CalendarPage() {
   const recentProjectId = useRecentProjectId();
   const projectId = paramProjectId ?? recentProjectId;
 
-  if (!projectId) return <Navigate to="/project" replace />;
-
   const [baseDate, setBaseDate] = useState(new Date());
   const weekDates = getThisWeekDates(baseDate);
 
@@ -72,6 +70,7 @@ export default function CalendarPage() {
     }
   }, [projectId, setRecentProjectId]);
 
+  if (!projectId) return <Navigate to="/project" replace />;
   if (error) return <Fallback />;
 
   return (

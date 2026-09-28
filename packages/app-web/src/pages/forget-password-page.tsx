@@ -13,16 +13,16 @@ export default function ForgetPasswordPage() {
     isPending: isRequestPasswordResetEmailPending,
   } = useRequestPasswordResetEmail({
     onSuccess: () => {
-      (toast.info("인증 메일이 발송되었습니다.", {
+      toast.info("인증 메일이 발송되었습니다.", {
         position: "top-center",
-      }),
-        setEmail(""));
+      });
+      setEmail("");
     },
     onError: (error) => {
-      (toast.error(generateErrorMessage(error), {
+      toast.error(generateErrorMessage(error), {
         position: "top-center",
-      }),
-        setEmail(""));
+      });
+      setEmail("");
     },
   });
 

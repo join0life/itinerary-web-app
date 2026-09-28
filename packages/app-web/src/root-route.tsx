@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useParams } from "react-router";
+import { Routes, Route, Navigate } from "react-router";
 import IndexPage from "@/pages/index-page";
 import GlobalLayout from "@/components/layout/global-layout";
 import TodoPage from "@/pages/todo-page";

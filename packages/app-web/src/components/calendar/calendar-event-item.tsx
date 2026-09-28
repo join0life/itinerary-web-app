@@ -29,8 +29,8 @@ export default function CalendarEventItem({
 
   const formatTime = (date: Date) => {
     const d = new Date(date);
-    let hour = d.getHours();
-    let minute = d.getMinutes();
+    const hour = d.getHours();
+    const minute = d.getMinutes();
 
     return `${hour.toString().padStart(2, "0")}:${minute.toString().padStart(2, "0")}`;
   };

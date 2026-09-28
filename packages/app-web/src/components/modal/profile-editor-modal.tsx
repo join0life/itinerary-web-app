@@ -3,7 +3,7 @@ import { useProfileEditorModal } from "@/store/profile-editor-modal";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import dog from "@/assets/dog-yellow.png";
+import airplaneYellow from "@/assets/airplane-yellow.png";
 import { useSession } from "@/store/session";
 import { useProfileData } from "@/hooks/queries/use-profile-data";
 import { useEffect, useRef, useState, type ChangeEvent } from "react";
@@ -36,7 +36,7 @@ export default function ProfileEditorModal() {
       onSuccess: () => {
         close();
       },
-      onError: (error) => {
+      onError: () => {
         toast.error("프로필 수정에 실패했습니다.", {
           position: "top-center",
         });
@@ -46,7 +46,7 @@ export default function ProfileEditorModal() {
     if (!isOpen) {
       if (avatarImage) URL.revokeObjectURL(avatarImage.previewUrl);
     }
-  }, [isOpen]);
+  }, [isOpen, avatarImage]);
 
   useEffect(() => {
     if (isOpen && profile) {
@@ -102,7 +102,9 @@ export default function ProfileEditorModal() {
                 onClick={() => {
                   if (fileInputRef.current) fileInputRef.current.click();
                 }}
-                src={avatarImage?.previewUrl || profile.avatar_url || dog}
+                src={
+                  avatarImage?.previewUrl || profile.avatar_url || airplaneYellow
+                }
                 id="profile-image"
                 className="h-30 w-30 rounded-full object-cover"
               />

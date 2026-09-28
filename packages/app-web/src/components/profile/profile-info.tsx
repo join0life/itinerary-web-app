@@ -1,4 +1,4 @@
-import dog from "@/assets/dog-yellow.png";
+import airplaneYellow from "@/assets/airplane-yellow.png";
 import { useProfileData } from "@/hooks/queries/use-profile-data";
 import Fallback from "../fallback";
 import Loader from "../loader";
@@ -21,7 +21,7 @@ export default function ProfileInfo({ userId }: { userId: string }) {
   return (
     <div className="flex flex-col items-center justify-center gap-5">
       <img
-        src={profile.avatar_url || dog}
+        src={profile.avatar_url || airplaneYellow}
         alt="프로필 이미지"
         className="h-30 w-30 rounded-full object-cover"
       />

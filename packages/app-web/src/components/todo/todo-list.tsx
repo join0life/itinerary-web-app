@@ -1,5 +1,5 @@
 import { useEventsData } from "@/hooks/queries/use-events-data";
-import dog from "@/assets/dog-yellow.png";
+import airplaneYellow from "@/assets/airplane-yellow.png";
 import type { GroupedByUser } from "@itinerary/shared";
 import Fallback from "../fallback";
 import Loader from "../loader";
@@ -38,7 +38,10 @@ export default function TodoList({ projectId }: { projectId: number }) {
       {grouped?.map(({ owner, events }) => (
         <div key={owner.id} className="flex flex-col gap-5">
           <div className="flex items-center gap-2">
-            <img className="h-6 w-6 rounded-full object-cover" src={dog}></img>
+            <img
+              className="h-6 w-6 rounded-full object-cover"
+              src={airplaneYellow}
+            ></img>
             <div className="text-sm font-semibold">{owner.nickname}</div>
           </div>
 
